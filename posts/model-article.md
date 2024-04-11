@@ -18,13 +18,13 @@ Magna ea adipisicing officia et ullamco irure consectetur minim dolor ut velit p
 
 [Gitlab], Ea deserunt consectetur labore elit cupidatat sint fugiat in. Lorem commodo anim cillum ad esse ut esse. Anim in excepteur anim tempor velit enim Lorem.
 
-## Ea deserunt consectetur: _[Ripissue]_
+## Ea deserunt consectetur: _[proident]_
 
 Laborum nisi ad dolore cupidatat cupidatat est culpa cillum enim. Deserunt fugiat adipisicing non Lorem consectetur consectetur fugiat aliquip excepteur commodo sit ullamco. Dolor ex proident ad ut officia laborum voluptate proident sunt tempor qui adipisicing nostrud. Mollit enim eu quis ipsum.
 
 [^1]: We are [Gustavo Basso] (@gubasso) and [Ismael Pamplona] (@ismaelpamplona), the founders and developers of the **[cwnt.io]** (@cwnt-io) company.
 
-[Definition]: https://link-website 'Definition'
+[proident]: https://link-website 'Definition'
 [Github]: https://github.com/ 'Github'
 [Gitlab]: https://about.gitlab.com/ 'Gitlab'
 [Ismael Pamplona]: https://isma.codes 'isma.codes'
