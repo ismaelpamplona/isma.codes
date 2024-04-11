@@ -71,13 +71,13 @@ pre code {
 
   .button,
   button {
-    background-color: $dark-accent;
+    background-color: transparent;
     color: $chinese-white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     &:hover {
-      background-color: darken($dark-accent, 10%);
+      opacity: 0.8;
     }
   }
 
@@ -183,13 +183,13 @@ pre code {
 
   .button,
   button {
-    background-color: $light-accent;
+    background-color: transparent;
     color: $dark-background;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     &:hover {
-      background-color: darken($light-accent, 10%);
+      opacity: 0.8;
     }
   }
 
