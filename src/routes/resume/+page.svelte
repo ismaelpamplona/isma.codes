@@ -64,6 +64,44 @@
 
   let htmlContent: string
 
+  async function download() {
+    loading = true
+    if (!htmlContent) {
+      console.error('No content to download')
+      return
+    }
+
+    try {
+      const response = await fetch('/api/download-pdf', {
+        method: 'POST',
+        body: JSON.stringify({ html: htmlContent }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+
+      if (response.ok) {
+        const blob = await response.blob()
+        const url = window.URL.createObjectURL(blob)
+        const a = document.createElement('a')
+        a.href = url
+        const currentDate = new Date()
+        const isoDate = currentDate.toISOString()
+        a.download = `${isoDate}-resume_ismael_pamplona.pdf`
+        document.body.appendChild(a)
+        a.click()
+        document.body.removeChild(a)
+        window.URL.revokeObjectURL(url)
+      } else {
+        console.error('Failed to download PDF')
+      }
+    } catch (error) {
+      console.error('Error downloading PDF:', error)
+    }
+
+    loading = false
+  }
+
   function getYearFromIso(date: string): number {
     return new Date(date).getFullYear()
   }
@@ -104,6 +142,18 @@
 <svelte:head>
   <title>isma.codes - resume|cv</title>
 </svelte:head>
+
+<div
+  aria-label="download-resume"
+  role="button"
+  class="download-btn-container"
+  tabindex="0"
+  on:click={download}
+  on:keydown={(event) => event.key === 'Enter' && download()}
+>
+  <iconify-icon class="icon download" icon="ic:baseline-download"></iconify-icon>
+  <span>download</span>
+</div>
 
 <div class="resume-container" id="resume-container">
   <section>
