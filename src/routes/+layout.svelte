@@ -1,10 +1,12 @@
 <script lang="ts">
   import 'iconify-icon'
   import '../style/index.scss'
+  import Nav from '$lib/Nav/Nav.svelte'
+  import { darkMode } from '$lib/Nav/stores'
 </script>
 
-<div class="dark-theme">
-  Teste
+<div class={$darkMode ? 'dark-theme' : 'light-theme'}>
+  <Nav />
   <div class="body-container">
     <slot />
   </div>
