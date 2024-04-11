@@ -1,0 +1,1 @@
+# write_article_model (Issue)
