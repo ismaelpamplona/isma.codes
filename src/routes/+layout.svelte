@@ -3,7 +3,11 @@
   import '../style/index.scss'
   import Nav from '$lib/Nav/Nav.svelte'
   import Footer from '$lib/Footer.svelte'
+  import Assistant from '$lib/Assistant/Assistant.svelte'
   import { darkMode } from '$lib/Nav/stores'
+  import type { ChatCompletion } from '$lib/openai/types'
+
+  export let data: ChatCompletion
 </script>
 
 <div class={$darkMode ? 'dark-theme' : 'light-theme'}>
@@ -13,6 +17,7 @@
       <slot />
     </div>
   </div>
+  <!-- <Assistant bind:data /> -->
   <Footer />
 </div>
 
