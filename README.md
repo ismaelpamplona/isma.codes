@@ -29,54 +29,42 @@ You can preview the production build with `npm run preview`.
 
 ### Color information shades
 
-### Rainbow indigo
-
-<span style="display: flex; width: 100%; height: 15px;  background: #274265; border-radius: 5px"></span>
+### <span style="display: flex; width: fit-content; padding: 5px; background: #274265; border-radius: 5px; color: #e1e1e1">Rainbow Indigo</span>
 
 - Name: Rainbow Indigo
 - Hex: 274265
 - RGB: (39, 66, 101)
 - CMYK: 0.613, 0.346, 0, 0.603
 
-### Dark sky blue
-
-<span style="display: flex; width: 100%; height: 15px;  background: #7cc0cd; border-radius: 5px"></span>
+### <span style="display: flex; width: fit-content; padding: 5px; background: #7cc0cd; border-radius: 5px; color: #1c2b4a">Dark Sky Blue</span>
 
 - Name: Dark Sky Blue
 - Hex: 7cc0cd
 - RGB: (124, 192, 205)
 - CMYK: 0.395, 0.063, 0, 0.196
 
-### Bone
-
-<span style="display: flex; width: 100%; height: 15px;  background: #e4dad0; border-radius: 5px"></span>
+### <span style="display: flex; width: fit-content; padding: 5px; background: #e4dad0; border-radius: 5px; color: #1c2b4a">Bone</span>
 
 - Name: Bone
 - Hex: e4dad0
 - RGB: (228, 218, 208)
 - CMYK: 0, 0.043, 0.087, 0.105
 
-### Metallic red
-
-<span style="display: flex; width: 100%; height: 15px;  background: #b02d27; border-radius: 5px"></span>
+### <span style="display: flex; width: fit-content; padding: 5px; background: #b02d27; border-radius: 5px; color: #e1e1e1">Metallic Red</span>
 
 - Name: Metallic Red
 - Hex: b02d27
 - RGB: (176, 45, 39)
 - CMYK: 0, 0.744, 0.778, 0.309
 
-### Chinese white
-
-<span style="display: flex; width: 100%; height: 15px;  background: #e1e1e1; border-radius: 5px"></span>
+### <span style="display: flex; width: fit-content; padding: 5px; background: #e1e1e1; border-radius: 5px; color: #1c2b4a">Chinese white</span>
 
 - Name: Chinese White
 - Hex: e1e1e1
 - RGB: (225, 225, 225)
 - CMYK: 0, 0, 0, 0.117
 
-### Space cadet
-
-<span style="display: flex; width: 100%; height: 15px;  background: #1c2b4a; border-radius: 5px"></span>
+### <span style="display: flex; width: fit-content; padding: 5px; background: #1c2b4a; border-radius: 5px; color: #e1e1e1">Space cadet</span>
 
 - Name: Space Cadet
 - Hex: 1c2b4a
