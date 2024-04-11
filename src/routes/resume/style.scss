@@ -1,0 +1,171 @@
+@import '../../style/sizes.scss';
+
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: $page-width;
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 5px;
+  padding: 5px;
+}
+
+a,
+p,
+li,
+span,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.job-tag-title {
+  text-transform: uppercase;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+a,
+p,
+span,
+li {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: justify;
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+.icon-link {
+  font-size: 1em;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.icon {
+  display: none;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  padding: 10px 0;
+  border-bottom: 1px solid #999;
+  gap: 5px;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.skills-tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  padding: 2px 6px;
+  border-radius: $tag-border-radius;
+  border: 1px solid;
+  margin: 0 inherit;
+  text-wrap: nowrap;
+  font-size: 15px;
+  text-transform: lowercase;
+}
+
+.years-experience {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.experience-header {
+  border-bottom: 1px solid #999;
+  padding: 10px 0 5px 0;
+}
+
+.experience-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.company-details {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.company-location {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.job-container {
+  padding: 10px 0;
+}
+
+.job-skills {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.job-skills-tags {
+  display: flex;
+  align-items: center;
+  justify-items: stretch;
+  flex-wrap: wrap;
+  margin: 5px 0;
+  gap: 5px;
+}
