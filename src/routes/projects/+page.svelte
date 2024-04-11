@@ -69,8 +69,7 @@
     grid-template-columns: 50% 50%;
     justify-content: center;
     gap: 10px;
-    width: $page-width;
-    max-width: 100%;
+    width: 100%;
     padding-bottom: 20px;
 
     .project-container {
