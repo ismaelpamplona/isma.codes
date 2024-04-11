@@ -1,0 +1,43 @@
+// Color Scheme Variables
+$rainbow-indigo: #274265;
+$dark-sky-blue: #7cc0cd;
+$bone: #e4dad0;
+$metallic-red: #b02d27;
+$lighter-red: #e57373;
+$chinese-white: #e1e1e1;
+$chinese-white-darker: #c4c0c0;
+$space-cadet: #1c2b4a;
+$space-cadet-darker: #09142c;
+
+// Dark Theme Variables
+$dark-background: $space-cadet;
+$dark-primary-text: $bone;
+$dark-secondary-text: $chinese-white;
+$dark-accent: $metallic-red;
+$dark-link: $bone;
+
+// Light Theme Variables
+$light-background: $chinese-white;
+$light-primary-text: $space-cadet;
+$light-secondary-text: $rainbow-indigo;
+$light-accent: $dark-sky-blue;
+$light-link: $space-cadet;
+
+// Logo colors
+$logo-stroke-dark: $bone;
+$logo-fill-dark: transparent;
+$terminal-dark-prompt-color: $bone;
+$logo-stroke-light: $rainbow-indigo;
+$logo-fill-light: transparent;
+$terminal-light-prompt-color: $rainbow-indigo;
+
+// Opacities
+$link-opacity: .8;
+
+// Assistant
+$user-msg-bg-light: $rainbow-indigo;
+$user-msg-bg-dark: $dark-sky-blue;
+$assistant-msg-bg-light: $metallic-red;
+$assistant-msg-bg-dark: $lighter-red;
+$assistant-container-bg-dark: $rainbow-indigo;
+$assistant-container-bg-light: #eee;
