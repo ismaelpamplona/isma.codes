@@ -53,8 +53,6 @@ export function throttle<T extends (...args: any[]) => any>(
 
 export const fetchMarkdownPostsRaw = async (): Promise<Post[]> => {
   const allPostFiles = import.meta.glob('/posts/*.md')
-  console.log('allPostFiles')
-  console.log(allPostFiles)
   const iterablePostFiles = Object.entries(allPostFiles)
   const allPosts: Post[] = await Promise.all(
     iterablePostFiles.map(async ([filepath, globEntry]): Promise<Post> => {
@@ -80,4 +78,21 @@ export const fetchMarkdownPosts = async (): Promise<EnhancedPost[]> => {
     next: allPosts[index - 1] || 0,
     previous: allPosts[index + 1] || 0
   }))
+}
+
+export const fetchCategories = async (): Promise<{ categories: string[] }> => {
+  const allRawPosts = await fetchMarkdownPostsRaw()
+  const catsSet = new Set<string>()
+  allRawPosts.forEach((post) => {
+    if (post.categories) {
+      post.categories.forEach((cat) => {
+        catsSet.add(cat)
+      })
+    }
+  })
+  const categories = [...catsSet]
+  categories.sort()
+  return {
+    categories
+  }
 }

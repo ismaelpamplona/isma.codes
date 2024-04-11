@@ -9,7 +9,9 @@
 <div class={$darkMode ? 'dark-theme' : 'light-theme'}>
   <Nav />
   <div class="body-container">
-    <slot />
+    <div class="slot-container">
+      <slot />
+    </div>
   </div>
   <Footer />
 </div>
@@ -24,5 +26,10 @@
     justify-content: flex-start;
     min-height: calc(100vh - $nav-height);
     padding: 0 20px;
+
+    .slot-container {
+      max-width: 100%;
+      width: $page-width;
+    }
   }
 </style>

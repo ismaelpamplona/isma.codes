@@ -18,7 +18,7 @@
 <div class="input-container">
   <SearchInput bind:data={data.posts} bind:results {searchableKeys} />
 </div>
-<div class="blogs">
+<div class="container">
   {#each results as post}
     <article>
       <div class="time-categories">
@@ -35,6 +35,12 @@
       </div>
     </article>
   {/each}
+
+  <a class="all-categories-link" href="{base}/blog/categories/">
+    <iconify-icon icon="carbon:collapse-categories" />
+    See all registered categories
+  </a>
+
   {#if data.posts.length > 0 && results.length === 0}
     <span class="no-matches">no matches founded</span>
   {/if}
@@ -48,10 +54,10 @@
     margin: 20px auto;
   }
 
-  .blogs {
+  .container {
     display: flex;
     flex-direction: column;
-    width: $page-width;
+    width: 100%;
 
     article {
       border-bottom: 1px solid;
@@ -100,5 +106,9 @@
 
   time {
     font-size: 0.75rem;
+  }
+
+  .all-categories-link {
+    margin: 20px 0;
   }
 </style>
