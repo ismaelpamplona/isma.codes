@@ -1,0 +1,23 @@
+- text: home
+  title: Go to Home Page
+  href: /
+  link: /
+  address: /
+
+- text: blog
+  title: Go to blog
+  href: /blog
+  link: /blog
+  address: /blog
+
+- text: projects
+  title: Go to projects
+  href: /projects
+  link: /projects
+  address: /projects
+
+- text: resume|cv
+  title: Go to resume
+  href: /resume
+  link: /resume
+  address: /resume
