@@ -37,6 +37,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"fuse.js": "^7.0.0",
 		"iconify-icon": "^2.0.0",
 		"sass": "^1.74.1"
 	}
