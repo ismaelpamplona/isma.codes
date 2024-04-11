@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Tickers from '$lib/Tickers.svelte'
   import data from '../data/personal.yml'
   let code = 'code'
 </script>
@@ -6,16 +7,20 @@
 <svelte:head>
   <title>isma.codes - home</title>
 </svelte:head>
-
 <div class="container">
-  <div class="slogan">
-    transforming <br />
-    ideas into <span>{code}</span>
-  </div>
+  <div class="sentence">
+    <div class="slogan">
+      transforming <br />
+      ideas into <span>{code}</span>
+    </div>
 
-  <div class="title">
-    <h1>{data.title.name}</h1>
-    <span>{@html data.title.position}</span>
+    <div class="title">
+      <h1>{data.title.name}</h1>
+      <span>{@html data.title.position}</span>
+    </div>
+  </div>
+  <div class="tickers-container">
+    <Tickers />
   </div>
 </div>
 
@@ -26,10 +31,24 @@
   .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     width: 100%;
     min-height: calc(100vh - $nav-height);
+
+    .tickers-container {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+    }
+
+    .sentence {
+      display: flex;
+      top: 0;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%;
+    }
 
     .title,
     .slogan {
@@ -51,7 +70,7 @@
     .slogan {
       font-size: 80px;
       font-weight: bolder;
-      margin-top: -150px;
+      margin-top: 100px;
 
       @keyframes gradientAnimation {
         0% {
