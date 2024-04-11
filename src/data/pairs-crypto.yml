@@ -1,0 +1,34 @@
+- name: BTC/USDT
+  pair: BTCUSDT
+  description: Bitcoin to Tether, trading Bitcoin with a USD-pegged stablecoin.
+  prefix: $
+
+- name: BTC/EUR
+  pair: BTCEUR
+  desc: Bitcoin to Euro, exchange of Bitcoin to the European currency.
+  prefix: €
+
+- name: BTC/GBP
+  pair: BTCGBP
+  desc: Bitcoin to British Pounds, exchange of Bitcoin to the British currency.
+  prefix: £
+
+- name: BTC/BRL
+  pair: BTCBRL
+  description: Bitcoin to Brazilian Real, trade Bitcoin with the Brazilian currency.
+  prefix: R$
+
+- name: ADA/USDT
+  pair: ADAUSDT
+  description: Cardano to Tether, exchange of Cardano for a USD-pegged stablecoin.
+  prefix: $
+
+- name: ETH/USDT
+  pair: ETHUSDT
+  description: Ethereum to Tether, exchange of Ethereum for a stablecoin pegged to the USD.
+  prefix: $
+
+- name: SOL/USDT
+  pair: SOLUSDT
+  description: Solana to Tether, exchange of Solana for a stablecoin pegged to the USD.
+  prefix: $
