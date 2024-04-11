@@ -1,0 +1,248 @@
+@import './colors.scss';
+@import './shadows.scss';
+
+body {
+  transition: background-color 0.3s ease;
+}
+
+code {
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85em; // Adjusted for inline display
+}
+
+// Styles for code blocks
+pre code {
+  display: block;
+  white-space: pre-wrap;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  font-size: 0.95em;
+  overflow-x: auto;
+}
+
+.dark-theme {
+  background-color: $dark-background;
+  color: $dark-primary-text;
+
+  code {
+    background-color: lighten($dark-background, 10%);
+    color: $dark-primary-text;
+    border: 1px solid darken($dark-background, 15%);
+  }
+
+  pre code {
+    background-color: lighten($dark-background, 5%);
+    border: 1px solid darken($dark-background, 10%);
+  }
+
+  a {
+    color: $dark-link;
+    &:hover {
+      color: darken($dark-link, 10%);
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  li,
+  .icon {
+    color: $dark-secondary-text;
+  }
+
+  nav {
+    background: $dark-background;
+    box-shadow: $box-shadow-dark;
+
+    .active {
+      box-shadow: $box-shadow-dark;
+    }
+  }
+
+  .button,
+  button {
+    background-color: $dark-accent;
+    color: $chinese-white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    &:hover {
+      background-color: darken($dark-accent, 10%);
+    }
+  }
+
+  input,
+  textarea {
+    background-color: lighten($dark-background, 5%);
+    color: $dark-primary-text;
+    border: 1px solid $dark-link;
+  }
+
+  .logo-container {
+    .left-line {
+      background: $metallic-red;
+    }
+    .terminal-symbol {
+      rect,
+      line {
+        stroke: $logo-stroke-dark;
+      }
+      rect[fill] {
+        fill: $logo-fill-dark;
+      }
+    }
+    .terminal-prompt {
+      color: $terminal-dark-prompt-color;
+      &::after {
+        content: '_';
+        animation: blink 1s step-start 0s infinite;
+      }
+    }
+  }
+
+  .container-resume {
+    box-shadow: $box-shadow-dark;
+  }
+
+  .user-msg {
+    border: 1px solid $user-msg-bg-dark;
+  }
+
+  .user-msg,
+  .assistant-msg {
+    box-shadow: $box-shadow-dark;
+  }
+
+  .assistant-container {
+    background: $assistant-container-bg-dark;
+    .assistant-msg {
+      border: 1px solid $assistant-msg-bg-dark;
+    }
+  }
+
+  footer {
+    background: $space-cadet-darker;
+    .copyright {
+      border-top: 1px solid $rainbow-indigo;
+    }
+  }
+}
+
+.light-theme {
+  background-color: $light-background;
+  color: $light-primary-text;
+
+  code {
+    background-color: darken($light-background, 5%);
+    color: $light-primary-text;
+    border: 1px solid darken($light-background, 10%);
+  }
+
+  pre code {
+    background-color: $light-background;
+    border: 1px solid darken($light-background, 10%);
+  }
+
+  a {
+    color: $light-link;
+    &:hover {
+      color: darken($light-link, 10%);
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  li,
+  .icon {
+    color: $light-secondary-text;
+  }
+
+  nav {
+    background: $light-background;
+    box-shadow: $box-shadow-light;
+    .active {
+      box-shadow: $box-shadow-light;
+    }
+  }
+
+  .button,
+  button {
+    background-color: $light-accent;
+    color: $dark-background;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    &:hover {
+      background-color: darken($light-accent, 10%);
+    }
+  }
+
+  input,
+  textarea {
+    background-color: $bone;
+    color: $light-primary-text;
+    border: 1px solid $light-secondary-text;
+  }
+
+  .logo-container {
+    .left-line {
+      background: $metallic-red;
+    }
+    .terminal-symbol {
+      rect,
+      line {
+        stroke: $logo-stroke-light;
+      }
+      rect[fill] {
+        fill: $logo-fill-light;
+      }
+    }
+    .terminal-prompt {
+      color: $terminal-light-prompt-color;
+      &::after {
+        content: '_';
+        animation: blink 1s step-start 0s infinite;
+      }
+    }
+  }
+
+  .container-resume {
+    box-shadow: $box-shadow-light;
+  }
+
+  .user-msg,
+  .assistant-msg {
+    box-shadow: $box-shadow-light;
+  }
+
+  .user-msg {
+    border: 1px solid $user-msg-bg-light;
+  }
+
+  .assistant-container {
+    background: $assistant-container-bg-light;
+    .assistant-msg {
+      border: 1px solid $assistant-msg-bg-light;
+    }
+  }
+
+  footer {
+    background: $bone;
+  }
+}
