@@ -1,0 +1,186 @@
+- name: isma.codes - this website
+  description: "Welcome to isma.codes: Ismael's fusion of technology and AI, with projects, blogs and a resume. It's a portal to the latest web and AI innovations. Explore Ismael's creative tech journey."
+  technologies:
+    - name: svelte
+      icon: devicon:svelte
+      link: https://svelte.dev/
+    - name: kit
+      icon: vscode-icons:file-type-svelteconfig
+      link: https://kit.svelte.dev/
+    - name: typescript
+      icon: devicon:typescript
+      link: https://www.typescriptlang.org/
+    - name: docker
+      icon: devicon:docker
+      link: https://www.docker.com/
+    - name: openai
+      icon: simple-icons:openai
+      link: https://platform.openai.com/docs/overview
+    - name: llama-gpt
+      icon: fluent-emoji-high-contrast:llama
+      link: https://github.com/getumbrel/llama-gpt
+
+  links:
+    - name: github
+      link: https://github.com/ismaelpamplona/isma.codes
+      icon: mdi:github
+    - name: website
+      link: https://isma.codes/
+      icon: streamline:web
+    - name: meta
+      icon: logos:meta-icon
+      link: https://llama.meta.com/
+
+- name: ripissue
+  description: May your issues rest in peace. CLI tool written in Rust for distributed bug / issue / story tracking with the filesystem and git.
+  technologies:
+    - name: rust
+      icon: skill-icons:rust
+      link: https://www.rust-lang.org/
+    - name: docker
+      icon: devicon:docker
+      link: https://www.docker.com/
+  links:
+    - name: github
+      link: https://github.com/cwnt-io/ripissue
+      icon: mdi:github
+    - name: crates.io
+      link: https://crates.io/crates/ripissue
+      icon: game-icons:cargo-crate
+
+- name: abroad-payroll-api
+  description: Payroll management rest api software, built in Rust, designed exclusively for Brazilian public agents on international missions.
+  technologies:
+    - name: rust
+      icon: skill-icons:rust
+      link: https://www.rust-lang.org/
+    - name: docker
+      icon: devicon:docker
+      link: https://www.docker.com/
+    - name: metabase
+      icon: logos:metabase
+      link: https://www.metabase.com/
+  links:
+    - name: github
+      link: https://github.com/ismaelpamplona/abroad-payroll-api
+      icon: mdi:github
+
+- name: brag-server
+  description: A gateway to brag-worthy developer productivity metrics. Harness the power of data-driven insights from your registered git repositories to showcase your achievements. Let your code do the bragging!
+  technologies:
+    - name: rust
+      icon: skill-icons:rust
+      link: https://www.rust-lang.org/
+    - name: docker
+      icon: devicon:docker
+      link: https://www.docker.com/
+  links:
+    - name: github
+      link: https://github.com/cwnt-io/brag-server
+      icon: mdi:github
+
+- name: uai-components
+  description: A versatile UI library with svelte components to improve usability for a variety of development needs. Simplifies design and development and provides a comprehensive solution for intuitive, engaging applications.
+  technologies:
+    - name: svelte
+      icon: devicon:svelte
+      link: https://svelte.dev/
+    - name: typescript
+      icon: devicon:typescript
+      link: https://www.typescriptlang.org/
+    - name: docker
+      icon: devicon:docker
+      link: https://www.docker.com/
+    - name: scss
+      icon: vscode-icons:file-type-scss2
+      link: https://sass-lang.com/
+    - name: storybook
+      icon: devicon:storybook
+      link: https://storybook.js.org/
+  links:
+    - name: github
+      link: https://github.com/vlgi/uai-components
+      icon: mdi:github
+    - name: npm
+      link: https://www.npmjs.com/package/uai-components
+      icon: logos:npm-icon
+
+- name: pomato
+  description: Improve your concentration with our open-source Pomodoro CLI timer built in Rust, which offers customizable intervals for work and breaks. It's a minimalist yet powerful tool designed for efficient workflow and invites contributions from the community!
+  technologies:
+    - name: rust
+      icon: skill-icons:rust
+      link: https://www.rust-lang.org/
+  links:
+    - name: github
+      link: https://github.com/ismaelpamplona/pomato
+      icon: mdi:github
+
+- name: leet-code-workspace-in-rust
+  description: Dive into solving LeetCode challenges with Rust in this workspace that provides idiomatic, efficient solutions. It's a community-driven repository perfect for learning Rust best practices and improving problem-solving skills. Contributions are welcome!
+  technologies:
+    - name: rust
+      icon: skill-icons:rust
+      link: https://www.rust-lang.org/
+  links:
+    - name: github
+      link: https://github.com/ismaelpamplona/leet-code-rust-ws
+      icon: mdi:github
+    - name: leetcode
+      link: https://leetcode.com/ismaelpamplona/
+      icon: simple-icons:leetcode
+
+- name: basic-http-rust-server
+  description: Explore the basics of the HTTP server with our open source Basic HTTP/1.1 Rust server, a pure Rust project with no dependencies, designed for learning and simplicity. Ideal for beginners in Rust and web protocols!
+  technologies:
+    - name: rust
+      icon: skill-icons:rust
+      link: https://www.rust-lang.org/
+  links:
+    - name: github
+      link: https://github.com/ismaelpamplona/http_rust_server/
+      icon: mdi:github
+
+- name: svelte-flow-kanban-board
+  description: Streamline your tasks with our Trello-inspired open-source Kanban board developed by Svelte. It offers a simple drag-and-drop interface for efficient project management. Ideal for individuals and teams looking for a responsive, easy-to-use tool. Contributions are welcome!
+  technologies:
+    - name: svelte
+      icon: devicon:svelte
+      link: https://svelte.dev/
+    - name: typescript
+      icon: devicon:typescript
+      link: https://www.typescriptlang.org/
+    - name: docker
+      icon: devicon:docker
+      link: https://www.docker.com/
+    - name: scss
+      icon: vscode-icons:file-type-scss2
+      link: https://sass-lang.com/
+    - name: storybook
+      icon: devicon:storybook
+      link: https://storybook.js.org/
+  links:
+    - name: demonstration
+      link: https://ismaelpamplona.gitlab.io/kanban-challenge/iframe.html?id=components-kanban--default-card&args=&viewMode=story
+      icon: bi:kanban
+
+- name: riot-meiosis-base
+  description: An open source base setup that combines Riot.js with Meiosis and gives developers the go-ahead for their web app projects. It is lightweight and offers a straightforward way to leverage the simplicity of Riot.js and the powerful state management of Meiosis. Perfect for building efficient, maintainable web apps from the ground up. Contributions are encouraged to further develop this essential tool!
+  technologies:
+    - name: riot.js
+      icon: logos:riot
+      link: https://riot.js.org/
+    - name: javascript
+      icon: devicon:javascript
+      link: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+    - name: meiosis
+      icon: streamline:web
+      link: https://meiosis.js.org/
+    - name: scss
+      icon: vscode-icons:file-type-scss2
+      link: https://sass-lang.com/
+
+  links:
+    - name: gitlab
+      link: https://gitlab.com/ismaelpamplona/riot-meiosis
+      icon: logos:gitlab
