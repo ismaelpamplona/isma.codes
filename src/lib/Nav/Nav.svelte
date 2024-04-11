@@ -28,14 +28,15 @@
           class={$page.url.pathname === link.href ? 'active' : ''}>{link.text}</a
         >
       {/each}
-      <span
-        title="witch theme"
+      <button
+        title="Switch theme"
         aria-label="Switch theme"
+        tabIndex="0"
         on:click={toggleTheme}
         on:keyup={toggleTheme}
       >
         <iconify-icon class="icon" icon={$darkMode ? 'emojione-v1:sun' : 'ph:moon-duotone'} />
-      </span>
+      </button>
     </div>
   </nav>
 </header>
