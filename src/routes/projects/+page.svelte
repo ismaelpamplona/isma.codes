@@ -1,6 +1,8 @@
 <script lang="ts">
   import data from '../../data/projects.yml'
 
+  import SearchInput from '$lib/SearchInput.svelte'
+
   type Project = {
     name: string
     description: string
@@ -12,16 +14,22 @@
     technologies: {
       icon: string
       name: string
+      link: string
     }[]
   }
 
   let projects = data as Project[]
   let results = projects
+  let searchableKeys = ['name', 'description', 'technologies.name', 'links.name']
 </script>
 
 <svelte:head>
   <title>isma.codes - projects</title>
 </svelte:head>
+
+<div class="input-container">
+  <SearchInput bind:data={projects} bind:results {searchableKeys} />
+</div>
 
 <div class="container">
   {#each results as project}
