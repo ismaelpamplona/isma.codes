@@ -1,0 +1,20 @@
+:global(
+    .content-container h2,
+    .content-container h3,
+    .content-container h4,
+    .content-container h5
+  ) {
+  margin: 20px 0 10px 0;
+}
+
+:global(.content-container p) {
+  margin: 10px 0;
+}
+
+:global(.content-container ul > li) {
+  margin-left: 20px;
+}
+
+:global(.content-container ol > li) {
+  margin-left: 30px;
+}

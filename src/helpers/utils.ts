@@ -1,4 +1,5 @@
 import Fuse, { type FuseResult } from 'fuse.js'
+import type { Post, GlobEntryResult, EnhancedPost } from '../types/posts'
 
 export function fuzzySearch<T>(
   list: T[],
@@ -48,4 +49,35 @@ export function throttle<T extends (...args: any[]) => any>(
   }
 
   return throttledFunction as unknown as T
+}
+
+export const fetchMarkdownPostsRaw = async (): Promise<Post[]> => {
+  const allPostFiles = import.meta.glob('/posts/*.md')
+  console.log('allPostFiles')
+  console.log(allPostFiles)
+  const iterablePostFiles = Object.entries(allPostFiles)
+  const allPosts: Post[] = await Promise.all(
+    iterablePostFiles.map(async ([filepath, globEntry]): Promise<Post> => {
+      const { metadata } = (await globEntry()) as GlobEntryResult
+      const slug = filepath.slice(7, -3)
+      return {
+        ...metadata,
+        slug
+      }
+    })
+  )
+
+  const sortedPosts = allPosts.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  )
+  return sortedPosts
+}
+
+export const fetchMarkdownPosts = async (): Promise<EnhancedPost[]> => {
+  const allRawPosts = await fetchMarkdownPostsRaw()
+  return allRawPosts.map((post, index, allPosts) => ({
+    ...post,
+    next: allPosts[index - 1] || 0,
+    previous: allPosts[index + 1] || 0
+  }))
 }
