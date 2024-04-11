@@ -2,6 +2,7 @@
   import 'iconify-icon'
   import '../style/index.scss'
   import Nav from '$lib/Nav/Nav.svelte'
+  import Footer from '$lib/Footer.svelte'
   import { darkMode } from '$lib/Nav/stores'
 </script>
 
@@ -10,6 +11,7 @@
   <div class="body-container">
     <slot />
   </div>
+  <Footer />
 </div>
 
 <style lang="scss">
