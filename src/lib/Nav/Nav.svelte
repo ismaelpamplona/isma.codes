@@ -4,6 +4,8 @@
   import links from '../../data/links.yml'
   import type { Link } from '../../types/links'
 
+  import Logo from '$lib/Logo.svelte'
+
   let navLinks = links as Link[]
 
   function toggleTheme() {
@@ -13,7 +15,9 @@
 
 <header>
   <nav>
-    <a href="/" title="Go to Home Page" aria-label="Home Page" aria-labelledby="homeLabel">LOGO</a>
+    <a href="/" title="Go to Home Page" aria-label="Home Page" aria-labelledby="homeLabel">
+      <Logo />
+    </a>
 
     <div class="links">
       {#each navLinks as link}
