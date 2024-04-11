@@ -335,7 +335,7 @@
   }
 
   .resume-container {
-    width: $page-width;
+    width: 100%;
   }
   .tag {
     padding: 2px 6px;
@@ -392,5 +392,10 @@
 
   .skills-tags {
     gap: 0 5px;
+  }
+
+  .years-experience {
+    font-size: 13px;
+    font-weight: 400;
   }
 </style>
