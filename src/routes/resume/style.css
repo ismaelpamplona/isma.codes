@@ -1,10 +1,7 @@
-@import '../../style/sizes.scss';
-
 .resume-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: $page-width;
   max-width: 100%;
   margin: 0 auto;
   gap: 5px;
@@ -114,7 +111,6 @@ a {
 
 .tag {
   padding: 2px 6px;
-  border-radius: $tag-border-radius;
   border: 1px solid;
   margin: 0 inherit;
   text-wrap: nowrap;

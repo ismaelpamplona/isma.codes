@@ -3,7 +3,6 @@
   import Spinner from '$lib/Spinner.svelte'
   import data from '../../data/personal.yml'
   import type { WorkExperience } from './types'
-  import style from './style.scss?inline'
 
   const { title, about, contact, education, languages, social, stack, experience } = data
 
@@ -62,10 +61,10 @@
     return resultArray
   }
 
-  let htmlContent: string
-
   async function download() {
     loading = true
+    let container = document.getElementById('resume-container')
+    const htmlContent = container ? `${container.innerHTML}` : ''
     if (!htmlContent) {
       console.error('No content to download')
       return
@@ -130,10 +129,6 @@
 
   onMount(async () => {
     await generateSummary()
-    const container = document.getElementById('resume-container')
-    if (container) {
-      htmlContent = `<style>${style}</style>` + container.innerHTML
-    }
   })
 </script>
 
@@ -320,7 +315,8 @@
 </div>
 
 <style lang="scss">
-  @import './style.scss';
+  @import './style.css';
+  @import '../../style/sizes.scss';
 
   .download-btn-container {
     display: flex;
@@ -338,6 +334,13 @@
     }
   }
 
+  .resume-container {
+    width: $page-width;
+  }
+  .tag {
+    padding: 2px 6px;
+    border-radius: $tag-border-radius;
+  }
   a,
   p,
   li,
