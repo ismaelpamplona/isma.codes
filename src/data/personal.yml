@@ -1,0 +1,851 @@
+---
+title:
+  name: Ismael Pamplona
+  position: <strong>Software Engineer</strong> with 10+ years of experience and <strong>Rust</strong> Enthusiast
+
+contact:
+  title: Contact
+  city:
+    icon: teenyicons:pin-outline
+    text: Brasilia, DF - Brazil | 71610035
+  phone:
+    icon: bi:phone
+    text: '+5561981317178'
+  email:
+    icon: line-md:email
+    text: 'isma@cwnt.io'
+
+social:
+  title: Social
+  data:
+    - icon: mdi:web
+      link: https://isma.codes
+      aria: go to ismael's website
+      text: isma.codes
+    - icon: mdi:linkedin
+      link: https://linkedin.com/in/ismael-pamplona
+      aria: go to ismael's linkedin
+      text: linkedin
+    - icon: mdi:github
+      link: https://github.com/ismaelpamplona
+      aria: go to ismael's github
+      text: github
+    - icon: mdi:gitlab
+      link: https://gitlab.com/ismaelpamplona
+      aria: go to ismael's gitlab
+      text: gitlab
+    - icon: simple-icons:leetcode
+      link: https://leetcode.com/ismaelpamplona
+      aria: go to ismael's leetcode
+      text: leetcode
+
+education:
+  title: Education
+  data:
+    - title: Bachelor of Business Administration
+      university: Universidade de Brasilia - UnB
+      link: https://www.unb.br
+      city: Brasilia
+      state: DF
+      country: Brazil
+      from: 2005-01-01
+      to: 2009-01-01
+
+    - title: Bachelor of Computer Science (inc.)
+      university: Universidade de Santa Catarina - UFSC
+      link: https://ufsc.br
+      city: Florianópolis
+      state: SC
+      country: Brazil
+      from: 2003-01-01
+      to: 2005-01-01
+
+languages:
+  title: Languages
+  data:
+    - Portuguese (native)
+    - English (advanced)
+
+hobbies:
+  title: Hobbies
+  data:
+    - Travel
+    - Develop apps
+    - Stay with my family
+    - Playing the guitar
+    - Play footvolley
+    - Play with my kids
+    - Dinner with my wife
+
+guitars:
+  have:
+    - American Fender Stratocaster Standard
+    - Music Man Steve Morse Signature
+    - Peavey Wolfgang
+    - Music Man Sillhouette
+  want:
+    - Any Suhr Guitar
+    - Any PRS
+
+equipaments:
+  have:
+    - Fender Delux Reissue
+    - Blackstar HT Club 40
+    - Quad Coxtex modeler
+
+dreams:
+  - Buy a house
+  - Buy a Suhr Guitar
+
+nicknames:
+  - Isma
+  - The Goat!
+
+general:
+  - Ismael roots for Flamengo, the greatest football team in Brazil.
+
+about:
+  title: About me
+  data:
+    - I'm a curious software engineer with more than a decade of experience in the technology industry, constantly learning and adapting. I've led teams of up to 30 people and taken on a variety of roles, from administration to programming. My experience as a company founder has given me the ability to combine promising technology with business value.
+    - In the last 5 years, I've specialized in customer-centric web applications on cloud servers. The agility in developing various applications combined with my thirst for deep knowledge enables me to keep delighting users. I've written a lot with Python, Typescript and other technologies throughout my career, but when I discovered Rust a few years ago, I immediately fell in love with the language.
+
+stack:
+  title: Daily Tech Stack
+  data:
+    - title: Operating System
+      description: Arch Linux
+      link: https://archlinux.org
+      icon: uil:linux
+    - title: Desktop Environment
+      description: KDE
+      link: https://kde.org
+      icon: ph:desktop
+    - title: Terminal multiplexer
+      description: Tmux
+      link: https://github.com/tmux/tmux
+      icon: tabler:terminal
+    - title: Code Editor
+      description: Visual Studio Code
+      link: https://code.visualstudio.com
+      icon: dashicons:editor-code-duplicate
+    - title: Issue Tracking
+      description: ripissue
+      link: https://crates.io/crates/ripissue
+      icon: material-symbols:manage-search
+    - title: Git Web UI
+      description: ungit
+      link: https://github.com/FredrikNoren/ungit
+      icon: teenyicons:git-outline
+    - title: Git Terminal UI
+      description: gitui
+      link: https://github.com/extrawurst/gitui
+      icon: teenyicons:git-outline
+
+experience:
+  title: Work Experience
+  data:
+    - title: Co-founder and Software Developer
+      show: true
+      company: cwnt.io
+      link: 'https://github.com/cwnt-io'
+      from: 2021-08-01
+      to: Present
+      city: Brasilia
+      state: DF
+      country: Brazil
+      description:
+        - An IT company specializing in investment management through cutting-edge investment algorithms designed and executed utilizing dense mathematical and statistical methodologies. Algorithms are primarily written in Rust, with a focus on the web3 market (<a target='_blank' href='https://cwnt.io'>cwnt.io</a>).
+      duties:
+        title: Duties
+        data:
+          - Co-founder along with <a target='_blank' href='https://gubasso.xyz/'>Gustavo Basso</a>, responsible for maintaining and developing applications and algorithms in Rust.
+
+      jobs:
+        title: Jobs
+        data:
+          - title: Rip Issue
+            description: "Open-source Rust-based CLI tool designed for agile management workflows. It facilitates efficient tracking and management utilizing the filesystem and git (<a target='_blank' href='https://crates.io/crates/ripissue'>crates.io/crates/ripissue</a>)."
+            technologies:
+              title: Stack
+              data:
+                - - Rust
+                  - https://www.rust-lang.org
+                - - Git
+                  - https://git-scm.com
+                # - - Github
+                # - https://github.com
+
+            roles:
+              title: Roles
+              data:
+                - Developer
+
+          - title: Abroad Payroll API
+            description: "An open-source payroll management rest api software, built in Rust, designed exclusively for Brazilian public agents on international missions (<a target='_blank' href='https://github.com/ismaelpamplona/abroad-payroll-api'>github.com/ismaelpamplona/abroad-payroll-api</a>)."
+            technologies:
+              title: Stack
+              data:
+                - - Rust
+                  - https://www.rust-lang.org
+                - - Git
+                  - https://git-scm.com
+                # - - Github
+                # - https://github.com
+
+            roles:
+              title: Roles
+              data:
+                - Developer
+
+          - title: Brag Server
+            description: "An open-source REST API, written in Rust, designed to load, update, and serve data from Git repositories. It efficiently retrieves and manages repository metrics, offering JSON-formatted data for client applications. The project provides valuable insights into Git repository activities. (<a target='_blank' href='https://github.com/cwnt-io/brag-server'>github.com/cwnt-io/brag-server</a>)."
+            technologies:
+              title: Stack
+              data:
+                - - Rust
+                  - https://www.rust-lang.org
+                - - Git
+                  - https://git-scm.com
+                # - - Github
+                # - https://github.com
+
+            roles:
+              title: Roles
+              data:
+                - Developer
+
+    - title: Co-founder, CTO and Software Developer
+      show: true
+      company: Planfy
+      link: 'https://www.planfy.com.br'
+      from: 2022-01-01
+      to: 2023-12-31
+      city: Brasilia
+      state: DF
+      country: Brazil
+      description:
+        - An IT company committed to empowering individuals on their financial journey, providing a digital ecosystem, investment management, and insurance brokerage for effective life planning (<a target='_blank' href='https://www.planfy.com.br/'>planfy.com.br</a>).
+        # - 'The life planning approach centers on three main pillars: financial independence, financial security, and goal achievement.'
+        # - For planners, there's a comprehensive web solution streamlining client data collection and aiding in managing existing clients' life plans, as well as prospects.
+        # - For end-users, there's a mobile app (iOS and Android) to manage life plans, consolidate financial data via the Brazilian open banking ecosystem, access and acquire products like insurance and managed portfolios, track expenses, manage debts, and more.
+      duties:
+        title: Duties
+        data:
+          - Co-founder, CTO and co-responsible for fundraising efforts.
+          - Developer (Typescript, Python and SQL).
+
+      jobs:
+        title: Jobs
+        data:
+          - title: Development Management Process
+            description: Following the Less model, employs Kanban to optimize large-scale project coordination.
+            # The Sprint Go is the sprint's core objective, divided into Epics defining products, Stories adding value, and Spikes for studies and planning. Tasks within Stories and a Bugs category for technical fixes ensure progress. Milestones mark development intervals, including releases and key checkpoints. Essential rituals like Product Backlog Refinement (PBR), General Review, Retrospective, and Planning uphold project quality and progress. Fronts focus on Requirements, Development, and Q&A. In UX/UI, stages encompass idea understanding, flow modeling, wireframing, component building, and prototyping. Validation ensures an optimized user experience and interface aligning with project needs.
+            tools:
+              title: Tools
+              data:
+                - - Agile
+                - - Scrum
+                - - Less
+                  - https://less.works
+                - - Kanban
+                - - Ora
+                  - https://ora.pm
+            roles:
+              title: Roles
+              data:
+                - Manager
+
+          - title: UX/UI Studio
+            description: Dedicated to shaping user-centric experiences through a meticulously crafted design journey.
+            # Leveraging potent tools such as Adobe Creative Cloud (Photoshop and Illustrator) for advanced graphic design, Figma for collaborative design involving wireframes and prototypes, and BPMN for modeling business processes and user journeys, we follow a seven-step process from idea inception to the final prototype. This encompasses understanding the core idea and project objectives, detailing flow and mapping the user's journey within the application, creating wireframes that define structure and layout, validating them through testing and feedback, building interactive components and prototypes, validating the final prototype for alignment with the desired experience, and then seamlessly handing it off to the development team for feature implementation.
+            tools:
+              title: Tools
+              data:
+                - - Adobe
+                  - https://www.adobe.com/creativecloud
+                - - Figma
+                  - https://www.figma.com
+                - - BPMN
+                  - https://www.bpmn.org
+            roles:
+              title: Roles
+              data:
+                - Manager
+
+          - title: Mobile and Web Apps
+            description: Mobile app aids users in financial planning within Brazilian Open Finance. Web app assists advisors in guiding clients towards goals, financial independence, and security (<a target='blank' href='https://demo.planfy.com.br/'>demo.planfy</a>).
+            # , including goal-based life planning, finance management, debt handling, and investment tracking.
+            technologies:
+              title: Stack
+              data:
+                - - Nodejs
+                  - https://nodejs.org
+                - - Svelte
+                  - https://svelte.dev
+                - - Typescript
+                  - https://www.typescriptlang.org
+                - - Capacitor
+                  - https://capacitorjs.com
+                - - Sass
+                  - https://sass-lang.com
+                - - Docker
+                  - https://www.docker.com
+                - - Vite
+                  - https://vitejs.dev
+                - - Git
+                  - https://git-scm.com
+                # - - Gitlab
+                # - https://gitlab.com
+            roles:
+              title: Roles
+              data:
+                - Manager
+                - Developer
+
+          - title: Web server
+            description: Acts as a centralized hub, handling all communication with the frontend and facilitating access to services.
+            # These encompass third-party services, VLGI Asset API, Educational API, Face recognition, single sign-on strategies, cache strategies, Kanban APIs, and more.
+            technologies:
+              title: Stack
+              data:
+                - - Nodejs
+                  - https://nodejs.org
+                - - Strapi
+                  - https://strapi.io
+                - - PostgreSQL
+                  - https://www.postgresql.org
+                - - Typescript
+                  - https://www.typescriptlang.org
+                - - Docker
+                  - https://www.docker.com
+                - - AWS LB
+                  - https://aws.amazon.com/elasticloadbalancing
+                - - AWS S3
+                  - https://aws.amazon.com/s3
+                # - - Azure SQL DB
+                # - https://azure.microsoft.com/en-us/products/azure-sql/database
+                - - AWS RDS
+                  - https://aws.amazon.com/rds
+                - - AWS Beanstalk
+                  - https://aws.amazon.com/elasticbeanstalk
+                - - Git
+                  - https://git-scm.com
+                # - - Gitlab
+                # - https://gitlab.com
+            roles:
+              title: Roles
+              data:
+                - Developer
+
+          - title: Data Chapter
+            description: Drives strategy, creating data products, maintaining data infrastructure, and ensuring governance and quality.
+            # It enables data democratization via self-service analytics, utilizing a Data Lakehouse and provides also a Data Science Environment. Innovations support also automated investment portfolio reallocation, financial planning, payment calculations, and revenue forecasting.
+            technologies:
+              title: Stack
+              data:
+                - - Databricks
+                  - https://www.databricks.com
+                - - Delta Lake
+                  - https://delta.io
+                - - Spark
+                  - https://spark.apache.org
+                - - PostgreSQL
+                  - https://www.postgresql.org
+                - - AWS S3
+                  - https://aws.amazon.com/s3
+                # - - Azure SQL DB
+                # - https://azure.microsoft.com/en-us/products/azure-sql/database
+                - - AWS RDS
+                  - https://aws.amazon.com/rds
+                - - AWS Deequ
+                  - https://github.com/awslabs/deequ
+                - - AWS DMS
+                  - https://aws.amazon.com/dms
+                - - AWS SQS
+                  - https://aws.amazon.com/sqs
+                - - AWS SNS
+                  - https://aws.amazon.com/sns
+                - - Nifi
+                  - https://nifi.apache.org
+                - - Airflow
+                  - https://airflow.apache.org
+                - - Metabase
+                  - https://www.metabase.com
+                - - Scikit Learn
+                  - https://scikit-learn.org
+                - - XGBoost
+                  - https://xgboost.readthedocs.io
+                - - Pyomo
+                  - https://www.pyomo.org
+                - - Streamlit
+                  - https://streamlit.io
+                - - Kedro
+                  - https://kedro.org
+                - - Great Expectations
+                  - https://greatexpectations.io
+                - - Git
+                  - https://git-scm.com
+                # - - Gitlab
+                # - https://gitlab.com
+
+            roles:
+              title: Roles
+              data:
+                - Manager
+
+          - title: Kanban Rest API
+            description: Designed to cater to all kanbans, including prospects CRM and tasks management.
+            technologies:
+              title: Stack
+              data:
+                - - Nodejs
+                  - https://nodejs.org
+                - - Nest
+                  - https://nestjs.com
+                - - Typescript
+                  - https://www.typescriptlang.org
+                - - PostgreSQL
+                  - https://www.postgresql.org
+                - - Docker
+                  - https://www.docker.com
+                - - AWS LB
+                  - https://aws.amazon.com/elasticloadbalancing
+                - - AWS S3
+                  - https://aws.amazon.com/s3
+                # - - Azure SQL DB
+                # - https://azure.microsoft.com/en-us/products/azure-sql/database
+                - - AWS RDS
+                  - https://aws.amazon.com/rds
+                - - Git
+                  - https://git-scm.com
+                # - - Gitlab
+                # - https://gitlab.com
+            roles:
+              title: Roles
+              data:
+                - Manager
+
+          - title: SZOT-UI
+            description: "Open-source library of user interface components and resources: <a target='_blank' href='https://team-tecnologia.gitlab.io/public-pkgs/szot-ui'>szot-ui</a>."
+            technologies:
+              title: Stack
+              data:
+                - - Nodejs
+                  - https://nodejs.org
+                - - Typescript
+                  - https://www.typescriptlang.org
+                - - Svelte
+                # - - Gitlab
+                # - https://gitlab.com
+            roles:
+              title: Roles
+              data:
+                - Developer
+
+    - title: CTO and Software Developer
+      show: true
+      company: Grupo Sozo
+      link: 'https://www.gruposozo.com.br'
+      from: 2019-11-01
+      to: 2021-12-01
+      city: Brasilia
+      state: DF
+      country: Brazil
+      description:
+        - "A tech-driven financial conglomerate that manages BRL 2.5 billion, serving 5,000+ clients with advisory and investment solutions
+          (<a target='_blank' href='https://www.gruposozo.com.br'>gruposozo</a>,
+          <a target='_blank' href='https://www.vlginvestimentos.com.br'>vlginvestimentos</a>,
+          <a target='_blank' href='https://vlgiasset.com.br'>vlgiasset</a>,
+          <a target='_blank' href='https://vlgivida.com.br'>vlgivida</a> and
+          <a target='_blank' href='https://vlgicorporate.com.br'>vlgicorporate</a>)."
+      duties:
+        title: Duties
+        data:
+          - Chief Technology Officer (CTO), overseeing technical aspects and driving technological innovations.
+          - Developer (Typescript, Python and SQL).
+
+      jobs:
+        title: Jobs
+        data:
+          - title: VLGI Asset Rest API
+            description: Serves internal and end-user-facing solutions.
+            technologies:
+              title: Stack
+              data:
+                - - Nodejs
+                  - https://nodejs.org
+                - - Typescript
+                  - https://www.typescriptlang.org
+                - - Nest
+                  - https://nestjs.com
+                - - PostgreSQL
+                  - https://www.postgresql.org
+                - - Docker
+                  - https://www.docker.com
+                - - AWS LB
+                  - https://aws.amazon.com/elasticloadbalancing
+                - - AWS S3
+                  - https://aws.amazon.com/s3
+                # - - Azure SQL DB
+                # - https://azure.microsoft.com/en-us/products/azure-sql/database
+                - - AWS RDS
+                  - https://aws.amazon.com/rds
+                - - AWS Beanstalk
+                  - https://aws.amazon.com/elasticbeanstalk
+                - - Git
+                  - https://git-scm.com
+                # - - Gitlab
+                # - https://gitlab.com
+            roles:
+              title: Roles
+              data:
+                - Manager
+                - Developer
+
+          - title: VLGI HUB Web App
+            description: Provides collaborators with access to files, BI dashboards, customer data, performance kpis, educational platform (<a target='_blank' href='https://hub.vlgi.com'>hub.vlgi.com</a>).
+            # It integrates Super Ranking (SR) methodology, aligning strategy with team goals, encouraging engagement, data-driven management, and eligibility for partnership recognition. The API allows Admin Management and seamless integration with the .
+            technologies:
+              title: Stack
+              data:
+                - - Nodejs
+                  - https://nodejs.org
+                - - Typescript
+                  - https://www.typescriptlang.org
+                - - Riot
+                  - https://riot.js.org
+                - - Svelte
+                  - https://svelte.dev
+                - - Docker
+                  - https://www.docker.com
+                - - webpack
+                  - https://webpack.js.org
+                - - Git
+                  - https://git-scm.com
+                # - - Gitlab
+                # - https://gitlab.com
+            roles:
+              title: Roles
+              data:
+                - Manager
+                - Developer
+
+          - title: VLGI Investimentos Rest API
+            description: Serves internal and end-user-facing solutions.
+            technologies:
+              title: Stack
+              data:
+                - - Python
+                  - https://www.python.org
+                - - Flask
+                  - https://flask.palletsprojects.com
+                - - Python-Eve
+                  - https://docs.python-eve.org
+                - - PostgreSQL
+                  - https://www.postgresql.org
+                - - AWS LB
+                  - https://aws.amazon.com/elasticloadbalancing
+                - - AWS S3
+                  - https://aws.amazon.com/s3
+                # - - Azure SQL DB
+                # - https://azure.microsoft.com/en-us/products/azure-sql/database
+                - - AWS RDS
+                  - https://aws.amazon.com/rds
+                - - AWS Beanstalk
+                  - https://aws.amazon.com/elasticbeanstalk
+                - - Git
+                  - https://git-scm.com
+                # - - Gitlab
+                # - https://gitlab.com
+            roles:
+              title: Roles
+              data:
+                - Manager
+                - Developer
+
+          - title: Auth Web Server
+            description: JWT authentication web server.
+            technologies:
+              title: Stack
+              data:
+                - - Nodejs
+                  - https://nodejs.org
+                - - ExpressJS
+                  - https://expressjs.com
+                - - Typescript
+                  - https://www.typescriptlang.org
+                - - PostgreSQL
+                  - https://www.postgresql.org
+                - - JWT
+                  - https://jwt.io
+                - - AWS LB
+                  - https://aws.amazon.com/elasticloadbalancing
+                - - AWS S3
+                  - https://aws.amazon.com/s3
+                # - - Azure SQL DB
+                # - https://azure.microsoft.com/en-us/products/azure-sql/database
+                - - AWS RDS
+                  - https://aws.amazon.com/rds
+                - - AWS Beanstalk
+                  - https://aws.amazon.com/elasticbeanstalk
+                - - Git
+                  - https://git-scm.com
+                # - - Gitlab
+                # - https://gitlab.com
+            roles:
+              title: Roles
+              data:
+                - Manager
+                - Developer
+
+          - title: Mobile APP
+            description: Provides exclusive features for VLGI clients, encompassing podcasts, financial news, events agenda, and a discount club.
+            # Although the first version was completed, the company made a decision to not release the app to the public.
+            technologies:
+              title: Stack
+              data:
+                - - NativeScript
+                  - https://nativescript.org
+                - - Svelte
+                  - https://svelte.dev
+                - - Git
+                  - https://git-scm.com
+                # - - Gitlab
+                # - https://gitlab.com
+            roles:
+              title: Roles
+              data:
+                - Manager
+
+          - title: M1M / VLGI News
+            description: M1M was a financial news portal, rebranded to VLGI News, and is now inactive.
+            technologies:
+              title: Stack
+              data:
+                - - Nodejs
+                  - https://nodejs.org
+                - - Handlebars
+                  - https://handlebarsjs.com
+                - - Express
+                  - https://expressjs.com
+                - - redis
+                  - https://redis.com
+                - - Docker
+                  - https://www.docker.com
+                - - Heroku
+                  - https://www.heroku.com/home
+                - - Git
+                  - https://git-scm.com
+                # - - Gitlab
+                # - https://gitlab.com
+                - - Strapi
+                  - https://strapi.io
+                - - Graphql
+                  - https://graphql.org
+                - - RSS
+                - - PostgreSQL
+                  - https://www.postgresql.org
+            roles:
+              title: Roles
+              data:
+                - Manager
+                - Developer
+
+    - title: Techlead and Developer
+      show: false
+      company: Grupo Milà
+      link: 'https://grupomila.com.br'
+      from: 2019-01-01
+      to: 2019-11-01
+      city: Brasilia
+      state: DF
+      country: Brazil
+      description:
+        - Undertakes AEC jobs, ranging from houses to large buildings (<a target='_blank' href='https://grupomila.com.br'>grupomila</a>, <a target='_blank' href='https://www.arquiteturaemversos.com.br'>arquiteturaemversos</a>).
+      duties:
+        title: Duties
+        data:
+          - Tech Lead, overseeing technical aspects and spearheading technological innovations within the team.
+          - Developer (Typescript, Python and SQL).
+
+      jobs:
+        title: Jobs
+        data:
+          - title: Milà Web Server
+            description: Acts as a centralized hub, handling all communication with the frontend and facilitating access to services.
+            # These encompass third-party services, Mila API, single sign-on strategies, cache strategies, and more.
+            technologies:
+              title: Stack
+              data:
+                - - Nodejs
+                  - https://nodejs.org
+                - - Express
+                  - https://expressjs.com
+                - - MongoDB
+                  - https://www.mongodb.com
+                - - Git
+                  - https://git-scm.com
+                # - - Gitlab
+                # - https://gitlab.com
+            roles:
+              title: Roles
+              data:
+                - Developer
+                - Manager
+
+          - title: Milà Management Web App
+            description: Provides collaborators with access to files, BI Dashboards, construction costs management feature. The APP also facilitates Admin Management of users.
+            technologies:
+              title: Stack
+              data:
+                - - Javascript
+                  - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+                - - Riot
+                  - https://riot.js.org
+                - - Redux
+                  - https://redux.js.org
+                - - Redux-Saga
+                  - https://redux-saga.js.org
+                - - Sass
+                  - https://sass-lang.com
+                - - webpack
+                  - https://webpack.js.org
+                - - Git
+                  - https://git-scm.com
+                # - - Gitlab
+                # - https://gitlab.com
+            # tools:
+            #   title: Tools
+            #   data:
+            #     - - Inkscape
+            #       - https://inkscape.org
+            #     - - Gimp
+            #       - https://www.gimp.org
+            roles:
+              title: Roles
+              data:
+                - Developer
+
+    - title: Developer
+      show: false
+      company: Basso Real Estate
+      link: ''
+      from: 2017-07-01
+      to: 2019-01-01
+      city: Brasilia
+      state: DF
+      country: Brazil
+      description:
+        - Specialized real state management services like rental and sales management.
+      duties:
+        title: Duties
+        data:
+          - Developer (Javascript, Python and SQL).
+          - Technology consultant.
+
+      jobs:
+        title: Jobs
+        data:
+          - title: Management App
+            description: Provides features to manage aspects of property administration, including taxes, bills, charges, tenant management and owner management.
+            # It integrates with third-party platforms, enhancing rental management by facilitating complete bill issuance management. This integration ensures efficiency and accuracy in financial transactions, enhancing the overall property management experience for both property owners and tenants.
+            technologies:
+              title: Stack
+              data:
+                - - Javascript
+                  - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+                - - React
+                  - https://react.dev
+                - - Redux
+                  - https://redux.js.org
+                - - Firebase
+                  - https://firebase.google.com
+                - - Sass
+                  - https://sass-lang.com
+                - - webpack
+                  - https://webpack.js.org
+                - - Git
+                  - https://git-scm.com
+                # - - Gitlab
+                # - https://gitlab.com
+            # tools:
+            #   title: Tools
+            #   data:
+            #     - - Inkscape
+            #       - https://inkscape.org
+            #     - - Gimp
+            #       - https://www.gimp.org
+            roles:
+              title: Roles
+              data:
+                - Developer
+
+    - title: Developer
+      show: false
+      company: Setedezessete
+      link: 'https://setedezessete.com'
+      from: 2015-10-01
+      to: 2017-07-01
+      city: Brasilia
+      state: DF
+      country: Brazil
+      description:
+        - "A Brazilian fashion brand specializing in exclusive design and in-house production of women's clothing: <a target='_blank' href='https://setedezessete.com'>setedezessete.com</a>."
+      duties:
+        title: Duties
+        data:
+          - Developer (Javascript, Python and SQL).
+          - Technology consultant.
+
+      jobs:
+        title: Jobs
+        data:
+          - title: Setedezessete Management App
+            description: Provides inventory, costs, production and customer relationship management.
+            # This solution includes tailor-made order management functionality, allowing meticulous tracking of costs, monitoring the production process, and ensuring adherence to deadlines.
+            technologies:
+              title: Stack
+              data:
+                - - Javascript
+                  - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+                - - Python
+                  - https://www.python.org
+                - - Django
+                  - https://www.djangoproject.com
+                - - MySQL
+                  - https://www.mysql.com
+                - - Heroku
+                  - https://www.heroku.com/home
+                - - Git
+                  - https://git-scm.com
+                # - - Github
+                # - https://github.com
+            # tools:
+            #   title: Tools
+            #   data:
+            #   - - Inkscape
+            #     - https://inkscape.org
+            #   - - Gimp
+            #     - https://www.gimp.org
+            roles:
+              title: Roles
+              data:
+                - Developer
+
+    - title: Investor
+      show: false
+      company: Vendji
+      link: ''
+      from: 2013-01-01
+      to: 2015-01-01
+      city: Brasilia
+      country: Brazil
+      description:
+        - Vendji was a company that developed software consolidating catalogs from various companies like Natura, Boticario, Avon into a single place.
+        - It enabled direct sales representatives to offer their customers products from multiple brands through an up-to-date catalog.
+        - Vendji facilitated credit card payments and streamlined the order process directly within the platform.
+      duties:
+        title: Duties
+        data:
+          - Contributed as an early-stage investor, providing vital financial support and strategic insights.
