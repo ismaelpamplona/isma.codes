@@ -9,7 +9,7 @@ export async function generatePdf(html: string) {
   })
 
   await page.addStyleTag({
-    path: 'src/routes/resume/style.css'
+    path: 'src/routes/resume/style-resume.css'
   })
 
   const pdfBuffer = await page.pdf({ format: 'A4' })
