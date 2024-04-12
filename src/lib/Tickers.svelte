@@ -52,7 +52,6 @@
   .ticker {
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: hidden;
     white-space: nowrap;
     animation: moveLeft 30s linear infinite;
     background-color: inherit;
