@@ -16,9 +16,12 @@
     - name: openai
       icon: simple-icons:openai
       link: https://platform.openai.com/docs/overview
-    - name: llama-gpt
-      icon: fluent-emoji-high-contrast:llama
-      link: https://github.com/getumbrel/llama-gpt
+    # - name: llama-gpt
+    #   icon: fluent-emoji-high-contrast:llama
+    #   link: https://github.com/getumbrel/llama-gpt
+    - name: binance
+      icon: simple-icons:binance
+      link: https://www.binance.com/en/support/faq/binance-options-api-interface-and-websocket-fe0be251ac014a8082e702f83d089e54
 
   links:
     - name: github
@@ -27,9 +30,9 @@
     - name: website
       link: https://isma.codes/
       icon: streamline:web
-    - name: meta
-      icon: logos:meta-icon
-      link: https://llama.meta.com/
+    # - name: meta
+    #   icon: logos:meta-icon
+    #   link: https://llama.meta.com/
 
 - name: ripissue
   description: May your issues rest in peace. CLI tool written in Rust for distributed bug / issue / story tracking with the filesystem and git.
