@@ -43,19 +43,22 @@
     </div>
 
     <div class="hamburguer {showHamburguerMenu ? 'hamburguer-opened' : 'hamburguer-closed'}">
-      <button
-        title="Switch theme"
-        aria-label="Switch theme"
-        tabIndex="0"
-        on:click={() => (showHamburguerMenu = !showHamburguerMenu)}
-        on:keyup={toggleTheme}
-      >
-        <iconify-icon
-          icon={showHamburguerMenu
-            ? 'line-md:menu-to-close-alt-transition'
-            : 'line-md:close-to-menu-alt-transition'}
-        />
-      </button>
+      <div class="hamburguer-header">
+        {#if showHamburguerMenu}<Logo />{/if}
+        <button
+          title="Switch theme"
+          aria-label="Switch theme"
+          tabIndex="0"
+          on:click={() => (showHamburguerMenu = !showHamburguerMenu)}
+          on:keyup={toggleTheme}
+        >
+          <iconify-icon
+            icon={showHamburguerMenu
+              ? 'line-md:menu-to-close-alt-transition'
+              : 'line-md:close-to-menu-alt-transition'}
+          />
+        </button>
+      </div>
 
       {#if showHamburguerMenu}
         <div class="hamburger-links">
@@ -77,6 +80,7 @@
             <iconify-icon class="icon" icon={$darkMode ? 'emojione-v1:sun' : 'ph:moon-duotone'} />
           </button>
         </div>
+        <span class="copyright">© 2024 Ismael Pamplona. All rights reserved.</span>
       {/if}
     </div>
   </nav>
@@ -120,6 +124,7 @@
       height: 100vh;
       width: 100%;
       opacity: 0.98;
+      position: fixed;
     }
 
     .hamburguer {
@@ -127,14 +132,19 @@
       flex-direction: column;
       align-items: flex-end;
       justify-content: flex-start;
-      position: fixed;
       top: 0;
       right: 0;
 
-      button {
-        font-size: 35px;
-        z-index: 20;
-        height: $nav-height;
+      .hamburguer-header {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        button {
+          font-size: 35px;
+          z-index: 20;
+          height: $nav-height;
+        }
       }
 
       .hamburger-links {
@@ -174,5 +184,15 @@
         }
       }
     }
+  }
+
+  .copyright {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+    padding: 10px;
   }
 </style>
