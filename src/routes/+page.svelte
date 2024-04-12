@@ -77,6 +77,7 @@
       right: 0;
       bottom: 0;
       position: absolute;
+      padding: 5px;
     }
 
     .sentence {
