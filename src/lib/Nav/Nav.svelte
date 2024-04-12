@@ -8,6 +8,8 @@
 
   let navLinks = links as Link[]
 
+  let showHamburguerMenu = false
+
   function toggleTheme() {
     darkMode.update((mode) => !mode)
   }
@@ -28,6 +30,7 @@
           class={$page.url.pathname === link.href ? 'active' : ''}>{link.text}</a
         >
       {/each}
+
       <button
         title="Switch theme"
         aria-label="Switch theme"
@@ -35,8 +38,46 @@
         on:click={toggleTheme}
         on:keyup={toggleTheme}
       >
-        <iconify-icon class="icon" icon={$darkMode ? 'emojione-v1:sun' : 'ph:moon-duotone'} />
+        <iconify-icon icon={$darkMode ? 'emojione-v1:sun' : 'ph:moon-duotone'} />
       </button>
+    </div>
+
+    <div class="hamburguer {showHamburguerMenu ? 'hamburguer-opened' : 'hamburguer-closed'}">
+      <button
+        title="Switch theme"
+        aria-label="Switch theme"
+        tabIndex="0"
+        on:click={() => (showHamburguerMenu = !showHamburguerMenu)}
+        on:keyup={toggleTheme}
+      >
+        <iconify-icon
+          icon={showHamburguerMenu
+            ? 'line-md:menu-to-close-alt-transition'
+            : 'line-md:close-to-menu-alt-transition'}
+        />
+      </button>
+
+      {#if showHamburguerMenu}
+        <div class="hamburger-links">
+          {#each navLinks as link}
+            <a
+              href={link.href}
+              title={link.title}
+              aria-label={link.title}
+              on:click={() => (showHamburguerMenu = false)}
+              class={$page.url.pathname === link.href ? 'active' : ''}>{link.text}</a
+            >
+          {/each}
+          <button
+            title="Switch theme"
+            aria-label="Switch theme"
+            tabIndex="0"
+            on:click={toggleTheme}
+          >
+            <iconify-icon class="icon" icon={$darkMode ? 'emojione-v1:sun' : 'ph:moon-duotone'} />
+          </button>
+        </div>
+      {/if}
     </div>
   </nav>
 </header>
@@ -46,6 +87,26 @@
   @import '../../style/colors.scss';
 
   nav {
+    @media only screen and (min-width: $mobile) {
+      --show-links: none;
+      --show-hamburger: flex;
+    }
+
+    @media only screen and (min-width: $tablet) {
+      --show-links: none;
+      --show-hamburger: flex;
+    }
+
+    @media only screen and (min-width: $desktop) {
+      --show-links: flex;
+      --show-hamburger: none;
+    }
+
+    @media only screen and (min-width: $largeDesktop) {
+      --show-links: flex;
+      --show-hamburger: none;
+    }
+
     position: sticky;
     display: flex;
     align-items: center;
@@ -54,6 +115,36 @@
     height: $nav-height;
     z-index: 2;
     top: 0;
+
+    .hamburguer-opened {
+      height: 100vh;
+      width: 100%;
+      opacity: 0.98;
+    }
+
+    .hamburguer {
+      display: var(--show-hamburger);
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-start;
+      position: fixed;
+      top: 0;
+      right: 0;
+
+      button {
+        font-size: 35px;
+        z-index: 20;
+        height: $nav-height;
+      }
+
+      .hamburger-links {
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        top: $nav-height;
+        padding: 20px;
+      }
+    }
 
     a {
       font-weight: 400;
@@ -67,7 +158,7 @@
     }
 
     .links {
-      display: flex;
+      display: var(--show-links);
       padding-right: 20px;
 
       span {

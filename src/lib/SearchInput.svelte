@@ -30,5 +30,6 @@
     width: 100%;
     height: 2.5rem;
     padding: 0 15px;
+    max-width: 90vw;
   }
 </style>

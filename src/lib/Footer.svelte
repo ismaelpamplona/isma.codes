@@ -58,6 +58,7 @@
 
 <style lang="scss">
   @import '../style/colors.scss';
+  @import '../style/sizes.scss';
 
   footer {
     display: flex;
@@ -78,13 +79,14 @@
 
     .content {
       display: flex;
+      flex-wrap: wrap;
+      // flex-direction: var(--content-flex-dir);
       justify-content: space-between;
       padding-bottom: 20px;
       gap: 2rem;
 
       .title {
         font-weight: bold;
-        font-size: 20px;
       }
 
       .list {
@@ -111,7 +113,6 @@
     .copyright {
       display: flex;
       align-items: center;
-      font-size: 12px;
       padding-top: 20px;
     }
   }

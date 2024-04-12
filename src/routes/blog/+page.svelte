@@ -51,6 +51,7 @@
 
   .input-container {
     width: 500px;
+    max-width: 100%;
     margin: 20px auto;
   }
 
@@ -91,7 +92,7 @@
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
     font-weight: 600;
-    line-height: 1.2rem;
+    line-height: 1.6rem;
   }
 
   a {
@@ -100,12 +101,7 @@
 
   .description {
     margin-top: 1.25rem;
-    font-size: 0.875rem;
     line-height: 1.25rem;
-  }
-
-  time {
-    font-size: 0.75rem;
   }
 
   .all-categories-link {

@@ -248,7 +248,7 @@
           <h3>{pos.title}</h3>
           <div class="experience-details">
             <div class="company-details">
-              <h4>{pos.company}</h4>
+              <h4><iconify-icon class="icon" icon="mdi:company" />{pos.company}</h4>
               <div class="company-location">
                 <iconify-icon class="icon" icon="teenyicons:pin-outline" />
                 <span>{pos.city}|</span>
@@ -336,58 +336,34 @@
 
   .resume-container {
     width: 100%;
+
+    @media only screen and (min-width: $mobile) {
+      --details-flex-direction: column;
+      --align-items: start;
+    }
+
+    @media only screen and (min-width: $tablet) {
+      --details-flex-direction: column;
+      --align-items: center;
+    }
+
+    @media only screen and (min-width: $desktop) {
+      --details-flex-direction: row;
+      --align-items: center;
+    }
+
+    @media only screen and (min-width: $largeDesktop) {
+      --details-flex-direction: row;
+      --align-items: center;
+    }
   }
   .tag {
     padding: 2px 6px;
     border-radius: $tag-border-radius;
   }
-  a,
-  p,
-  li,
-  span,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    color: inherit;
-  }
-
-  h1 {
-    font-size: 3em;
-  }
-
-  h2 {
-    font-size: 2.5em;
-  }
-
-  h3 {
-    font-size: 2.2em;
-  }
-
-  h4 {
-    font-size: 1.9em;
-  }
-
-  h5 {
-    font-size: 1.6em;
-  }
-
-  p,
-  span,
-  li,
-  a,
-  .icon-link {
-    font-size: 1em;
-    margin: 3px 0;
-  }
 
   a {
     color: inherit;
-  }
-
-  .icon {
-    display: block;
   }
 
   .skills-tags {
@@ -397,5 +373,27 @@
   .years-experience {
     font-size: 13px;
     font-weight: 400;
+  }
+
+  .experience-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .experience-details {
+    flex-direction: var(--details-flex-direction);
+    align-items: var(--align-items);
+    width: 100%;
+    text-align: left;
+  }
+
+  .company-details {
+    gap: 10px;
+  }
+
+  .icon {
+    display: flex;
   }
 </style>

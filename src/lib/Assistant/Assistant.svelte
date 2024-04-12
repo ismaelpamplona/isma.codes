@@ -119,11 +119,9 @@
     {#if newsCount > 0 && !show}
       <span class="news-count">{newsCount}</span>
     {/if}
-    <iconify-icon
-      class="icon"
-      on:click={minimizeMaximize}
-      icon={show ? 'solar:minimize-square-broken' : 'bi:chat'}
-    />
+    <button on:click={minimizeMaximize}>
+      <iconify-icon icon={show ? 'solar:minimize-square-broken' : 'bi:chat'} />
+    </button>
   </div>
   <div class="content" bind:this={div}>
     {#if outOfService}
@@ -154,9 +152,8 @@
     align-items: center;
     position: fixed;
     right: 10px;
-    bottom: 10px;
+    bottom: 20px;
     max-height: 100%;
-    max-width: 100%;
     border-radius: 10px;
     gap: 5px;
     padding: 10px;
@@ -168,6 +165,10 @@
       justify-content: flex-end;
       align-items: flex-end;
       font-size: 25px;
+
+      button {
+        padding: 0 5px;
+      }
 
       .news-count {
         position: absolute;
@@ -242,12 +243,13 @@
 
   .show-chat,
   .hide-chat {
-    max-width: 100%;
+    max-width: 95vw;
   }
   .show-chat {
     .content {
       height: 500px;
       width: 500px;
+      max-width: 100%;
     }
   }
   .hide-chat {

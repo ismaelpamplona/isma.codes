@@ -33,7 +33,6 @@
     }
 
     .typing-animation {
-      font-size: 20px;
       white-space: nowrap;
       overflow: hidden;
       border-right: 0.15em solid black; /* Cursor */

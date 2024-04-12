@@ -56,6 +56,8 @@
     white-space: nowrap;
     animation: moveLeft 30s linear infinite;
     background-color: inherit;
+    font-size: 12px;
+    gap: 40px;
   }
 
   @keyframes moveLeft {
@@ -70,9 +72,8 @@
   .crypto-pair {
     display: flex;
     align-items: center;
-    padding: 0 10px;
+    gap: 3px;
     span {
-      padding: 5px 10px;
       border-radius: 5px;
       transition: background-color 0.3s ease;
       position: relative;
@@ -100,7 +101,6 @@
     display: inline-block;
     width: 0;
     height: 0;
-    margin-left: 5px;
     border-style: solid;
   }
 

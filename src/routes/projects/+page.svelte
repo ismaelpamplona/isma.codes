@@ -62,11 +62,28 @@
   .input-container {
     width: 500px;
     margin: 20px auto;
+    max-width: 100%;
   }
 
   .container {
+    @media only screen and (min-width: $mobile) {
+      --grid-template-columns: 100%;
+    }
+
+    @media only screen and (min-width: $tablet) {
+      --grid-template-columns: 50% 50%;
+    }
+
+    @media only screen and (min-width: $desktop) {
+      --grid-template-columns: 50% 50%;
+    }
+
+    @media only screen and (min-width: $largeDesktop) {
+      --grid-template-columns: 50% 50%;
+    }
+
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: var(--grid-template-columns);
     justify-content: center;
     gap: 10px;
     width: 100%;

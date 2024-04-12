@@ -11,23 +11,26 @@ code {
   border-radius: 3px;
   padding: 2px 4px;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 0.85em; // Adjusted for inline display
 }
 
-// Styles for code blocks
 pre code {
   display: block;
   white-space: pre-wrap;
   border-radius: 5px;
   padding: 0.5em;
   margin: 0.5em 0;
-  font-size: 0.95em;
   overflow-x: auto;
 }
 
 .dark-theme {
   background-color: $dark-background;
   color: $dark-primary-text;
+
+  .hamburguer-opened {
+    height: 100vh;
+    width: 100%;
+    background-color: $space-cadet-darker;
+  }
 
   code {
     background-color: lighten($dark-background, 10%);
@@ -141,6 +144,10 @@ pre code {
 .light-theme {
   background-color: $light-background;
   color: $light-primary-text;
+
+  .hamburguer-opened {
+    background-color: $dark-sky-blue;
+  }
 
   code {
     background-color: darken($light-background, 5%);
