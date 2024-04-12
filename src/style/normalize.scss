@@ -257,10 +257,24 @@ Interactive
 Add the correct display in Chrome and Safari.
 */
 
+li {
+  margin: 10px 0;
+}
+
 summary {
   display: list-item;
 }
 
 a {
   text-decoration: none;
+}
+
+blockquote {
+  padding: 0 1em;
+  margin: 1em 0;
+  border-left: 4px solid;
+  font-style: italic;
+  font-size: 1.2em;
+  position: relative;
+  margin-left: 20px;
 }

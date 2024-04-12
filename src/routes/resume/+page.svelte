@@ -220,13 +220,13 @@
   </section>
 
   <section>
-    <h2>
-      Stack, tools and skills &nbsp<span class="years-experience">
-        | &nbsp years of experience</span
-      >
-    </h2>
+    <div class="stack-tools-skills">
+      <h2>Stack, tools and skills</h2>
+      <span class="years-experience"> (years of experience)</span>
+    </div>
     <div class="skills-tags">
       <h5>Stack:</h5>
+
       {#each technologies as tech}
         <a class="tag" target="_blank" href={tech[1]}>{tech[0]} </a>
       {/each}
@@ -280,6 +280,7 @@
             <div class="job-container">
               <h5>{job.title}</h5>
               <p>{@html job.description}</p>
+              <br />
               <div class="job-skills">
                 {#if job.technologies}
                   <div class="job-skills-tags">
@@ -315,8 +316,8 @@
 </div>
 
 <style lang="scss">
-  @import './style.css';
   @import '../../style/sizes.scss';
+  // @import './style-resume.css';
 
   .download-btn-container {
     display: flex;
@@ -357,6 +358,26 @@
       --align-items: center;
     }
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  .job-tag-title {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  a,
+  p,
+  span,
+  li {
+    text-align: justify;
+  }
+
   .tag {
     padding: 2px 6px;
     border-radius: $tag-border-radius;
@@ -364,10 +385,6 @@
 
   a {
     color: inherit;
-  }
-
-  .skills-tags {
-    gap: 0 5px;
   }
 
   .years-experience {
@@ -393,7 +410,105 @@
     gap: 10px;
   }
 
-  .icon {
+  .icon-link {
+    font-size: 1em;
     display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    padding: 10px 0;
+    border-bottom: 1px solid #aaa;
+    gap: 5px;
+  }
+
+  section:last-child {
+    border-bottom: none;
+  }
+
+  ul,
+  ol {
+    list-style-type: none;
+  }
+
+  ul,
+  li,
+  p {
+    margin: 5px 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .skills-tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .tag {
+    padding: 2px 6px;
+    border: 1px solid;
+    margin: 0 inherit;
+    text-wrap: nowrap;
+    font-size: 15px;
+    text-transform: lowercase;
+    border-radius: 10px;
+  }
+
+  .years-experience {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .experience-header {
+    border-bottom: 1px solid #999;
+    padding: 10px 0 5px 0;
+  }
+
+  .experience-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .company-details {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .company-location {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .job-container {
+    padding: 10px 0;
+  }
+
+  .job-skills {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .job-skills-tags {
+    display: flex;
+    align-items: center;
+    justify-items: stretch;
+    flex-wrap: wrap;
+    margin: 5px 0;
+    gap: 5px;
   }
 </style>

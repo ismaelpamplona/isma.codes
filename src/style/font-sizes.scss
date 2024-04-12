@@ -1,50 +1,54 @@
 * {
   @media only screen and (min-width: $mobile) {
-    --h1-size: 2em;
-    --h2-size: 1.5em;
-    --h3-size: 1.17em;
+    --h1-size: 2.2em;
+    --h2-size: 1.8em;
+    --h3-size: 1.6em;
     --span-size: 0.9em;
     --anchor-size: 1em;
-    --li-size: 1em;
-    --h4-size: 1.1em;
-    --h5-size: 0.9em;
-    --p-size: 1em;
+    --h4-size: 1.4em;
+    --h5-size: 1.2em;
+    --p-size: 0.9em;
+    --li-size: var(--p-size);
+    --blockquote-size: var(var(--p-size));
   }
 
   @media only screen and (min-width: $tablet) {
-    --h1-size: 2.5em;
-    --h2-size: 2em;
-    --h3-size: 1.33em;
+    --h1-size: 2.6em;
+    --h2-size: 2.2em;
+    --h3-size: 2em;
     --span-size: 1em;
     --anchor-size: 1em;
-    --li-size: 1em;
-    --h4-size: 1.2em;
-    --h5-size: 1em;
+    --h4-size: 1.8em;
+    --h5-size: 1.6em;
     --p-size: 1.1em;
+    --li-size: var(--p-size);
+    --blockquote-size: var(var(--p-size));
   }
 
   @media only screen and (min-width: $desktop) {
     --h1-size: 3em;
     --h2-size: 2.5em;
-    --h3-size: 1.5em;
+    --h3-size: 2.1em;
     --span-size: 1.1em;
     --anchor-size: 1em;
-    --li-size: 1em;
-    --h4-size: 1.3em;
-    --h5-size: 1.1em;
-    --p-size: 1.2em;
+    --h4-size: 1.8em;
+    --h5-size: 1.5em;
+    --p-size: 1em;
+    --li-size: var(--p-size);
+    --blockquote-size: var(var(--p-size));
   }
 
   @media only screen and (min-width: $largeDesktop) {
     --h1-size: 3.5em;
     --h2-size: 3em;
-    --h3-size: 2em;
+    --h3-size: 2.5em;
     --span-size: 1.2em;
     --anchor-size: 1em;
-    --li-size: 1em;
-    --h4-size: 1.5em;
-    --h5-size: 1.2em;
+    --h4-size: 2.1em;
+    --h5-size: 1.7em;
     --p-size: 1.3em;
+    --li-size: var(--p-size);
+    --blockquote-size: var(var(--p-size));
   }
 }
 
@@ -82,4 +86,8 @@ h5 {
 
 p {
   font-size: var(--p-size);
+}
+
+blockquote {
+  font-size: var(--blockquote-size);
 }
