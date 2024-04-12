@@ -35,18 +35,18 @@
   {#each results as project}
     <div class="project-container">
       <div class="info">
-        <h2>{project.name}</h2>
-        <span>{project.description}</span>
+        <h4>{project.name}</h4>
+        <p>{project.description}</p>
       </div>
       <div class="lists">
         <div class="list">
-          <h4>project-links:</h4>
+          <strong>project-links:</strong>
           {#each project.links as link}
             <a target="_blank" href={link.link}><iconify-icon icon={link.icon} /></a>
           {/each}
         </div>
         <div class="list">
-          <h4>stack-links:</h4>
+          <strong>stack-links:</strong>
           {#each project.technologies as tech}
             <a target="_blank" href={tech.link}>{tech.name}<iconify-icon icon={tech.icon} /></a>
           {/each}
@@ -67,41 +67,45 @@
 
   .container {
     @media only screen and (min-width: $mobile) {
-      --grid-template-columns: 100%;
+      --column-count: 1;
     }
 
     @media only screen and (min-width: $tablet) {
-      --grid-template-columns: 50% 50%;
+      --column-count: 2;
     }
 
     @media only screen and (min-width: $desktop) {
-      --grid-template-columns: 50% 50%;
+      --column-count: 2;
     }
 
     @media only screen and (min-width: $largeDesktop) {
-      --grid-template-columns: 50% 50%;
+      --column-count: 2;
     }
 
-    display: grid;
-    grid-template-columns: var(--grid-template-columns);
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    padding-bottom: 20px;
+    h4,
+    a,
+    p {
+      margin: 0;
+    }
+
+    column-count: var(--column-count);
+    column-gap: 10px;
 
     .project-container {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 20px;
       padding: 10px;
       border: 1px solid;
       border-radius: $tag-border-radius;
+      gap: 20px;
+      margin-bottom: 10px;
+      break-inside: avoid;
 
       .info {
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 10px;
       }
 
       .lists {
