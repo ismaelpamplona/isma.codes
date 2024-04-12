@@ -39,18 +39,18 @@
     </div>
     <div class="list contacts">
       <span class="title">contact:</span>
-      <span
-        ><iconify-icon class="icon" icon={contacts.city.icon} />
-        <span>{contacts.city.text}</span></span
-      >
-      <span
-        ><iconify-icon class="icon" icon={contacts.phone.icon} />
-        <span>{contacts.phone.text}</span></span
-      >
-      <span
-        ><iconify-icon class="icon" icon={contacts.email.icon} />
-        <span>{contacts.email.text}</span></span
-      >
+      <span>
+        <iconify-icon class="icon" icon={contacts.phone.icon} />
+        {contacts.city.text}
+      </span>
+      <span>
+        <iconify-icon class="icon" icon={contacts.phone.icon} />
+        {contacts.phone.text}
+      </span>
+      <span>
+        <iconify-icon class="icon" icon={contacts.phone.icon} />
+        {contacts.email.text}
+      </span>
     </div>
   </div>
   <span class="copyright">© 2024 Ismael Pamplona. All rights reserved.</span>
@@ -84,7 +84,6 @@
       justify-content: space-between;
       padding-bottom: 20px;
       gap: 2rem;
-
       .title {
         font-weight: bold;
       }
@@ -114,6 +113,7 @@
       display: flex;
       align-items: center;
       padding-top: 20px;
+      font-size: 12px;
     }
   }
 </style>
