@@ -10,6 +10,8 @@ categories:
   - security
 ---
 
+## Content
+
 ## Introduction
 
 With the development of the Brazilian technology sector, the demand for robust API systems for payroll has become crucial. Rust, a language designed for performance and safety, is an excellent choice for such systems. This article explores why Rust is ideal for building Brazilian payroll API systems, with examples from the `abroad-payroll-api`.
