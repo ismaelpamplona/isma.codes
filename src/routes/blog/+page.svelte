@@ -77,8 +77,8 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    column-gap: 1rem;
-    row-gap: 0.5rem;
+    column-gap: 5px;
+    row-gap: 5px;
     line-height: 1rem;
   }
 
@@ -89,10 +89,13 @@
   }
 
   h3 {
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
+    margin-top: 0.72rem;
+    margin-bottom: 0.2rem;
     font-weight: 600;
-    line-height: 1.6rem;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   a {
