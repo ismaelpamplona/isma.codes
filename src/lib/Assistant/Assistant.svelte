@@ -152,11 +152,12 @@
     align-items: center;
     position: fixed;
     right: 10px;
-    bottom: 20px;
+    bottom: 10px;
     max-height: 100%;
     border-radius: 10px;
     gap: 5px;
     padding: 10px;
+    opacity: 0.98;
 
     .header {
       display: flex;
@@ -218,6 +219,7 @@
           width: fit-content;
           max-width: 90%;
           border-radius: 25px;
+          font-size: 12px;
         }
 
         .assistant-msg {
