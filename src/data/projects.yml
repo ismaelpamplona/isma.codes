@@ -7,6 +7,9 @@
     - name: kit
       icon: vscode-icons:file-type-svelteconfig
       link: https://kit.svelte.dev/
+    - name: vite
+      icon: skill-icons:vite-dark
+      link: https://vitejs.dev/
     - name: typescript
       icon: devicon:typescript
       link: https://www.typescriptlang.org/
@@ -88,6 +91,9 @@
     - name: svelte
       icon: devicon:svelte
       link: https://svelte.dev/
+    - name: vite
+      icon: skill-icons:vite-dark
+      link: https://vitejs.dev/
     - name: typescript
       icon: devicon:typescript
       link: https://www.typescriptlang.org/
@@ -150,6 +156,9 @@
     - name: svelte
       icon: devicon:svelte
       link: https://svelte.dev/
+    - name: vite
+      icon: skill-icons:vite-dark
+      link: https://vitejs.dev/
     - name: typescript
       icon: devicon:typescript
       link: https://www.typescriptlang.org/
