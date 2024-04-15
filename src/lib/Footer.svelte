@@ -15,12 +15,15 @@
     <div class="list links">
       <span class="title">pages:</span>
       {#each navLinks as link}
-        <a
-          href={link.href}
-          title={link.title}
-          aria-label={link.title}
-          class={$page.url.pathname === link.href ? 'active' : ''}>{link.text}</a
-        >
+        <span>
+          >
+          <a
+            href={link.href}
+            title={link.title}
+            aria-label={link.title}
+            class={$page.url.pathname === link.href ? 'active' : ''}>{link.text}</a
+          >
+        </span>
       {/each}
     </div>
     <div class="list social-network">
@@ -40,7 +43,7 @@
     <div class="list contacts">
       <span class="title">contact:</span>
       <span>
-        <iconify-icon class="icon" icon={contacts.phone.icon} />
+        <iconify-icon class="icon" icon={contacts.city.icon} />
         {contacts.city.text}
       </span>
       <span>
@@ -48,7 +51,7 @@
         {contacts.phone.text}
       </span>
       <span>
-        <iconify-icon class="icon" icon={contacts.phone.icon} />
+        <iconify-icon class="icon" icon={contacts.email.icon} />
         {contacts.email.text}
       </span>
     </div>
@@ -59,7 +62,6 @@
 <style lang="scss">
   @import '../style/colors.scss';
   @import '../style/sizes.scss';
-
   footer {
     display: flex;
     flex-direction: column;
