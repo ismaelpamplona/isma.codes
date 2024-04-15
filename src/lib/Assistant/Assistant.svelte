@@ -114,19 +114,19 @@
   // })
 </script>
 
-<div class="container assistant-container {show ? 'show-chat' : 'hide-chat'}">
-  <div class="header">
-    {#if newsCount > 0 && !show}
-      <span class="news-count">{newsCount}</span>
-    {/if}
-    <button on:click={minimizeMaximize}>
-      <iconify-icon icon={show ? 'solar:minimize-square-broken' : 'bi:chat'} />
-    </button>
-  </div>
-  <div class="content" bind:this={div}>
-    {#if outOfService}
+{#if outOfService}
+  <div class="container assistant-container {show ? 'show-chat' : 'hide-chat'}">
+    <div class="header">
+      {#if newsCount > 0 && !show}
+        <span class="news-count">{newsCount}</span>
+      {/if}
+      <button on:click={minimizeMaximize}>
+        <iconify-icon icon={show ? 'solar:minimize-square-broken' : 'bi:chat'} />
+      </button>
+    </div>
+    <div class="content" bind:this={div}>
       <span>Out of service</span>
-    {:else}
+
       {#await updateChat() then}
         {#each chat as msg}
           <div class="message-container">
@@ -136,13 +136,13 @@
           </div>
         {/each}
       {/await}
-    {/if}
-    {#if loaddingMsg}
-      <span class="loading-msg">Ismael is typing...</span>
-    {/if}
+      {#if loaddingMsg}
+        <span class="loading-msg">Ismael is typing...</span>
+      {/if}
+    </div>
+    <textarea on:keydown={sendMessage} bind:value={userInput} id="userInput"></textarea>
   </div>
-  <textarea on:keydown={sendMessage} bind:value={userInput} id="userInput"></textarea>
-</div>
+{/if}
 
 <style lang="scss">
   .container {
