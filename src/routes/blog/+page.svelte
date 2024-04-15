@@ -110,4 +110,8 @@
   .all-categories-link {
     margin: 20px 0;
   }
+
+  p {
+    text-align: justify;
+  }
 </style>

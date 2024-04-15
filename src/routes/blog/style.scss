@@ -18,3 +18,7 @@
 :global(.content-container ol > li) {
   margin-left: 30px;
 }
+
+:global(p) {
+  text-align: justify;
+}
