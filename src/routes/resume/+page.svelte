@@ -3,7 +3,6 @@
   import Spinner from '$lib/Spinner.svelte'
   import data from '../../data/personal.yml'
   import type { WorkExperience } from './types'
-  import { jsPDF } from 'jspdf'
 
   const { title, about, contact, education, languages, social, stack, experience } = data
 
