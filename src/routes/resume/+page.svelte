@@ -150,6 +150,11 @@
   <span>download</span>
 </div>
 
+<!-- <a target="_blank" href="ismael_pamplona_resume.pdf" class="download-btn-container">
+  <iconify-icon class="icon download" icon="ic:baseline-download"></iconify-icon>
+  <span>download</span>
+</a> -->
+
 <div class="resume-container" id="resume-container">
   <section>
     <h1>{title.name}</h1>
