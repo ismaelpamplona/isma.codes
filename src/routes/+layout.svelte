@@ -17,7 +17,7 @@
       <slot />
     </div>
   </div>
-  <!-- <Assistant bind:data /> -->
+  <Assistant bind:data />
   <Footer />
 </div>
 
