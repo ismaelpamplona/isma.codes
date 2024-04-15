@@ -317,7 +317,6 @@
 
 <style lang="scss">
   @import '../../style/sizes.scss';
-  // @import './style-resume.css';
 
   .download-btn-container {
     display: flex;
@@ -368,7 +367,6 @@
     margin: 0;
     display: flex;
     align-items: center;
-    font-family: 'Courier New', Courier, monospace;
   }
 
   a,
