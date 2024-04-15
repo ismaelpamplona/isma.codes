@@ -12,6 +12,7 @@
 <svelte:head>
   <title>isma.codes - home</title>
 </svelte:head>
+
 <div class="container">
   <div class="sentence">
     <div class="slogan">
@@ -20,7 +21,7 @@
     </div>
 
     <div class="title">
-      <h1>{data.title.name}</h1>
+      <h3>{data.title.name}</h3>
       <span>{@html data.title.position}</span>
     </div>
   </div>
@@ -36,31 +37,23 @@
   .container {
     @media only screen and (min-width: $mobile) {
       --slogan-font-size: 45px;
-      --h1-size: 20px;
-      --span-size: 15px;
     }
 
     @media only screen and (min-width: $tablet) {
       --slogan-font-size: 60px;
-      --h1-size: 30px;
-      --span-size: 20px;
     }
 
     @media only screen and (min-width: $desktop) {
       --slogan-font-size: 70px;
-      --h1-size: 30px;
-      --span-size: 20px;
     }
 
     @media only screen and (min-width: $largeDesktop) {
       --slogan-font-size: 80px;
-      --h1-size: 35px;
-      --span-size: 20px;
     }
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     min-height: calc(100vh - $nav-height);
 
@@ -84,42 +77,32 @@
       display: flex;
       top: 0;
       flex-direction: column;
-      justify-content: flex-start;
-      height: 100%;
+      gap: 200px;
     }
 
     .title,
     .slogan {
       max-width: 100%;
       width: $page-width;
-      padding: 50px 0;
     }
 
     .title {
       display: flex;
       flex-direction: column;
       align-items: end;
-      h1,
+      h3,
       span {
-        text-align: end;
-      }
-
-      h1 {
-        font-weight: 600;
-        font-size: var(--h1-size);
+        margin: 0;
       }
 
       span {
         font-weight: 400;
-        font-size: var(--span-size);
       }
     }
 
     .slogan {
       font-size: var(--slogan-font-size);
       font-weight: bolder;
-      margin-top: 100px;
-
       @keyframes gradientAnimation {
         0% {
           background-position: 0% 50%;
