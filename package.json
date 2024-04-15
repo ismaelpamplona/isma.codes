@@ -47,7 +47,7 @@
     "iconify-icon": "^2.0.0",
     "marked": "^12.0.1",
     "openai": "^4.33.0",
-    "puppeteer": "^22.6.3",
+    "playwright": "^1.43.1",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-slug": "^6.0.0",
     "remark-footnotes": "^4.0.1",

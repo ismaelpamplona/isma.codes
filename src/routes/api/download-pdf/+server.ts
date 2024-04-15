@@ -8,8 +8,7 @@ export const POST: RequestHandler = async ({ request }) => {
   return new Response(pdfBuffer, {
     status: 201,
     headers: {
-      'Content-Type': 'application/pdf',
-      'Content-Disposition': 'attachment filename="resume.pdf"'
+      'Content-Type': 'application/pdf'
     }
   })
 }
