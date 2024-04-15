@@ -12,7 +12,7 @@ const config = {
   kit: {
     adapter: vercel(),
     paths: {
-      base: dev ? '' : '/build'
+      base: ''
     }
   }
 }
