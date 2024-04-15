@@ -1,10 +1,12 @@
-import puppeteer from 'puppeteer'
-import chromium from 'chromium'
+import puppeteer from 'puppeteer-core'
+import chromium from '@sparticuz/chromium'
 
 export async function generatePdf(html: string) {
   const browser = await puppeteer.launch({
-    executablePath: chromium.path
+    args: chromium.args,
+    executablePath: await chromium.executablePath()
   })
+
   const page = await browser.newPage()
 
   await page.setContent(html, {
