@@ -16,7 +16,7 @@ const config = {
       strict: false
     }),
     paths: {
-      base: dev ? '' : 'isma.codes'
+      base: ''
     }
   }
 }
