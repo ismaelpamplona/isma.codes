@@ -90,6 +90,7 @@
 
     column-count: var(--column-count);
     column-gap: 10px;
+    margin-bottom: 20px;
 
     .project-container {
       display: flex;
