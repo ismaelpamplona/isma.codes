@@ -1,6 +1,6 @@
 import OpenAI from 'openai'
 import type { ChatCompletion, Message } from './types'
-import { OPENAI_API_KEY, TEST } from '$env/static/private'
+import { OPENAI_API_KEY } from '$env/static/private'
 import instructions from '../../data/assistant-instructions.yml'
 import links from '../../data/links.yml'
 import data from '../../data/personal.yml'
@@ -8,8 +8,6 @@ import data from '../../data/personal.yml'
 const openai = new OpenAI({
   apiKey: OPENAI_API_KEY
 })
-
-console.log(TEST)
 
 const messages: Message[] = [
   {
