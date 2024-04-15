@@ -11,8 +11,8 @@ const config = {
   preprocess: [sveltePreProcess(), mdsvex(mdsvexConfig)],
   kit: {
     adapter: adapter({
-      pages: 'build',
-      assets: 'build',
+      pages: 'public',
+      assets: 'public',
       strict: false
     }),
     paths: {
