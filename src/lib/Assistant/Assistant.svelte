@@ -45,6 +45,7 @@
       lastCount = chat.length
       newsCount = chat.length
       // localStorage.setItem('chatData', JSON.stringify(chat))
+      outOfService = false
     } catch (error) {
       console.error('Error updating chat:', error)
       outOfService = true
@@ -114,7 +115,7 @@
   // })
 </script>
 
-{#if outOfService}
+{#if !outOfService}
   <div class="container assistant-container {show ? 'show-chat' : 'hide-chat'}">
     <div class="header">
       {#if newsCount > 0 && !show}
@@ -125,8 +126,6 @@
       </button>
     </div>
     <div class="content" bind:this={div}>
-      <span>Out of service</span>
-
       {#await updateChat() then}
         {#each chat as msg}
           <div class="message-container">
