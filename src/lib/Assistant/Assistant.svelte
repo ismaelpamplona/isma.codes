@@ -147,6 +147,7 @@
   @import '../../style/sizes.scss';
 
   .container {
+    --container-padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -154,10 +155,10 @@
     position: fixed;
     right: 10px;
     bottom: 10px;
-    max-height: calc(100% - $nav-height * 2);
+    max-height: calc(100% - $nav-height - var(--container-padding) * 2);
     border-radius: 10px;
     gap: 5px;
-    padding: 10px;
+    padding: var(--container-padding);
     opacity: 0.98;
 
     .header {
