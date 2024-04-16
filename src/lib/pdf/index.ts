@@ -8,9 +8,6 @@ export async function generatePdf(html: string) {
     executablePath: await chromium.executablePath()
   })
 
-  const basePath = process.cwd()
-
-  const filePath = path.join(basePath, 'style-resume.css')
   const page = await browser.newPage()
 
   await page.setContent(html, {
@@ -18,7 +15,7 @@ export async function generatePdf(html: string) {
   })
 
   await page.addStyleTag({
-    path: filePath
+    url: 'https://isma-codes.vercel.app/style-resume.css'
   })
 
   const pdfBuffer = await page.pdf({ format: 'A4' })
