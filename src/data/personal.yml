@@ -12,7 +12,7 @@ contact:
     icon: bi:phone
     text: '+5561981317178'
   email:
-    icon: line-md:email
+    icon: eva:email-outline
     text: 'isma@cwnt.io'
 
 social:
