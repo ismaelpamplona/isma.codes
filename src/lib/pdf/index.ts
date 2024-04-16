@@ -1,5 +1,10 @@
 import puppeteer from 'puppeteer-core'
 import chromium from '@sparticuz/chromium'
+import path from 'path'
+
+const currentDir = path.dirname(new URL(import.meta.url).pathname)
+
+const styleFilePath = path.resolve(currentDir, 'style-resume.css')
 
 export async function generatePdf(html: string) {
   const browser = await puppeteer.launch({
@@ -12,11 +17,9 @@ export async function generatePdf(html: string) {
   await page.setContent(html, {
     waitUntil: 'networkidle0'
   })
-
   await page.addStyleTag({
-    path: 'style-resume.css'
+    path: styleFilePath
   })
-
   const pdfBuffer = await page.pdf({ format: 'A4' })
 
   await browser.close()
