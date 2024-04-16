@@ -10,7 +10,7 @@ export async function generatePdf(html: string) {
 
   const basePath = process.cwd()
 
-  const filePath = path.join(basePath, 'static/style-resume.css')
+  const filePath = path.join(basePath, 'style-resume.css')
   const page = await browser.newPage()
 
   await page.setContent(html, {
