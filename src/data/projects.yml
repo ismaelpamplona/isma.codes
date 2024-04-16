@@ -124,6 +124,9 @@
     - name: github
       link: https://github.com/ismaelpamplona/pomato
       icon: mdi:github
+    - name: crates.io
+      link: https://crates.io/crates/pomodoro-automation
+      icon: game-icons:cargo-crate
 
 - name: leet-code-workspace-in-rust
   description: Dive into solving LeetCode challenges with Rust in this workspace that provides idiomatic, efficient solutions. It's a community-driven repository perfect for learning Rust best practices and improving problem-solving skills. Contributions are welcome!
