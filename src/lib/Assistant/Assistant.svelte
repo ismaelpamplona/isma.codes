@@ -144,6 +144,8 @@
 {/if}
 
 <style lang="scss">
+  @import '../../style/sizes.scss';
+
   .container {
     display: flex;
     flex-direction: column;
@@ -152,7 +154,7 @@
     position: fixed;
     right: 10px;
     bottom: 10px;
-    max-height: 100%;
+    max-height: calc(100% - $nav-height);
     border-radius: 10px;
     gap: 5px;
     padding: 10px;
@@ -249,6 +251,7 @@
   .show-chat {
     .content {
       height: 500px;
+      max-height: 100%;
       width: 500px;
       max-width: 100%;
     }
