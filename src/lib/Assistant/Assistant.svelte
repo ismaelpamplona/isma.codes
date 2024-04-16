@@ -154,7 +154,7 @@
     position: fixed;
     right: 10px;
     bottom: 10px;
-    max-height: calc(100% - $nav-height);
+    max-height: calc(100% - $nav-height * 2);
     border-radius: 10px;
     gap: 5px;
     padding: 10px;
