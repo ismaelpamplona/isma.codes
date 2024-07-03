@@ -1,6 +1,6 @@
 ---
 title: Protecting Clients from Server Issues
-date: '2023-10-23'
+date: '2024-07-03'
 description: >-
   Learn how to safeguard clients from server failures by understanding synchronous and asynchronous clients, circuit breakers, fail-fast design principles, bulkhead patterns, and shuffle sharding. This comprehensive guide covers practical implementations and real-world examples to ensure your applications remain robust and resilient.
 categories:
