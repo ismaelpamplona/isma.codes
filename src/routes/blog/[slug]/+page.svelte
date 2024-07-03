@@ -1,7 +1,9 @@
 <script lang="ts">
-  import type { SvelteComponent } from 'svelte'
+  import { onMount, type SvelteComponent } from 'svelte'
   import { base } from '$app/paths'
-  import type { PostMetadata } from '../../../helpers/utils'
+  import type { PostMetadata } from '../../../types/posts'
+  import mermaid from 'mermaid'
+  import { darkMode } from '$lib/Nav/stores'
 
   type DataType = PostMetadata & {
     Content: typeof SvelteComponent
@@ -10,6 +12,23 @@
   export let data: DataType
 
   const { title, date, description, categories, Content } = data
+
+  onMount(async () => {
+    let theme = $darkMode ? 'dark' : 'light'
+    changeTheme(theme)
+  })
+
+  async function changeTheme(newTheme: string) {
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: newTheme
+    })
+    await mermaid.run({
+      querySelector: '.mermaid'
+    })
+  }
+
+  $: $darkMode ? changeTheme('dark') : changeTheme('light')
 </script>
 
 <svelte:head>

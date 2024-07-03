@@ -4,10 +4,10 @@
     --h2-size: 1.8em;
     --h3-size: 1.6em;
     --span-size: 0.9em;
-    --anchor-size: 1em;
+    --p-size: 0.9em;
+    --anchor-size: var(--p-size);
     --h4-size: 1.4em;
     --h5-size: 1.2em;
-    --p-size: 0.9em;
     --li-size: var(--p-size);
     --blockquote-size: var(var(--p-size));
   }
@@ -17,10 +17,10 @@
     --h2-size: 2.2em;
     --h3-size: 2em;
     --span-size: 1em;
-    --anchor-size: 1em;
+    --p-size: 1.1em;
+    --anchor-size: var(--p-size);
     --h4-size: 1.8em;
     --h5-size: 1.6em;
-    --p-size: 1.1em;
     --li-size: var(--p-size);
     --blockquote-size: var(var(--p-size));
   }
@@ -30,10 +30,10 @@
     --h2-size: 2.5em;
     --h3-size: 2.1em;
     --span-size: 1.1em;
-    --anchor-size: 1em;
+    --p-size: 1em;
+    --anchor-size: var(--p-size);
     --h4-size: 1.8em;
     --h5-size: 1.5em;
-    --p-size: 1em;
     --li-size: var(--p-size);
     --blockquote-size: var(var(--p-size));
   }
@@ -43,10 +43,10 @@
     --h2-size: 3em;
     --h3-size: 2.5em;
     --span-size: 1.2em;
-    --anchor-size: 1em;
+    --p-size: 1.1em;
+    --anchor-size: var(--p-size);
     --h4-size: 2.1em;
     --h5-size: 1.7em;
-    --p-size: 1.3em;
     --li-size: var(--p-size);
     --blockquote-size: var(var(--p-size));
   }
