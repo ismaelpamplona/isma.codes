@@ -145,6 +145,99 @@ stack:
 experience:
   title: Work Experience
   data:
+    - title: Software Engineer
+      show: true
+      company: Scale AI
+      link: 'https://github.com/cwnt-io'
+      from: 2024-03-01
+      to: Present
+      city: San Francisco (remote)
+      state: CA
+      country: United States
+      description:
+        - Scale AI is an artificial intelligence company headquartered in San Francisco in the US State of California. The company provides labeled data used to train AI applications.
+      duties:
+        title: Duties
+        data:
+          - Software Engineer for AI training.
+
+      jobs:
+        title: Jobs
+        data:
+          - title: Coding MultiTurn Deviation
+            description: The Coding MultiTurn Deviations project aims to identify significant differences in the model's responses during programme-oriented conversations to highlight areas of strength and improvement in the model's performance.
+            technologies:
+              title: Stack
+              data:
+                - - Python
+                  - https://www.python.org
+                - - Javascript
+                  - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+                - - Typescript
+                  - https://www.typescriptlang.org
+                - - PostgreSQL
+                  - https://www.postgresql.org
+                - - MariaDB
+                  - https://mariadb.org/documentation/
+                - - Rust
+                  - https://www.rust-lang.org
+                - - CSS
+                  - https://developer.mozilla.org/en-US/docs/Web/CSS
+                - - HTML
+                  - https://developer.mozilla.org/en-US/docs/Web/HTML
+                - - JAVA
+                  - https://dev.java/
+
+            roles:
+              title: Roles
+              data:
+                - Developer
+
+          - title: Code V Code
+            description: Code V Code project aims to evaluate the capability of large language models to call API tools.
+            technologies:
+              title: Stack
+              data:
+                - - Python
+                  - https://www.python.org
+                - - Javascript
+                  - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+                - - Typescript
+                  - https://www.typescriptlang.org
+
+            roles:
+              title: Roles
+              data:
+                - Developer
+
+          - title: Standard Eval Code
+            description: The Standard Eval Code project is dedicated to promoting excellence in the evaluation of AI model responses, contributing to the establishment of fair evaluations across different dimensions and advancing the development of artificial intelligence.
+            technologies:
+              title: Stack
+              data:
+                - - Python
+                  - https://www.python.org
+                - - Javascript
+                  - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+                - - Typescript
+                  - https://www.typescriptlang.org
+                - - PostgreSQL
+                  - https://www.postgresql.org
+                - - MariaDB
+                  - https://mariadb.org/documentation/
+                - - Rust
+                  - https://www.rust-lang.org
+                - - CSS
+                  - https://developer.mozilla.org/en-US/docs/Web/CSS
+                - - HTML
+                  - https://developer.mozilla.org/en-US/docs/Web/HTML
+                - - JAVA
+                  - https://dev.java/
+            roles:
+              title: Roles
+              data:
+                - Developer
+
     - title: Co-founder and Software Developer
       show: true
       company: cwnt.io
