@@ -1,6 +1,6 @@
 ---
 title: Handling High Traffic for Ticket Sales
-date: '2024-07-03'
+date: '2024-05-01'
 description: >-
   Managing high traffic for ticket sales requires a strategic approach. By combining load balancing and queue-based systems, you can ensure that the system remains responsive and efficient, even under heavy loads. This method provides a scalable and reliable way to handle large volumes of user requests during peak times.
 categories:
