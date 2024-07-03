@@ -5,23 +5,6 @@ body {
   transition: background-color 0.3s ease;
 }
 
-code {
-  display: inline-block;
-  white-space: nowrap;
-  border-radius: 3px;
-  padding: 2px 4px;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-pre code {
-  display: block;
-  white-space: pre-wrap;
-  border-radius: 5px;
-  padding: 0.5em;
-  margin: 0.5em 0;
-  overflow-x: auto;
-}
-
 .dark-theme {
   background-color: $dark-background;
   color: $dark-primary-text;
@@ -30,17 +13,6 @@ pre code {
     height: 100vh;
     width: 100%;
     background-color: $space-cadet-darker;
-  }
-
-  code {
-    background-color: lighten($dark-background, 10%);
-    color: $dark-primary-text;
-    border: 1px solid darken($dark-background, 15%);
-  }
-
-  pre code {
-    background-color: lighten($dark-background, 5%);
-    border: 1px solid darken($dark-background, 10%);
   }
 
   a {
@@ -147,17 +119,6 @@ pre code {
 
   .hamburguer-opened {
     background-color: $dark-sky-blue;
-  }
-
-  code {
-    background-color: darken($light-background, 5%);
-    color: $light-primary-text;
-    border: 1px solid darken($light-background, 10%);
-  }
-
-  pre code {
-    background-color: $light-background;
-    border: 1px solid darken($light-background, 10%);
   }
 
   a {
