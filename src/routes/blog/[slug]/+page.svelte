@@ -16,6 +16,14 @@
   onMount(async () => {
     let theme = $darkMode ? 'dark' : 'light'
     changeTheme(theme)
+    const tables = document.querySelectorAll<HTMLTableElement>('table')
+    tables.forEach((table) => {
+      const wrapper = document.createElement('div')
+      wrapper.className = 'table-wrapper'
+
+      table.parentNode?.insertBefore(wrapper, table)
+      wrapper.appendChild(table)
+    })
   })
 
   async function changeTheme(newTheme: string) {

@@ -282,3 +282,8 @@ blockquote {
 article {
   margin-bottom: 2rem;
 }
+
+.table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+}
