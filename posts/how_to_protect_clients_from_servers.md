@@ -12,6 +12,8 @@ categories:
   - engineering
 ---
 
+## Contents
+
 ## Introduction
 
 In today's interconnected world, ensuring that clients are protected from server failures is paramount to building resilient and reliable systems. Whether you're dealing with synchronous or asynchronous clients, implementing circuit breakers, adopting fail-fast principles, using bulkhead patterns, or applying shuffle sharding, each strategy plays a crucial role in maintaining system stability. This guide delves into these concepts with practical examples to help you safeguard your applications against common server issues.
