@@ -1,6 +1,6 @@
 ---
 title: How to deliver data at large scale
-date: '2024-07-05'
+date: '2024-07-04'
 description: >
   This guide covers strategies for delivering data at a large scale, focusing on message consumption, partitioning, request routing, rebalancing partitions, and consistent hashing. It explores how to handle large amounts of data efficiently, ensuring scalability, performance, and reliability in software systems.
 categories:
