@@ -4,8 +4,8 @@ date: '2024-06-12'
 description: >-
   Chaos Engineering is the discipline of experimenting on a distributed system to ensure it can tolerate unanticipated failure conditions. This way, organizations can pre-identify and correct issues to build more reliable and fault-tolerant systems. The fundamental principles, benefits, tools, and best practices about how to carry out chaos engineering are defined within this paper. Real-world examples have been added to guide you in implementing this powerful approach to improve system reliability.
 categories:
-  - chaos-engineering
   - architecture
+  - chaos-engineering
   - engineering
 ---
 

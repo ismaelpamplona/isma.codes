@@ -4,11 +4,11 @@ date: '2024-05-28'
 description: >-
   Discover how to choose the best database for your project by understanding your data requirements, scalability needs, and operational factors. Explore real-world examples to see how different databases excel in various scenarios.
 categories:
-  - database
   - data-management
+  - database
   - engineering
-  - technology
   - infrastructure
+  - technology
 ---
 
 ## Contents

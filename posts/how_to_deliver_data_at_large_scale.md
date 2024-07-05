@@ -4,12 +4,12 @@ date: '2024-07-05'
 description: >
   This guide covers strategies for delivering data at a large scale, focusing on message consumption, partitioning, request routing, rebalancing partitions, and consistent hashing. It explores how to handle large amounts of data efficiently, ensuring scalability, performance, and reliability in software systems.
 categories:
+  - consistent-hashing
   - data-scaling
+  - engineering
   - message-consumption
   - partitioning
   - request-routing
-  - consistent-hashing
-  - engineering
 ---
 
 ## Contents

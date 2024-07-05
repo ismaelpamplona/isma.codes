@@ -4,10 +4,10 @@ date: '2024-04-10'
 description: >-
   Exploring the advantages of using Rust to build system APIs for Brazilian payroll, focusing on performance, safety, and concurrency.
 categories:
-  - systems programming
-  - rust
   - rest api
+  - rust
   - security
+  - systems-programming
 ---
 
 ## Content
