@@ -105,6 +105,33 @@ body {
     }
   }
 
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: $dark-background;
+    color: $dark-primary-text;
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid $dark-secondary-text;
+    }
+
+    th {
+      background-color: $space-cadet-darker;
+      color: $chinese-white;
+    }
+
+    tr:nth-child(even) {
+      background-color: lighten($dark-background, 5%);
+    }
+
+    tr:hover {
+      background-color: lighten($dark-background, 10%);
+    }
+  }
+
   footer {
     background: $space-cadet-darker;
     .copyright {
@@ -207,6 +234,33 @@ body {
     background: $assistant-container-bg-light;
     .assistant-msg {
       border: 1px solid $assistant-msg-bg-light;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: $light-background;
+    color: $light-primary-text;
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid $light-secondary-text;
+    }
+
+    th {
+      background-color: $dark-sky-blue;
+      color: $dark-background;
+    }
+
+    tr:nth-child(even) {
+      background-color: $bone;
+    }
+
+    tr:hover {
+      background-color: lighten($bone, 10%);
     }
   }
 
