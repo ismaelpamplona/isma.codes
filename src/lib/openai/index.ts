@@ -1,9 +1,43 @@
 import OpenAI from 'openai'
-import type { ChatCompletion, Message } from './types'
 import { OPENAI_API_KEY } from '$env/static/private'
 import instructions from '../../data/assistant-instructions.yml'
 import links from '../../data/links.yml'
 import data from '../../data/personal.yml'
+
+type ChatCompletion = {
+  id: string
+  object: string
+  created: number
+  model: string
+  choices: Array<{
+    index: number
+    message: Message
+    logprobs: {
+      content: Array<{
+        token: string
+        logprob: number
+        bytes: number[] | null
+        top_logprobs: Array<{
+          token: string
+          logprob: number
+          bytes: number[] | null
+        }>
+      }>
+    }
+    finish_reason: string
+  }>
+  usage: {
+    prompt_tokens: number
+    completion_tokens: number
+    total_tokens: number
+  }
+  system_fingerprint: string | null | undefined
+}
+
+type Message = {
+  role: 'user' | 'system' | 'assistant'
+  content: string
+}
 
 const openai = new OpenAI({
   apiKey: OPENAI_API_KEY
