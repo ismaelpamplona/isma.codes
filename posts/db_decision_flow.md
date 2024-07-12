@@ -8,7 +8,6 @@ categories:
   - database
   - engineering
   - infrastructure
-  - technology
 ---
 
 ## Contents

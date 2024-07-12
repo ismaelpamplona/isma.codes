@@ -7,7 +7,7 @@ categories:
   - distributed-systems
   - engineering
   - network
-  - performance-optimization
+  - performance
   - reliability
   - system-design
 ---

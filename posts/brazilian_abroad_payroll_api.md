@@ -4,7 +4,7 @@ date: '2024-04-10'
 description: >-
   Exploring the advantages of using Rust to build system APIs for Brazilian payroll, focusing on performance, safety, and concurrency.
 categories:
-  - rest api
+  - rest-api
   - rust
   - security
   - systems-programming
@@ -14,19 +14,21 @@ categories:
 
 ## Introduction
 
-With the development of the Brazilian technology sector, the demand for robust API systems for payroll has become crucial. Rust, a language designed for performance and safety, is an excellent choice for such systems. This article explores why Rust is ideal for building Brazilian payroll API systems, with examples from the `abroad-payroll-api`.
+As the Brazilian tech scene grows, there is a growing need for robust API systems around payroll. With its combination of performance, safety, and semantic expressiveness, there is no better fit than Rust. In this piece, we make the case for using Rust to build Brazilian payroll API systems, with practical examples based on the `abroad-payroll-api`.
 
-## Why Rust for Payroll systems?
+## Why Rust for Payroll Systems?
 
-Rust offers memory safety guarantees, exceptional runtime performance and modern language constructs, making it suitable for API systems that demand reliability and efficiency. Here's how Rust stands out:
+By providing memory safety guarantees, state-of-the-art runtime performance, and modern language features, we believe that Rust APIs can be as robust as they are productive. Here’s what Rust brings to the table:
 
-- **Safety**: Rust's ownership model prevents data races, a common issue in concurrent processing, which is a requirement for payroll systems handling multiple requests.
-- **Performance**: Rust's zero-cost abstractions mean you don't have to sacrifice performance for expressiveness, an important consideration when dealing with large payroll data.
-- **Concurrency**: Rust's concurrency model makes it easier to build scalable systems that can handle numerous API requests simultaneously without running into the common pitfalls of multi-threaded programming.
+- **Safety**: Because Rust has a strict ownership model, concurrency bugs of the data race kind (which can affect any system doing concurrent processing; indeed, payroll systems must) cannot happen.
 
-## Building the foreign payroll` API in Rust
+- **Performance**: Zero-cost abstractions mean that, when processing millions of rows of payroll data, you don’t have to choose between expressiveness and performance.
 
-The `abroad-payroll-api` uses the powerful ecosystem of Rust to ensure a reliable and performant service for managing payroll for Brazilian public agents abroad. Here is a snapshot of the `Cargo.toml` to give you an idea of the dependencies:
+- **Concurrency**: Rust’s concurrency model makes it easy to scale systems that can manage thousands of requests to a service’s API without falling into many of the pitfalls of multithreaded development.
+
+## Building the Foreign Payroll API in Rust
+
+`abroad-payroll-api` is built on the strong ecosystem of Rust to provide a trustworthy and performant service to maintain payrolls for Brazilian public agents abroad. Here’s a glimpse of the `Cargo.toml` for you to see what dependencies were needed:
 
 ```toml
 [package]
@@ -40,9 +42,9 @@ tokio = { version = "1.35.1", features = ["full"] }
 sqlx = { version = "0.7", features = ["postgres"] }
 ```
 
-This configuration emphasises the use of axum for web framework capabilities, tokio for asynchronous runtime and sqlx for database operations — all of which ensure a robust backend setup.
+This setup puts axum first for web framework features, tokio second for async runtime, and sqlx for the database. This provides a stable backend build.
 
-The `abroad-payroll-api` is structured to facilitate maintenance and scalability. Below is the API path structure of the project, showing a clean separation of concerns and modularity:
+The `abroad-payroll-api` has been structured with maintenance and scalability in mind. The path structure of the API in the project (as shown below) has a clean separation of concerns, clear modules, and shows modularity.
 
 ```
 .
@@ -55,9 +57,9 @@ The `abroad-payroll-api` is structured to facilitate maintenance and scalability
     └── response.rs
 ```
 
-This structure allows developers to navigate the codebase easily and manage the API's components effectively.
+By doing so, the structure enables a developer to find classes and functions in one part of an API or even an entire codebase, and then find all the references to them in other parts.
 
-Including the API path structure in this way sets the stage for a discussion of how Rust's design benefits the individual components of a web service.
+The fact that, in the case of Rust, the API path structure is included in this manner presents an opportunity for a discussion of how the design of Rust benefits the individual components of the web service.
 
 ## API Endpoints and Operations
 
@@ -71,11 +73,11 @@ async fn get_banks() -> Result<Json<Vec<Bank>>, Error> {
 }
 ```
 
-This asynchronous function fetches bank data and demonstrates Rust's asynchronous capabilities for non-blocking I/O operations — a must for responsive APIs.
+Here we have an asynchronous function that retrieves some fake bank data – securing a place to showcase Rust’s asynchronous functionality for non-blocking I/O, which is crucial for building responsive APIs.
 
 ## Containerization with Docker
 
-The abroad-payroll-api uses Docker for containerization to ensure that the API runs consistently in every environment. Here is a look at the Dockerfile.dev used:
+To make sure that every time the abroad-payroll-api runs, it behaves consistently from one environment to another, we use containerization through Docker. The `Dockerfile.dev` looks like this:
 
 ```dockerfile
 FROM rust:latest as builder
@@ -102,7 +104,7 @@ let rec: (i32, String) = sqlx::query_as("SELECT id, name FROM banks WHERE id = $
 
 ## Conclusion
 
-Rust's combination of safety, performance and modern features makes it the first choice for creating system APIs such as the abroad-payroll-api. As the Brazilian financial sector requires increasingly sophisticated software solutions, Rust is ready to take on these challenges.
+Rust's combination of safety, performance, and modern features makes it the first choice for creating system APIs such as the abroad-payroll-api. As the Brazilian financial sector requires increasingly sophisticated software solutions, Rust is ready to take on these challenges.
 
 ## Appendix: Collection Example
 

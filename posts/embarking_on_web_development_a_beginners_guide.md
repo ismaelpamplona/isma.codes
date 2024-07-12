@@ -4,14 +4,10 @@ date: '2024-04-09'
 description: >-
   This comprehensive guide demystifies the basics of web development and provides beginners with a solid foundation to understand how the web and the Internet work, what key technologies are involved, and gives practical advice on how to get started.
 categories:
-  - programming
-  - web-development
-  - web-servers
-  - web-hosting
+  - web
   - networking
   - internet
   - infrastructure
-  - web-applications
 ---
 
 ## Content

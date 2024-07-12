@@ -5,9 +5,9 @@ description: >-
   Queues are fundamental components in distributed systems, helping manage tasks and data efficiently. This article explores different types of queues, their applications, and strategies for handling queue-related issues.
 categories:
   - distributed-systems
-  - queues
+  - queue
   - data-management
-  - system-architecture
+  - architecture
 ---
 
 ## Contents
