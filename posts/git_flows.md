@@ -1,5 +1,5 @@
 ---
-title: Elevate Your Workflow: The Power of Git Flow and Trunk-Based Development
+title: 'Elevate Your Workflow: The Power of Git Flow and Trunk-Based Development'
 date: '2024-07-12'
 description: >-
   Discover how Git Flow and Trunk-Based Development streamline code management and enhance team collaboration. Learn the key principles, best practices, and scenarios for each model to optimize your development process.
