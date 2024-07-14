@@ -37,7 +37,19 @@ Git Flow introduces a set of guidelines to manage branches in a Git repository. 
   2. **Release Branches**: Used to prepare a new production release.
   3. **Hotfix Branches**: Used to quickly fix production issues.
 
-**Workflow**
+### Workflow
+
+To install `git flow` on the most important and popular systems, follow these steps:
+
+| Operating System  | Installation Command            |
+| :---------------- | :------------------------------ |
+| **macOS**         | `brew install git-flow-avh`     |
+| **Ubuntu/Debian** | `sudo apt-get install git-flow` |
+| **Fedora**        | `sudo dnf install gitflow`      |
+| **Windows**       | `choco install git-flow-avh`    |
+| **Arch Linux**    | `paru -S gitflow-avh`           |
+
+Once `git flow` is installed, you can proceed with the following steps:
 
 1. **Cloning the Repository**
 
@@ -168,7 +180,7 @@ Trunk-Based Development revolves around a few key principles:
 2. **Short-Lived Feature Branches**: Feature branches are short-lived, often merged into the trunk within a day or less.
 3. **Continuous Integration**: Code is continuously integrated into the trunk, ensuring that it is always in a deployable state.
 
-**Workflow**
+### Workflow
 
 1. **Cloning the Repository**
 
