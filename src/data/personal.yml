@@ -596,7 +596,7 @@ experience:
         title: Jobs
         data:
           - title: Corporate Windows Login and AzureAD Activation MDM
-            description: Developed an MDM solution based on the Windows MDM Demo project, enabling Windows login using corporate emails and activating computers in AzureAD. This solution streamlines the device enrollment process, enhances security, and integrates seamlessly with AzureAD for better device management.
+            description: Built an MDM solution from the open-source <a target='_blank' href='https://github.com/oscartbeaumont/windows_mdm'>Windows MDM Demo</a>, enabling Windows login with corporate emails and AzureAD activation. This streamlined device enrollment and enhanced security.
             technologies:
               title: Stack
               data:
