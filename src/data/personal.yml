@@ -181,6 +181,8 @@ experience:
                   - https://mariadb.org/documentation/
                 - - Rust
                   - https://www.rust-lang.org
+                - - Go
+                  - https://go.dev/
                 - - CSS
                   - https://developer.mozilla.org/en-US/docs/Web/CSS
                 - - HTML
@@ -192,6 +194,8 @@ experience:
               title: Roles
               data:
                 - Developer
+                - Software-engineer
+                - Prompt-engineer
 
           - title: Code V Code
             description: Code V Code project aims to evaluate the capability of large language models to call API tools.
@@ -209,6 +213,8 @@ experience:
               title: Roles
               data:
                 - Developer
+                - Software-engineer
+                - Prompt-engineer
 
           - title: Standard Eval Code
             description: The Standard Eval Code project is dedicated to promoting excellence in the evaluation of AI model responses, contributing to the establishment of fair evaluations across different dimensions and advancing the development of artificial intelligence.
@@ -227,6 +233,8 @@ experience:
                   - https://mariadb.org/documentation/
                 - - Rust
                   - https://www.rust-lang.org
+                - - Go
+                  - https://go.dev/
                 - - CSS
                   - https://developer.mozilla.org/en-US/docs/Web/CSS
                 - - HTML
@@ -237,6 +245,8 @@ experience:
               title: Roles
               data:
                 - Developer
+                - Software-engineer
+                - Prompt-engineer
 
     - title: Co-founder and Software Engineer
       show: true
@@ -273,6 +283,8 @@ experience:
               title: Roles
               data:
                 - Developer
+                - Software-engineer
+                - Maintainer
 
           - title: Abroad Payroll API
             description: "An open-source payroll management rest api software, built in Rust, designed exclusively for Brazilian public agents on international missions (<a target='_blank' href='https://github.com/ismaelpamplona/abroad-payroll-api'>github.com/ismaelpamplona/abroad-payroll-api</a>)."
@@ -290,6 +302,8 @@ experience:
               title: Roles
               data:
                 - Developer
+                - Software-engineer
+                - Maintainer
 
           - title: Brag Server
             description: "An open-source REST API, written in Rust, designed to load, update, and serve data from Git repositories. It efficiently retrieves and manages repository metrics, offering JSON-formatted data for client applications. The project provides valuable insights into Git repository activities. (<a target='_blank' href='https://github.com/cwnt-io/brag-server'>github.com/cwnt-io/brag-server</a>)."
@@ -307,6 +321,8 @@ experience:
               title: Roles
               data:
                 - Developer
+                - Software-engineer
+                - Maintainer
 
     - title: Co-founder, CTO and Software Engineer
       show: true
@@ -327,6 +343,7 @@ experience:
         data:
           - Co-founder, CTO and co-responsible for fundraising efforts.
           - Developer (Typescript, Python and SQL).
+          - Software-engineer
 
       jobs:
         title: Jobs
@@ -388,6 +405,10 @@ experience:
                   - https://vitejs.dev
                 - - Git
                   - https://git-scm.com
+                - - CSS
+                  - https://developer.mozilla.org/en-US/docs/Web/CSS
+                - - HTML
+                  - https://developer.mozilla.org/en-US/docs/Web/HTML
                 # - - Gitlab
                 # - https://gitlab.com
             roles:
@@ -395,6 +416,7 @@ experience:
               data:
                 - Manager
                 - Developer
+                - Software-engineer
 
           - title: Web server
             description: Acts as a centralized hub, handling all communication with the frontend and facilitating access to services.
@@ -430,6 +452,8 @@ experience:
               title: Roles
               data:
                 - Developer
+                - Software-engineer
+                - DevOps
 
           - title: Data Chapter
             description: Drives strategy, creating data products, maintaining data infrastructure, and ensuring governance and quality.
@@ -486,6 +510,7 @@ experience:
               title: Roles
               data:
                 - Manager
+                - DevOps
 
           - title: Kanban Rest API
             description: Designed to cater to all kanbans, including prospects CRM and tasks management.
@@ -518,6 +543,7 @@ experience:
               title: Roles
               data:
                 - Manager
+                - DevOps
 
           - title: SZOT-UI
             description: "Open-source library of user interface components and resources: <a target='_blank' href='https://team-tecnologia.gitlab.io/public-pkgs/szot-ui'>szot-ui</a>."
@@ -529,12 +555,19 @@ experience:
                 - - Typescript
                   - https://www.typescriptlang.org
                 - - Svelte
+                  - https://svelte.dev
+                - - CSS
+                  - https://developer.mozilla.org/en-US/docs/Web/CSS
+                - - HTML
+                  - https://developer.mozilla.org/en-US/docs/Web/HTML
                 # - - Gitlab
                 # - https://gitlab.com
             roles:
               title: Roles
               data:
                 - Developer
+                - Software-engineer
+                - Maintainer
 
     - title: CTO and Software Engineer
       show: true
@@ -557,10 +590,30 @@ experience:
         data:
           - Chief Technology Officer (CTO), overseeing technical aspects and driving technological innovations.
           - Developer (Typescript, Python and SQL).
+          - Software engineer
 
       jobs:
         title: Jobs
         data:
+          - title: Corporate Windows Login and AzureAD Activation MDM
+            description: Developed an MDM solution based on the Windows MDM Demo project, enabling Windows login using corporate emails and activating computers in AzureAD. This solution streamlines the device enrollment process, enhances security, and integrates seamlessly with AzureAD for better device management.
+            technologies:
+              title: Stack
+              data:
+                - - Azure
+                  - https://azure.microsoft.com/en-us
+                - - Go
+                  - https://go.dev/
+                - - Docker
+                  - https://www.docker.com/
+            roles:
+              title: Roles
+              data:
+                - Manager
+                - Developer
+                - Software-engineer
+                - DevOps
+
           - title: VLGI Asset Rest API
             description: Serves internal and end-user-facing solutions.
             technologies:
@@ -595,6 +648,8 @@ experience:
               data:
                 - Manager
                 - Developer
+                - Software-engineer
+                - DevOps
 
           - title: VLGI HUB Web App
             description: Provides collaborators with access to files, BI dashboards, customer data, performance kpis, educational platform (<a target='_blank' href='https://hub.vlgi.com'>hub.vlgi.com</a>).
@@ -616,6 +671,10 @@ experience:
                   - https://webpack.js.org
                 - - Git
                   - https://git-scm.com
+                - - CSS
+                  - https://developer.mozilla.org/en-US/docs/Web/CSS
+                - - HTML
+                  - https://developer.mozilla.org/en-US/docs/Web/HTML
                 # - - Gitlab
                 # - https://gitlab.com
             roles:
@@ -623,6 +682,8 @@ experience:
               data:
                 - Manager
                 - Developer
+                - Software-engineer
+                - DevOps
 
           - title: VLGI Investimentos Rest API
             description: Serves internal and end-user-facing solutions.
@@ -656,6 +717,8 @@ experience:
               data:
                 - Manager
                 - Developer
+                - Software-engineer
+                - DevOps
 
           - title: Auth Web Server
             description: JWT authentication web server.
@@ -691,6 +754,8 @@ experience:
               data:
                 - Manager
                 - Developer
+                - Software-engineer
+                - DevOps
 
           - title: Mobile APP
             description: Provides exclusive features for VLGI clients, encompassing podcasts, financial news, events agenda, and a discount club.
@@ -730,6 +795,10 @@ experience:
                   - https://www.heroku.com/home
                 - - Git
                   - https://git-scm.com
+                - - CSS
+                  - https://developer.mozilla.org/en-US/docs/Web/CSS
+                - - HTML
+                  - https://developer.mozilla.org/en-US/docs/Web/HTML
                 # - - Gitlab
                 # - https://gitlab.com
                 - - Strapi
@@ -744,8 +813,10 @@ experience:
               data:
                 - Manager
                 - Developer
+                - Software-engineer
+                - DevOps
 
-    - title: Techlead and Developer
+    - title: Techlead and Software Engineer
       show: false
       company: Grupo Milà
       link: 'https://grupomila.com.br'
@@ -761,6 +832,7 @@ experience:
         data:
           - Tech Lead, overseeing technical aspects and spearheading technological innovations within the team.
           - Developer (Typescript, Python and SQL).
+          - Software-engineer
 
       jobs:
         title: Jobs
@@ -785,7 +857,9 @@ experience:
               title: Roles
               data:
                 - Developer
+                - Software-engineer
                 - Manager
+                - DevOps
 
           - title: Milà Management Web App
             description: Provides collaborators with access to files, BI Dashboards, construction costs management feature. The APP also facilitates Admin Management of users.
@@ -806,6 +880,10 @@ experience:
                   - https://webpack.js.org
                 - - Git
                   - https://git-scm.com
+                - - CSS
+                  - https://developer.mozilla.org/en-US/docs/Web/CSS
+                - - HTML
+                  - https://developer.mozilla.org/en-US/docs/Web/HTML
                 # - - Gitlab
                 # - https://gitlab.com
             # tools:
@@ -819,8 +897,10 @@ experience:
               title: Roles
               data:
                 - Developer
+                - Software-engineer
+                - DevOps
 
-    - title: Developer
+    - title: Software Engineer
       show: false
       company: Basso Real Estate
       link: ''
@@ -835,6 +915,7 @@ experience:
         title: Duties
         data:
           - Developer (Javascript, Python and SQL).
+          - Software-engineer
           - Technology consultant.
 
       jobs:
@@ -860,6 +941,10 @@ experience:
                   - https://webpack.js.org
                 - - Git
                   - https://git-scm.com
+                - - CSS
+                  - https://developer.mozilla.org/en-US/docs/Web/CSS
+                - - HTML
+                  - https://developer.mozilla.org/en-US/docs/Web/HTML
                 # - - Gitlab
                 # - https://gitlab.com
             # tools:
@@ -873,8 +958,10 @@ experience:
               title: Roles
               data:
                 - Developer
+                - Software-engineer
+                - DevOps
 
-    - title: Developer
+    - title: Software Engineer
       show: false
       company: Setedezessete
       link: 'https://setedezessete.com'
@@ -889,6 +976,7 @@ experience:
         title: Duties
         data:
           - Developer (Javascript, Python and SQL).
+          - Software-engineer
           - Technology consultant.
 
       jobs:
@@ -912,6 +1000,10 @@ experience:
                   - https://www.heroku.com/home
                 - - Git
                   - https://git-scm.com
+                - - CSS
+                  - https://developer.mozilla.org/en-US/docs/Web/CSS
+                - - HTML
+                  - https://developer.mozilla.org/en-US/docs/Web/HTML
                 # - - Github
                 # - https://github.com
             # tools:
@@ -925,6 +1017,7 @@ experience:
               title: Roles
               data:
                 - Developer
+                - Software-engineer
 
     - title: Investor
       show: false
