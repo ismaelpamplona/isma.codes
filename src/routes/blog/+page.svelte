@@ -19,6 +19,10 @@
   <SearchInput bind:data={data.posts} bind:results {searchableKeys} />
 </div>
 <div class="container">
+  <a class="all-categories-link" href="{base}/blog/categories/">
+    <iconify-icon icon="carbon:collapse-categories" />
+    See all registered categories
+  </a>
   {#each results as post}
     <article>
       <div class="time-categories">
@@ -35,11 +39,6 @@
       </div>
     </article>
   {/each}
-
-  <a class="all-categories-link" href="{base}/blog/categories/">
-    <iconify-icon icon="carbon:collapse-categories" />
-    See all registered categories
-  </a>
 
   {#if data.posts.length > 0 && results.length === 0}
     <span class="no-matches">no matches founded</span>

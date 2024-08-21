@@ -80,19 +80,25 @@ export const fetchMarkdownPosts = async (): Promise<EnhancedPost[]> => {
   }))
 }
 
-export const fetchCategories = async (): Promise<{ categories: string[] }> => {
+export const fetchCategories = async (): Promise<{
+  categories: { name: string; count: number }[]
+}> => {
   const allRawPosts = await fetchMarkdownPostsRaw()
-  const catsSet = new Set<string>()
+  const catMap = new Map<string, number>()
   allRawPosts.forEach((post) => {
     if (post.categories) {
       post.categories.forEach((cat) => {
-        catsSet.add(cat)
+        catMap.set(cat, (catMap.get(cat) ?? 0) + 1)
       })
     }
   })
-  const categories = [...catsSet]
-  categories.sort()
+
+  const categories: { name: string; count: number }[] = Array.from(catMap, ([name, count]) => ({
+    name,
+    count
+  }))
+
   return {
-    categories
+    categories: categories.sort((a, b) => a.name.localeCompare(b.name))
   }
 }
