@@ -3,7 +3,7 @@ import type { ChatCompletion } from '$lib/openai/types'
 import type { Load } from '@sveltejs/kit'
 
 export const load: Load = async () => {
-  let response: ChatCompletion = await greeting()
+  const response: ChatCompletion = await greeting()
   return {
     ...response
   }
