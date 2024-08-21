@@ -113,8 +113,6 @@ body {
 
     th,
     td {
-      padding: 10px;
-      text-align: left;
       border: 1px solid $dark-secondary-text;
     }
 
@@ -181,7 +179,6 @@ body {
     background-color: transparent;
     color: $dark-background;
     border: none;
-    padding: 10px 20px;
     cursor: pointer;
     &:hover {
       opacity: 0.8;
@@ -245,8 +242,6 @@ body {
 
     th,
     td {
-      padding: 10px;
-      text-align: left;
       border: 1px solid $light-secondary-text;
     }
 
