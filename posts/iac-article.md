@@ -572,7 +572,6 @@ Infrastructure as Code (IaC) has been adopted by numerous organizations across v
 
 ### Netflix: Scaling Infrastructure with IaC
 
-**Company Overview:**
 Netflix, a global streaming service with millions of users, needed to manage and scale its infrastructure rapidly to handle ever-increasing demand. With a vast microservices architecture deployed across multiple AWS regions, Netflix required a solution that could ensure consistency, reliability, and speed in deploying and managing its infrastructure.
 
 **IaC Implementation:**
@@ -586,7 +585,6 @@ Netflix adopted IaC using a combination of Terraform and AWS CloudFormation to m
 
 ### Atlassian: Streamlining DevOps with IaC
 
-**Company Overview:**
 Atlassian, a software company known for tools like Jira and Confluence, embraced IaC to improve its DevOps processes and manage infrastructure across multiple cloud providers. The company needed a solution to handle its complex, multi-cloud environment while maintaining high standards for security and compliance.
 
 **IaC Implementation:**
@@ -600,7 +598,6 @@ Atlassian implemented Terraform to manage its multi-cloud infrastructure, integr
 
 ### Capital One: Enhancing Security with IaC
 
-**Company Overview:**
 Capital One, a major financial services company, sought to enhance its cloud security posture while accelerating its migration to AWS. Given the stringent regulatory requirements in the financial sector, the company needed a robust solution to automate and enforce security practices across its cloud infrastructure.
 
 **IaC Implementation:**
