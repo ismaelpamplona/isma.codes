@@ -87,7 +87,7 @@
   .categories {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 1rem;
+    gap: 1rem;
     align-items: center;
     line-height: 1rem;
     padding-bottom: 0.6rem;
