@@ -37,11 +37,11 @@ Before the advent of IaC, infrastructure was typically managed manually. System 
 
 **Configuration Management Tools**
 
-The first significant leap towards automation came with configuration management tools like Puppet, Chef, and Ansible. These tools allowed for the automation of server configuration by defining the desired state of the infrastructure in scripts. While this was a major improvement over manual processes, the infrastructure itself—like virtual machines, networks, and storage—was still managed outside of these tools.
+The first significant leap towards automation came with configuration management tools like Puppet, Chef, and Ansible. These tools allowed for the automation of server configuration by defining the desired state of the infrastructure in scripts. While this was a major improvement over manual processes, the infrastructure itself like virtual machines, networks, and storage—was still managed outside of these tools.
 
 **Infrastructure as Code**
 
-IaC takes the principles of configuration management a step further by allowing the entire infrastructure stack—servers, networks, databases, load balancers, etc.—to be defined in code. This evolution has been driven by the rise of cloud computing, where infrastructure is provisioned and managed via APIs. IaC tools like Terraform, AWS CloudFormation, and Azure Resource Manager enable teams to define their infrastructure as code, automating the provisioning and management processes from start to finish.
+IaC takes the principles of configuration management a step further by allowing the entire infrastructure stack—servers, networks, databases, load balancers, etc.— to be defined in code. This evolution has been driven by the rise of cloud computing, where infrastructure is provisioned and managed via APIs. IaC tools like Terraform, AWS CloudFormation, and Azure Resource Manager enable teams to define their infrastructure as code, automating the provisioning and management processes from start to finish.
 
 <pre class="mermaid">
 timeline
@@ -574,10 +574,7 @@ Infrastructure as Code (IaC) has been adopted by numerous organizations across v
 
 Netflix, a global streaming service with millions of users, needed to manage and scale its infrastructure rapidly to handle ever-increasing demand. With a vast microservices architecture deployed across multiple AWS regions, Netflix required a solution that could ensure consistency, reliability, and speed in deploying and managing its infrastructure.
 
-**IaC Implementation:**
 Netflix adopted IaC using a combination of Terraform and AWS CloudFormation to manage its cloud infrastructure. By defining its infrastructure as code, Netflix was able to automate the provisioning and scaling of resources across multiple regions.
-
-**Benefits Realized:**
 
 - **Scalability:** IaC allowed Netflix to scale its infrastructure quickly and efficiently to meet growing user demand.
 - **Consistency:** The use of IaC ensured that deployments were consistent across all regions, reducing the risk of configuration drift.
@@ -587,10 +584,7 @@ Netflix adopted IaC using a combination of Terraform and AWS CloudFormation to m
 
 Atlassian, a software company known for tools like Jira and Confluence, embraced IaC to improve its DevOps processes and manage infrastructure across multiple cloud providers. The company needed a solution to handle its complex, multi-cloud environment while maintaining high standards for security and compliance.
 
-**IaC Implementation:**
 Atlassian implemented Terraform to manage its multi-cloud infrastructure, integrating IaC into its CI/CD pipelines. This allowed the company to automate the deployment and management of resources across AWS, Azure, and Google Cloud.
-
-**Benefits Realized:**
 
 - **Multi-Cloud Management:** Terraform enabled Atlassian to manage resources across multiple cloud platforms from a single, unified codebase.
 - **Improved Compliance:** By codifying security policies and compliance requirements into its IaC, Atlassian ensured that all deployments adhered to organizational standards.
@@ -600,10 +594,7 @@ Atlassian implemented Terraform to manage its multi-cloud infrastructure, integr
 
 Capital One, a major financial services company, sought to enhance its cloud security posture while accelerating its migration to AWS. Given the stringent regulatory requirements in the financial sector, the company needed a robust solution to automate and enforce security practices across its cloud infrastructure.
 
-**IaC Implementation:**
 Capital One adopted AWS CloudFormation along with custom-built tools to manage and secure its cloud infrastructure. The company integrated security controls into its IaC, using static analysis and policy enforcement tools to ensure compliance with security standards.
-
-**Benefits Realized:**
 
 - **Security and Compliance:** By embedding security into its IaC, Capital One was able to automate compliance checks and reduce the risk of misconfigurations.
 - **Faster Deployments:** Automated infrastructure provisioning and security checks enabled faster deployments, supporting the company’s digital transformation initiatives.
