@@ -1,0 +1,366 @@
+/* Container styling for code block */
+pre {
+  position: relative;
+  padding-top: 3em; /* Space for the label */
+}
+
+/* Styling the code block inside pre */
+pre > code {
+  display: block; /* Ensure code takes full width */
+  padding-top: 2em; /* Padding inside code block */
+}
+
+/* Adding the label automatically using CSS, only for code inside pre */
+pre > code[class*='language-']::before {
+  content: attr(class); /* This will be overridden by specific language rules */
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 10px;
+  font-size: 12px;
+  background-color: #f0f0f0; /* Label background color */
+  color: #333; /* Label text color */
+  border-bottom: 1px solid #ddd; /* Border at the bottom of the label */
+  width: 100%;
+  opacity: 0.5;
+}
+
+/* Specific language labels */
+pre > code.language-html::before {
+  content: 'HTML';
+}
+
+pre > code.language-css::before {
+  content: 'CSS';
+}
+
+pre > code.language-javascript::before,
+pre > code.language-js::before {
+  content: 'JavaScript';
+}
+
+pre > code.language-python::before,
+pre > code.language-py::before {
+  content: 'Python';
+}
+
+pre > code.language-r::before {
+  content: 'R';
+}
+
+pre > code.language-ruby::before,
+pre > code.language-rb::before {
+  content: 'Ruby';
+}
+
+pre > code.language-java::before {
+  content: 'Java';
+}
+
+pre > code.language-php::before {
+  content: 'PHP';
+}
+
+pre > code.language-c::before {
+  content: 'C';
+}
+
+pre > code.language-cpp::before,
+pre > code.language-cplusplus::before,
+pre > code.language-cxx::before {
+  content: 'C++';
+}
+
+pre > code.language-csharp::before,
+pre > code.language-cs::before {
+  content: 'C#';
+}
+
+pre > code.language-go::before {
+  content: 'Go';
+}
+
+pre > code.language-rust::before,
+pre > code.language-rs::before {
+  content: 'Rust';
+}
+
+pre > code.language-swift::before {
+  content: 'Swift';
+}
+
+pre > code.language-kotlin::before,
+pre > code.language-kt::before {
+  content: 'Kotlin';
+}
+
+pre > code.language-typescript::before,
+pre > code.language-ts::before {
+  content: 'TypeScript';
+}
+
+pre > code.language-shell::before,
+pre > code.language-sh::before,
+pre > code.language-bash::before {
+  content: 'Shell';
+}
+
+pre > code.language-sql::before {
+  content: 'SQL';
+}
+
+pre > code.language-perl::before,
+pre > code.language-pl::before {
+  content: 'Perl';
+}
+
+pre > code.language-haskell::before {
+  content: 'Haskell';
+}
+
+pre > code.language-scala::before {
+  content: 'Scala';
+}
+
+pre > code.language-dart::before {
+  content: 'Dart';
+}
+
+pre > code.language-vb::before,
+pre > code.language-vbnet::before {
+  content: 'VB.NET';
+}
+
+pre > code.language-objectivec::before,
+pre > code.language-objc::before {
+  content: 'Objective-C';
+}
+
+pre > code.language-matlab::before {
+  content: 'MATLAB';
+}
+
+pre > code.language-sass::before,
+pre > code.language-scss::before {
+  content: 'Sass';
+}
+
+pre > code.language-less::before {
+  content: 'Less';
+}
+
+pre > code.language-xml::before {
+  content: 'XML';
+}
+
+pre > code.language-json::before {
+  content: 'JSON';
+}
+
+pre > code.language-yaml::before,
+pre > code.language-yml::before {
+  content: 'YAML';
+}
+
+pre > code.language-graphql::before {
+  content: 'GraphQL';
+}
+
+pre > code.language-markdown::before,
+pre > code.language-md::before {
+  content: 'Markdown';
+}
+
+pre > code.language-vue::before {
+  content: 'Vue';
+}
+
+pre > code.language-sql::before {
+  content: 'SQL';
+}
+
+pre > code.language-sqlite::before {
+  content: 'SQLite';
+}
+
+pre > code.language-powershell::before,
+pre > code.language-ps::before,
+pre > code.language-ps1::before {
+  content: 'PowerShell';
+}
+
+pre > code.language-ini::before {
+  content: 'INI';
+}
+
+pre > code.language-dockerfile::before {
+  content: 'Dockerfile';
+}
+
+pre > code.language-batch::before,
+pre > code.language-bat::before {
+  content: 'Batch';
+}
+
+pre > code.language-rust::before {
+  content: 'Rust';
+}
+
+pre > code.language-coffeescript::before,
+pre > code.language-coffee::before {
+  content: 'CoffeeScript';
+}
+
+pre > code.language-lua::before {
+  content: 'Lua';
+}
+
+pre > code.language-clojure::before {
+  content: 'Clojure';
+}
+
+pre > code.language-elixir::before {
+  content: 'Elixir';
+}
+
+pre > code.language-erlang::before {
+  content: 'Erlang';
+}
+
+pre > code.language-graphql::before {
+  content: 'GraphQL';
+}
+
+pre > code.language-latex::before {
+  content: 'LaTeX';
+}
+
+pre > code.language-groovy::before {
+  content: 'Groovy';
+}
+
+pre > code.language-puppet::before {
+  content: 'Puppet';
+}
+
+pre > code.language-scheme::before {
+  content: 'Scheme';
+}
+
+pre > code.language-fsharp::before,
+pre > code.language-fs::before {
+  content: 'F#';
+}
+
+pre > code.language-vhdl::before {
+  content: 'VHDL';
+}
+
+pre > code.language-verilog::before {
+  content: 'Verilog';
+}
+
+pre > code.language-solidity::before {
+  content: 'Solidity';
+}
+
+pre > code.language-pascal::before {
+  content: 'Pascal';
+}
+
+pre > code.language-rust::before {
+  content: 'Rust';
+}
+
+pre > code.language-toml::before {
+  content: 'TOML';
+}
+
+pre > code.language-asm::before,
+pre > code.language-assembly::before {
+  content: 'Assembly';
+}
+
+pre > code.language-apex::before {
+  content: 'Apex';
+}
+
+pre > code.language-abap::before {
+  content: 'ABAP';
+}
+
+pre > code.language-d::before {
+  content: 'D';
+}
+
+pre > code.language-forth::before {
+  content: 'Forth';
+}
+
+pre > code.language-fortran::before {
+  content: 'Fortran';
+}
+
+pre > code.language-gml::before {
+  content: 'GML';
+}
+
+pre > code.language-haxe::before {
+  content: 'Haxe';
+}
+
+pre > code.language-julia::before {
+  content: 'Julia';
+}
+
+pre > code.language-makefile::before {
+  content: 'Makefile';
+}
+
+pre > code.language-nim::before {
+  content: 'Nim';
+}
+
+pre > code.language-ocaml::before {
+  content: 'OCaml';
+}
+
+pre > code.language-prolog::before {
+  content: 'Prolog';
+}
+
+pre > code.language-racket::before {
+  content: 'Racket';
+}
+
+pre > code.language-rst::before {
+  content: 'reStructuredText';
+}
+
+pre > code.language-smali::before {
+  content: 'Smali';
+}
+
+pre > code.language-stylus::before {
+  content: 'Stylus';
+}
+
+pre > code.language-twig::before {
+  content: 'Twig';
+}
+
+pre > code.language-xquery::before {
+  content: 'XQuery';
+}
+
+pre > code.language-zig::before {
+  content: 'Zig';
+}
+
+pre > code.language-http::before {
+  content: 'http';
+}
+
+pre > code.language-hcl::before {
+  content: 'hcl';
+}
