@@ -5,7 +5,6 @@ description: >-
   Infrastructure as Code (IaC) is transforming IT infrastructure management. This guide covers the evolution, core paradigms, tools, and key practices of IaC. Explore its application in cloud, hybrid, and on-premises environments, from declarative vs. imperative approaches to real-world examples and emerging trends like AI/ML and GitOps. A must-read for mastering IaC and elevating your DevOps strategies.
 categories:
   - devops
-  - infrastructure-as-code
   - cloud-computing
   - automation
   - iac
