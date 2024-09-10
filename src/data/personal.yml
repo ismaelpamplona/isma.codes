@@ -267,6 +267,31 @@ experience:
       jobs:
         title: Jobs
         data:
+          - title: API Queue Manager
+            description: A Rust-based service 🦀 using Axum and RabbitMQ to manage and queue API requests efficiently. Handles high traffic by enqueuing requests and processing them asynchronously, ensuring reliable communication with third-party APIs. Ideal for applications needing scalable, rate-limited API management. (<a target='_blank' href='https://github.com/ismaelpamplona/api-queue-manager/'>github</a>)."
+            technologies:
+              title: Stack
+              data:
+                - - Rust
+                  - https://www.rust-lang.org
+                - - Git
+                  - https://git-scm.com
+                - - Go
+                  - https://go.dev/
+                - - Docker
+                  - https://www.docker.com
+                - - Kubernetes
+                  - https://kubernetes.io/
+                - - RabbitMQ
+                  - https://www.rabbitmq.com/
+
+            roles:
+              title: Roles
+              data:
+                - Developer
+                - Software-engineer
+                - Maintainer
+
           - title: Rip Issue
             description: "Open-source Rust-based CLI tool designed for agile management workflows. It facilitates efficient tracking and management utilizing the filesystem and git (<a target='_blank' href='https://crates.io/crates/ripissue'>crates.io/crates/ripissue</a>)."
             technologies:
