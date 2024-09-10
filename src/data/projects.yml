@@ -1,3 +1,26 @@
+- name: api-queue-manager
+  description: 'A Rust-based service 🦀 using Axum and RabbitMQ to manage and queue API requests efficiently. Handles high traffic by enqueuing requests and processing them asynchronously, ensuring reliable communication with third-party APIs. Ideal for applications needing scalable, rate-limited API management.'
+  technologies:
+    - name: rust
+      icon: skill-icons:rust
+      link: https://www.rust-lang.org/
+    - name: go
+      icon: devicon:go
+      link: https://go.dev/
+    - name: docker
+      icon: devicon:docker
+      link: https://www.docker.com/
+    - name: kubernetes
+      icon: devicon:kubernetes
+      link: https://kubernetes.io/
+    - name: rabbitmq
+      icon: devicon:rabbitmq
+      link: https://www.rabbitmq.com/
+  links:
+    - name: github
+      link: https://github.com/ismaelpamplona/api-queue-manager/
+      icon: mdi:github
+
 - name: isma.codes
   description: "This website! Ismael's fusion of technology and AI, with projects, blogs and a resume. It's a portal to the latest web and AI innovations. Explore Ismael's creative tech journey."
   technologies:
