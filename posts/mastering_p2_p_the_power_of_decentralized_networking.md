@@ -1100,7 +1100,7 @@ Blockchain technology represents an advanced application of P2P networking, wher
 
 - **Layer 2 Scaling Solutions**: To enhance the scalability of blockchain-based P2P networks, layer 2 solutions such as **Lightning Network** (for Bitcoin) allow for faster and cheaper transactions by conducting off-chain transactions.
 
-### 8. P2P Overlay Multicast
+### P2P Overlay Multicast
 
 Overlay multicast is a technique used in P2P networks to optimize the distribution of data to multiple recipients. Unlike traditional IP multicast, which relies on routers, P2P overlay multicast allows peers to form a multicast tree, where each peer helps forward data to other peers. This is particularly useful for live streaming and real-time data distribution.
 
@@ -1306,13 +1306,14 @@ Several powerful frameworks and tools have emerged to simplify the development o
 
 ### Grenache: Decentralized Microservice Framework
 
-[**Grenache**](https://grenache.io) is a decentralized microservice framework developed by **Bitfinex**. It provides a lightweight solution for building P2P applications by using the **Kademlia Distributed Hash Table (DHT)** to enable peer discovery and service communication. Grenache excels in decentralized service discovery and message passing, which makes it highly scalable for distributed applications.
+[**Grenache**](https://grenache.io) is a decentralized microservice framework developed by **Bitfinex**. It provides a lightweight solution for building P2P applications by using the [**Kademlia Distributed Hash Table (DHT)**](https://en.wikipedia.org/wiki/Kademlia) to enable peer discovery and service communication. Grenache excels in decentralized service discovery and message passing, which makes it highly scalable for distributed applications.
 
 **Key Concepts:**
 
-- **Grape**: In Grenache, a **Grape** is a node that participates in the DHT. Grapes act as routers, helping peers discover one another and route messages across the network. You can think of a Grape as a lightweight server for managing decentralized communication.
-- **DHT (Distributed Hash Table)**: This is the backbone of Grenache, enabling decentralized storage and retrieval of key-value pairs. It helps peers locate each other without needing a central server.
-- **Link**: A **Link** in Grenache is a network connection between nodes, enabling communication through messages or data.
+- **Grenache-Grape**: A signaling server that runs the DHT (Distributed Hash Table) network, enabling service discovery and peer-to-peer communication.
+- **Grenache-Link**: A module that connects to the DHT and handles communication between nodes using the Grape signaling server.
+- **Grenache-Service**: A microservice that registers with the DHT via Grape, allowing other nodes to discover and interact with it.
+- **Grenache-Peer**: A client that communicates with services via the DHT, making requests to registered services.
 
 **Key Features:**
 
@@ -1320,15 +1321,50 @@ Several powerful frameworks and tools have emerged to simplify the development o
 - **Decentralized Messaging**: Nodes can communicate by passing messages directly to each other via the DHT, bypassing centralized servers.
 - **Lightweight and Scalable**: Grenache’s minimalistic design allows for high scalability in distributed systems.
 
-Code Example:
+<pre class="mermaid" style="display: flex; justify-content: center;">
+sequenceDiagram
+    participant GrenachePeer
+    participant GrenacheLink
+    participant GrenacheGrape
+    participant GrenacheService
 
-**Install Grenache**:
+    GrenachePeer->>GrenacheLink: Initialize and connect to GrenacheGrape
+    GrenacheLink->>GrenacheGrape: Connect to DHT for service discovery
+    GrenacheService->>GrenacheLink: Register service with GrenacheGrape (DHT)
+    GrenacheLink->>GrenacheGrape: Register "test_service"
+    GrenachePeer->>GrenacheGrape: Request "test_service"
+    GrenacheGrape->>GrenacheLink: Resolve "test_service"
+    GrenacheLink->>GrenacheService: Forward request to service
+    GrenacheService->>GrenacheLink: Respond to request
+    GrenacheLink->>GrenachePeer: Return response from service
+</pre>
+
+- **GrenachePeer** initializes and connects to the **GrenacheGrape** signaling server through **GrenacheLink**.
+- **GrenacheService** registers itself with the DHT through **GrenacheLink**.
+- **GrenachePeer** sends a request to the DHT for the registered service.
+- **GrenacheGrape** resolves the service and forwards the request via **GrenacheLink**.
+- **GrenacheService** processes the request and sends a response back to **GrenachePeer** via **GrenacheLink**.
+
+Here's what happens:
+
+1.  **Client wants to talk to a Service**: The **client** is like someone who wants to ask a question but doesn’t know who has the answer. So, it first needs to connect to a "helper" (Grenache-Link) who can find the service for them.
+2.  **Connecting to a Phone Book (Grenache-Grape)**: The **helper** connects to a special system called **Grenache-Grape**. You can think of this system like a **phone book** that keeps track of where different services are. The client asks the phone book: "Hey, where can I find the service I’m looking for?"
+3.  **The Service Registers**: Before this happens, the **service** itself has already registered in the phone book (Grenache-Grape) through its own **helper** (Grenache-Link). It’s like the service saying, "I’m available! Put me in the phone book under the name 'test_service.'"
+4.  **Client Asks for the Service**: The **client** asks the **phone book** (Grenache-Grape) where to find the service called "test_service."
+5.  **Phone Book Finds the Service**: The phone book checks and tells the **client's helper** where to find the service.
+6.  **Message Forwarded to the Service**: Once the **client** knows where the service is, its **helper** sends the actual request to the service. It’s like forwarding the client’s question to the right person who can answer it.
+7.  **Service Responds**: The **service** gets the request, processes it, and sends the answer back.
+8.  **Client Gets the Answer**: Finally, the **client's helper** receives the answer from the service and delivers it to the client.
+
+**Code Example:**
+
+Install Grenache:
 
 ```bash
 npm install grenache-grape grenache-nodejs-link
 ```
 
-**Create a Grape (DHT node)**:
+Create a Grape (DHT node):
 Here, a Grape is set up to participate in the DHT and enable peer discovery.
 
 ```javascript
@@ -1343,8 +1379,7 @@ const grape = new Grape({
 grape.start()
 ```
 
-**Publishing a service**:
-This example shows how to publish a message or service on the DHT.
+Publishing a service: this example shows how to publish a message or service on the DHT.
 
 ```javascript
 const Link = require('grenache-nodejs-link')
@@ -1361,8 +1396,7 @@ setInterval(() => {
 }, 1000) // Publish every second
 ```
 
-**Consuming a service**:
-This part demonstrates how a peer retrieves data published by another peer using the DHT.
+Consuming a service: this part demonstrates how a peer retrieves data published by another peer using the DHT.
 
 ```javascript
 link.get('some-service', (err, res) => {
@@ -1394,14 +1428,13 @@ Official Docs: [https://grenache.io](https://grenache.io)
 
 **Code Example:**
 
-**Install libp2p**:
+Install libp2p:
 
 ```bash
 npm install libp2p
 ```
 
-**Creating a basic libp2p node**:
-This example shows how to create a simple libp2p node that uses TCP for communication, Mplex for stream multiplexing, and Noise for encryption.
+Creating a basic libp2p node: this example shows how to create a simple libp2p node that uses TCP for communication, Mplex for stream multiplexing, and Noise for encryption.
 
 ```javascript
 const Libp2p = require('libp2p')
@@ -1453,14 +1486,13 @@ Official Docs: [https://libp2p.io](https://libp2p.io)
 
 To use BitTorrent in a Node.js application:
 
-**Install BitTorrent client**:
+Install BitTorrent client:
 
 ```bash
 npm install bittorrent-client
 ```
 
-**Download a file using BitTorrent**:
-This example shows how to start a BitTorrent client and download a file using a magnet link.
+Download a file using BitTorrent: this example shows how to start a BitTorrent client and download a file using a magnet link.
 
 ```javascript
 const Client = require('bittorrent-client')
@@ -1495,20 +1527,32 @@ Here are some additional resources to further explore the concepts covered in th
 ## Glossary
 
 - **Peer-to-Peer (P2P)**: A decentralized network model where each participant acts as both a client and a server, exchanging data directly with others.
-- **Grape**: In Grenache, a node participating in a Distributed Hash Table (DHT) to facilitate decentralized service discovery and communication.
+- **Grape**: In Grenache, a node participating in a Distributed Hash Table (DHT) to facilitate decentralized service discovery and communicatioHere's what happens:
+
 - **DHT (Distributed Hash Table)**: A decentralized storage system that maps keys to values across many nodes, used in P2P networks for peer discovery.
+
 - **Swarming**: A process in BitTorrent where a file is divided into chunks and downloaded from multiple peers simultaneously.
+
 - **Seeding**: In BitTorrent, when a peer that has downloaded a complete file continues to share it with others.
+
 - **Smart Contracts**: Self-executing contracts with the terms written in code, often used in blockchain platforms like Ethereum.
+
 - **Proof of Work (PoW)**: A consensus mechanism where participants (miners) solve complex puzzles to validate transactions, used in Bitcoin.
+
 - **Proof of Stake (PoS)**: A consensus algorithm where participants validate transactions based on the amount of cryptocurrency they hold, used in Ethereum 2.0.
 
 ## References
 
 1. **Grenache Documentation**: [https://grenache.io](https://grenache.io)
+
 2. **Libp2p Documentation**: [https://libp2p.io](https://libp2p.io)
+
 3. **BitTorrent**: [https://www.bittorrent.com](https://www.bittorrent.com)
+
 4. Antonopoulos, Andreas. _Mastering Bitcoin: Unlocking Digital Cryptocurrencies_. O'Reilly Media, 2017.
+
 5. **Kademlia DHT**: [https://en.wikipedia.org/wiki/Kademlia](https://en.wikipedia.org/wiki/Kademlia)
+
 6. Nakamoto, Satoshi. "Bitcoin: A Peer-to-Peer Electronic Cash System." [https://bitcoin.org/bitcoin.pdf](https://bitcoin.org/bitcoin.pdf)
+
 7. Wood, Gavin. _Ethereum: A Secure Decentralised Generalised Transaction Ledger_. 2014. [https://ethereum.org/en/whitepaper/](https://ethereum.org/en/whitepaper/)
