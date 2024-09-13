@@ -1,3 +1,26 @@
+- name: grapevine-p2p-chat
+  description: 'Grapevine 🍇🌿 P2P Chat is a decentralized, peer-to-peer chat app built with the Bitfinex Grenache microservice framework, using the BitTorrent DHT protocol for service discovery. It enables real-time, serverless communication between peers, offering a fault-tolerant, fully decentralized messaging system.'
+  technologies:
+    - name: nodejs
+      icon: gos:nodejs-icon
+      link: https://nodejs.org/
+    - name: javascript
+      icon: devicon:javascript
+      link: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+    - name: grenache
+      icon: openmoji:grapes
+      link: https://github.com/bitfinexcom/grenache
+    - name: docker
+      icon: devicon:docker
+      link: https://www.docker.com/
+    - name: kubernetes
+      icon: devicon:kubernetes
+      link: https://kubernetes.io/
+  links:
+    - name: github
+      link: https://github.com/ismaelpamplona/grapevine-p2p-chat/
+      icon: mdi:github
+
 - name: api-queue-manager
   description: 'A Rust-based service 🦀 using Axum and RabbitMQ to manage and queue API requests efficiently. Handles high traffic by enqueuing requests and processing them asynchronously, ensuring reliable communication with third-party APIs. Ideal for applications needing scalable, rate-limited API management.'
   technologies:
