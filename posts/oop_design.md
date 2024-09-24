@@ -20,7 +20,7 @@ Object-Oriented Programming (OOP) is a programming paradigm that organizes softw
 
 The history of OOP involves the evolution of concepts and ideas that have led to its current state. Here's a timeline illustrating key moments in OOP's development:
 
-```mermaid
+<pre class="mermaid" style="display: flex; justify-content: center;">
 timeline
     title History of OOP
     1960 : "Simula (1960s) - Developed by Ole-Johan Dahl and Kristen Nygaard, it introduced the concept of classes and objects."
@@ -29,7 +29,7 @@ timeline
     1995 : "Java (1995) - Java, created by Sun Microsystems, made OOP more mainstream with its 'write once, run anywhere' philosophy."
     2000 : "Python (2000s) - Python, originally released in 1991, gained popularity for its simple and clear OOP approach, making it easier for beginners."
     2015 : "Modern OOP Languages - Languages like Swift, Kotlin, and modern JavaScript introduced OOP features with new syntax and patterns."
-```
+</pre>
 
 **Differences Between OOP and Procedural Programming**
 
@@ -158,14 +158,14 @@ print(dog.name)  # Output: Buddy
 print(dog.speak())  # Output: Woof!
 ```
 
-```mermaid
+<pre class="mermaid" style="display: flex; justify-content: center;">
 classDiagram
     direction LR
     Animal <|-- Dog
     Animal : +name
     Animal : +speak()
     Dog : +speak()
-```
+</pre>
 
 ### Polymorphism
 
@@ -1166,7 +1166,7 @@ student = Student("Alice")
 print(f"{student.name} is taught by {teacher.name}")
 ```
 
-```mermaid
+<pre class="mermaid" style="display: flex; justify-content: center;">
 classDiagram
     direction LR
     class Teacher {
@@ -1178,7 +1178,7 @@ classDiagram
     }
 
     Student --> Teacher : Association
-```
+</pre>
 
 ### Aggregation
 
@@ -1206,7 +1206,7 @@ library.add_book(book1)
 print(f"{library.name} contains the book: {book1.title}")
 ```
 
-```mermaid
+<pre class="mermaid" style="display: flex; justify-content: center;">
 classDiagram
     direction LR
     class Library {
@@ -1218,7 +1218,7 @@ classDiagram
     }
 
     Library o-- Book : Aggregation
-```
+</pre>
 
 ### Composition
 
@@ -1241,7 +1241,7 @@ car = Car("Toyota", "V8 Engine")
 print(f"The {car.model} has a {car.engine.engine_type}")
 ```
 
-```mermaid
+<pre class="mermaid" style="display: flex; justify-content: center;">
 classDiagram
     direction LR
     class House {
@@ -1253,7 +1253,7 @@ classDiagram
     }
 
     House *-- Room : Composition
-```
+</pre>
 
 ## How OOP Enables Code Reusability and Modularity
 
@@ -1596,7 +1596,7 @@ Represents the static structure of a system, showing classes, their attributes, 
 - **Classes**: Represented as rectangles with three compartments (class name, attributes, methods).
 - **Relationships**: Includes association, aggregation, composition, and inheritance.
 
-```mermaid
+<pre class="mermaid" style="display: flex; justify-content: center;">
 classDiagram
     direction LR
     class Car {
@@ -1618,7 +1618,7 @@ classDiagram
 
     Car "1" *-- "1" Engine : Composition
     Driver "1" --> "1" Car : Uses
-```
+</pre>
 
 In this example:
 
@@ -1633,7 +1633,7 @@ Represents how objects interact with each other in a sequence over time. It show
 - **Messages**: Shown as arrows indicating the flow of communication.
 - **Lifelines**: Vertical dashed lines representing the existence of an object over time.
 
-```mermaid
+<pre class="mermaid" style="display: flex; justify-content: center;">
 sequenceDiagram
     participant User
     participant ATM
@@ -1657,7 +1657,7 @@ Represents the functional requirements of a system by illustrating different use
 - **Use Cases**: Represented as ovals, showing the system's functionality.
 - **System Boundary**: Represents the boundary of the system being modeled.
 
-```mermaid
+<pre class="mermaid" style="display: flex; justify-content: center;">
 flowchart TB
     subgraph CustomerActions[Customer Actions]
         C1(Withdraw Money)
@@ -1673,8 +1673,7 @@ flowchart TB
     Admin --> A1
 
     C1 <---> C3(Deposit Money)
-
-```
+</pre>
 
 In this example, the use case diagram shows how a `Customer` can interact with an ATM to withdraw money, check balance, and make deposits, while an `Admin` is responsible for maintaining the ATM.
 
