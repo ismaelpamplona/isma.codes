@@ -158,14 +158,14 @@ print(dog.name)  # Output: Buddy
 print(dog.speak())  # Output: Woof!
 ```
 
-<pre class="mermaid" style="display: flex; justify-content: center;">
+<!-- <pre class="mermaid" style="display: flex; justify-content: center;">
 classDiagram
     direction LR
     Animal <|-- Dog
     Animal : +name
     Animal : +speak()
     Dog : +speak()
-</pre>
+</pre> -->
 
 ### Polymorphism
 
@@ -1166,7 +1166,7 @@ student = Student("Alice")
 print(f"{student.name} is taught by {teacher.name}")
 ```
 
-<pre class="mermaid" style="display: flex; justify-content: center;">
+<!-- <pre class="mermaid" style="display: flex; justify-content: center;">
 classDiagram
     direction LR
     class Teacher {
@@ -1178,7 +1178,7 @@ classDiagram
     }
 
     Student --> Teacher : Association
-</pre>
+</pre> -->
 
 ### Aggregation
 
@@ -1206,7 +1206,7 @@ library.add_book(book1)
 print(f"{library.name} contains the book: {book1.title}")
 ```
 
-<pre class="mermaid" style="display: flex; justify-content: center;">
+<!-- <pre class="mermaid" style="display: flex; justify-content: center;">
 classDiagram
     direction LR
     class Library {
@@ -1218,7 +1218,7 @@ classDiagram
     }
 
     Library o-- Book : Aggregation
-</pre>
+</pre> -->
 
 ### Composition
 
@@ -1241,7 +1241,7 @@ car = Car("Toyota", "V8 Engine")
 print(f"The {car.model} has a {car.engine.engine_type}")
 ```
 
-<pre class="mermaid" style="display: flex; justify-content: center;">
+<!-- <pre class="mermaid" style="display: flex; justify-content: center;">
 classDiagram
     direction LR
     class House {
@@ -1253,7 +1253,7 @@ classDiagram
     }
 
     House *-- Room : Composition
-</pre>
+</pre> -->
 
 ## How OOP Enables Code Reusability and Modularity
 
@@ -1596,7 +1596,7 @@ Represents the static structure of a system, showing classes, their attributes, 
 - **Classes**: Represented as rectangles with three compartments (class name, attributes, methods).
 - **Relationships**: Includes association, aggregation, composition, and inheritance.
 
-<pre class="mermaid" style="display: flex; justify-content: center;">
+<!-- <pre class="mermaid" style="display: flex; justify-content: center;">
 classDiagram
     direction LR
     class Car {
@@ -1618,7 +1618,7 @@ classDiagram
 
     Car "1" *-- "1" Engine : Composition
     Driver "1" --> "1" Car : Uses
-</pre>
+</pre> -->
 
 In this example:
 
@@ -1645,7 +1645,7 @@ sequenceDiagram
     ATM ->> BankSystem: Verify PIN
     BankSystem -->> ATM: PIN Verified
     ATM ->> User: Select transaction
-```
+</pre>
 
 In this example, the sequence diagram shows how a user interacts with an ATM, and the ATM communicates with the bank system to verify a PIN.
 
