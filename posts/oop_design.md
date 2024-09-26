@@ -1,6 +1,6 @@
 ---
 title: 'Object-Oriented Programming (OOP) Design'
-date: '2024-09-23'
+date: '2024-09-16'
 description: >-
   This article provides an in-depth exploration of Object-Oriented Programming (OOP) design principles, concepts, and best practices. It covers OOP's core principles, such as encapsulation, abstraction, inheritance, and polymorphism, along with design patterns, SOLID principles, and UML diagrams. The guide also delves into OOP's comparison with other paradigms, like functional programming, and offers insights into future trends in software design.
 categories:
