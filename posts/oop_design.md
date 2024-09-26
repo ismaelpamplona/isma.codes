@@ -20,16 +20,16 @@ Object-Oriented Programming (OOP) is a programming paradigm that organizes softw
 
 The history of OOP involves the evolution of concepts and ideas that have led to its current state. Here's a timeline illustrating key moments in OOP's development:
 
-<pre class="mermaid" style="display: flex; justify-content: center;">
-timeline
-    title History of OOP
-    1960 : "Simula (1960s) - Developed by Ole-Johan Dahl and Kristen Nygaard, it introduced the concept of classes and objects."
-    1972 : "Smalltalk (1972) - Created by Alan Kay, Adele Goldberg, and others, Smalltalk popularized many core OOP principles, such as encapsulation, inheritance, and polymorphism."
-    1980 : "C++ (1980s) - Developed by Bjarne Stroustrup, C++ combined C's procedural aspects with OOP, leading to greater adoption in the software industry."
-    1995 : "Java (1995) - Java, created by Sun Microsystems, made OOP more mainstream with its 'write once, run anywhere' philosophy."
-    2000 : "Python (2000s) - Python, originally released in 1991, gained popularity for its simple and clear OOP approach, making it easier for beginners."
-    2015 : "Modern OOP Languages - Languages like Swift, Kotlin, and modern JavaScript introduced OOP features with new syntax and patterns."
-</pre>
+    <pre class="mermaid" style="display: flex; justify-content: center;">
+    timeline
+        title History of OOP
+        1960 : "Simula (1960s) - Developed by Ole-Johan Dahl and Kristen Nygaard, it introduced the concept of classes and objects."
+        1972 : "Smalltalk (1972) - Created by Alan Kay, Adele Goldberg, and others, Smalltalk popularized many core OOP principles, such as encapsulation, inheritance, and polymorphism."
+        1980 : "C++ (1980s) - Developed by Bjarne Stroustrup, C++ combined C's procedural aspects with OOP, leading to greater adoption in the software industry."
+        1995 : "Java (1995) - Java, created by Sun Microsystems, made OOP more mainstream with its 'write once, run anywhere' philosophy."
+        2000 : "Python (2000s) - Python, originally released in 1991, gained popularity for its simple and clear OOP approach, making it easier for beginners."
+        2015 : "Modern OOP Languages - Languages like Swift, Kotlin, and modern JavaScript introduced OOP features with new syntax and patterns."
+    </pre>
 
 **Differences Between OOP and Procedural Programming**
 
@@ -158,14 +158,14 @@ print(dog.name)  # Output: Buddy
 print(dog.speak())  # Output: Woof!
 ```
 
-<!-- <pre class="mermaid" style="display: flex; justify-content: center;">
+```mermaid
 classDiagram
     direction LR
     Animal <|-- Dog
     Animal : +name
     Animal : +speak()
     Dog : +speak()
-</pre> -->
+```
 
 ### Polymorphism
 
@@ -278,7 +278,7 @@ print("End of program.")
 
 Output:
 
-```
+```bash
 Object1 created.
 Object is in use.
 Object1 destroyed.
@@ -1166,7 +1166,7 @@ student = Student("Alice")
 print(f"{student.name} is taught by {teacher.name}")
 ```
 
-<!-- <pre class="mermaid" style="display: flex; justify-content: center;">
+```mermaid
 classDiagram
     direction LR
     class Teacher {
@@ -1178,7 +1178,7 @@ classDiagram
     }
 
     Student --> Teacher : Association
-</pre> -->
+```
 
 ### Aggregation
 
@@ -1206,7 +1206,7 @@ library.add_book(book1)
 print(f"{library.name} contains the book: {book1.title}")
 ```
 
-<!-- <pre class="mermaid" style="display: flex; justify-content: center;">
+```mermaid
 classDiagram
     direction LR
     class Library {
@@ -1218,7 +1218,7 @@ classDiagram
     }
 
     Library o-- Book : Aggregation
-</pre> -->
+```
 
 ### Composition
 
@@ -1241,7 +1241,7 @@ car = Car("Toyota", "V8 Engine")
 print(f"The {car.model} has a {car.engine.engine_type}")
 ```
 
-<!-- <pre class="mermaid" style="display: flex; justify-content: center;">
+```mermaid
 classDiagram
     direction LR
     class House {
@@ -1253,7 +1253,7 @@ classDiagram
     }
 
     House *-- Room : Composition
-</pre> -->
+```
 
 ## How OOP Enables Code Reusability and Modularity
 
@@ -1596,7 +1596,7 @@ Represents the static structure of a system, showing classes, their attributes, 
 - **Classes**: Represented as rectangles with three compartments (class name, attributes, methods).
 - **Relationships**: Includes association, aggregation, composition, and inheritance.
 
-<!-- <pre class="mermaid" style="display: flex; justify-content: center;">
+```mermaid
 classDiagram
     direction LR
     class Car {
@@ -1618,7 +1618,7 @@ classDiagram
 
     Car "1" *-- "1" Engine : Composition
     Driver "1" --> "1" Car : Uses
-</pre> -->
+```
 
 In this example:
 
@@ -1672,7 +1672,8 @@ flowchart TB
     Customer --> C2
     Admin --> A1
 
-    C1 <---> C3(Deposit Money)
+    C1 --> C3(Deposit Money)
+    C3 --> C1
 </pre>
 
 In this example, the use case diagram shows how a `Customer` can interact with an ATM to withdraw money, check balance, and make deposits, while an `Admin` is responsible for maintaining the ATM.
@@ -2237,6 +2238,91 @@ In conclusion, Object-Oriented Programming (OOP) remains a fundamental paradigm 
 When designing object-oriented systems, it's essential to adhere to best practices. Begin by ensuring that each class has a clear and single responsibility, following the Single Responsibility Principle (SRP). This not only makes code easier to maintain but also promotes reusability. Always aim for loose coupling and high cohesion by minimizing dependencies between classes and ensuring that each class has a well-defined purpose. Favor composition over inheritance to avoid rigid class hierarchies, and leverage interfaces and abstract classes to define clear contracts between different parts of your system. These practices lead to more adaptable and maintainable codebases.
 
 Looking ahead, the future of OOP design is evolving with trends like data-oriented design, which emphasizes organizing data and logic around data flow, and hybrid approaches that combine OOP with functional programming principles. These trends are gaining traction as developers seek more efficient ways to handle the complexities of modern software systems. By staying open to these evolving paradigms and continually refining your understanding of OOP, you'll be well-equipped to design software that is both powerful and adaptable in an ever-changing technological landscape.
+
+## Case Study (Example Project)
+
+In this section, we'll explore the "Library Management System REST API" as a case study, demonstrating how Object-Oriented Programming (OOP) principles are applied in a real-world project. The complete project is available on [GitHub](https://github.com/ismaelpamplona/library-management-system-rest-api), and we'll examine various code snippets to highlight how OOP concepts are used.
+
+**Overview of the Project**
+
+The Library Management System REST API provides functionalities such as user registration, book management, borrowing/returning books, and fine management. It uses Python, Flask, and SQLAlchemy for its implementation, employing OOP principles to design models, routes, and services.
+
+**Encapsulation**
+
+Encapsulation involves bundling related data and methods within a class, protecting the data from outside interference. In this project, encapsulation is used extensively in the `User`, `Book`, and `Borrow` classes, where the data attributes and methods are grouped logically.
+
+Example: User Model
+
+```python
+class User(db.Model):
+    __tablename__ = "users"
+
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(255), nullable=False, unique=True)
+    email = db.Column(db.String(255), nullable=False, unique=True)
+    password_hash = db.Column(db.String(255), nullable=False)
+    is_admin = db.Column(db.Boolean, default=False)
+
+    def set_password(self, password):
+        self.password_hash = generate_password_hash(password)
+
+    def check_password(self, password):
+        return check_password_hash(self.password_hash, password)
+```
+
+In the `User` class, the attributes (`id`, `username`, `email`, etc.) are encapsulated within the class, and the methods `set_password` and `check_password` provide controlled access to modify or check the password, thus protecting direct access to `password_hash`.
+
+**Inheritance**
+
+Inheritance allows classes to inherit attributes and methods from a parent class, promoting code reuse. In this project, inheritance is seen with Flask's `Model` class from SQLAlchemy, which our models (`User`, `Book`, `Borrow`) inherit from.
+
+```python
+class Book(db.Model):
+    __tablename__ = "books"
+
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(255), nullable=False)
+    author = db.Column(db.String(255), nullable=False)
+    published_date = db.Column(db.Date, nullable=True)
+    isbn = db.Column(db.String(13), unique=True, nullable=True)
+    pages = db.Column(db.Integer, nullable=True)
+    cover = db.Column(db.String(255), nullable=True)
+    language = db.Column(db.String(50), nullable=False)
+```
+
+The `Book` class inherits from `db.Model`, gaining all the functionalities required to interact with the database without redefining them.
+
+**Polymorphism**
+
+Polymorphism allows methods to be used in different contexts. In this project, polymorphism is demonstrated through the use of Flask's route handling. Each route method (`GET`, `POST`, `PUT`, `DELETE`) behaves differently based on the type of request, even though the interface remains consistent.
+
+```python
+@users_bp.route("/profile", methods=["GET", "PUT", "DELETE"])
+@jwt_required()
+def manage_user_profile():
+    if request.method == "GET":
+        return get_user_profile()
+    elif request.method == "PUT":
+        return update_user_profile()
+    elif request.method == "DELETE":
+        return delete_user_profile()
+```
+
+The `manage_user_profile` function handles different HTTP methods (`GET`, `PUT`, `DELETE`) through polymorphism, invoking different functions based on the request type.
+
+**Abstraction**
+
+Abstraction simplifies complex systems by hiding implementation details and exposing only the necessary components. In the project, the use of Flask Blueprints (`users_bp`, `books_bp`, `admin_bp`) abstracts the complexity of routing and allows the main application to interact with these components without needing to know their internal workings.
+
+Example: User Blueprint Initialization
+
+```python
+users_bp = Blueprint("users", __name__, url_prefix="/users")
+```
+
+The `users_bp` object abstracts the details of all routes related to users, and the main application only needs to register this blueprint.
+
+The "Library Management System REST API" serves as a comprehensive example of how OOP principles can be effectively applied in a real-world application. It demonstrates encapsulation, inheritance, polymorphism, and abstraction in action, contributing to a clean, maintainable, and scalable codebase. By studying this case, you can gain practical insights into how OOP concepts translate into functional and efficient software solutions.
 
 ## Additional Resources
 
