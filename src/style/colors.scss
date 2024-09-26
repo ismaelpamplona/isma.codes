@@ -15,6 +15,7 @@ $dark-primary-text: $bone;
 $dark-secondary-text: $chinese-white;
 $dark-accent: $metallic-red;
 $dark-link: $bone;
+$special-dark-link: $lighter-red;
 
 // Light Theme Variables
 $light-background: $chinese-white;
@@ -22,6 +23,7 @@ $light-primary-text: $space-cadet;
 $light-secondary-text: $rainbow-indigo;
 $light-accent: $dark-sky-blue;
 $light-link: $space-cadet;
+$special-light-link: $metallic-red;
 
 // Logo colors
 $logo-stroke-dark: $bone;
@@ -32,7 +34,7 @@ $logo-fill-light: transparent;
 $terminal-light-prompt-color: $rainbow-indigo;
 
 // Opacities
-$link-opacity: .8;
+$link-opacity: 0.8;
 
 // Assistant
 $user-msg-bg-light: $rainbow-indigo;

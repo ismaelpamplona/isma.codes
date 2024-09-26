@@ -29,7 +29,8 @@
   async function changeTheme(newTheme: string) {
     mermaid.initialize({
       startOnLoad: false,
-      theme: newTheme
+      theme: newTheme,
+      securityLevel: 'loose' // Add this line
     })
     await mermaid.run({
       querySelector: '.mermaid'
@@ -37,6 +38,12 @@
   }
 
   $: $darkMode ? changeTheme('dark') : changeTheme('light')
+
+  $: {
+    changeTheme($darkMode ? 'dark' : 'light')
+    // Trigger re-rendering of all Mermaid diagrams
+    mermaid.init(undefined, document.querySelectorAll('.mermaid'))
+  }
 </script>
 
 <svelte:head>
