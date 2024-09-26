@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { onMount, type SvelteComponent } from 'svelte'
   import { base } from '$app/paths'
-  import type { PostMetadata } from '../../../types/posts'
-  import mermaid from 'mermaid'
   import { darkMode } from '$lib/Nav/stores'
+  import mermaid from 'mermaid'
+  import { onMount, type SvelteComponent } from 'svelte'
+  import type { PostMetadata } from '../../../types/posts'
 
   type DataType = PostMetadata & {
     Content: typeof SvelteComponent
@@ -57,7 +57,7 @@
   <p class="published">Published at: {date}</p>
   {#if categories?.length}
     <div class="categories">
-      <p>Categories:</p>
+      Categories:
       {#each categories as cat}
         <a class="category" href="{base}/blog/categories/{cat}">{cat}</a>
       {/each}
@@ -94,16 +94,16 @@
   .categories {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
     align-items: center;
-    line-height: 1rem;
-    padding-bottom: 0.6rem;
+    column-gap: 5px;
+    row-gap: 5px;
+    line-height: 100%;
   }
 
   .category {
     padding: 4px 8px;
+    border: 1px solid;
     border-radius: $tag-border-radius;
-    border: solid 1px;
   }
 
   a {
