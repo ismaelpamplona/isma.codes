@@ -1,11 +1,10 @@
 <script lang="ts">
-  import 'iconify-icon'
-  import '../style/index.scss'
-  import Nav from '$lib/Nav/Nav.svelte'
   import Footer from '$lib/Footer.svelte'
-  import Assistant from '$lib/Assistant/Assistant.svelte'
+  import Nav from '$lib/Nav/Nav.svelte'
   import { darkMode } from '$lib/Nav/stores'
   import type { ChatCompletion } from '$lib/openai/types'
+  import 'iconify-icon'
+  import '../style/index.scss'
 
   export let data: ChatCompletion
 </script>
@@ -17,7 +16,7 @@
       <slot />
     </div>
   </div>
-  <Assistant bind:data />
+  <!-- <Assistant bind:data /> -->
   <Footer />
 </div>
 
