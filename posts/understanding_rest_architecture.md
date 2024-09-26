@@ -886,8 +886,6 @@ Ultimately, building effective RESTful APIs requires a thoughtful balance betwee
 
 ## Glossary
 
-## Glossary
-
 - **API (Application Programming Interface)**: A set of rules and protocols that allow different software applications to communicate with each other.
 - **Authentication**: The process of verifying the identity of a user or application trying to access an API.
 - **Authorization**: The process of determining if an authenticated user or application has permission to access a specific resource or perform an action.
