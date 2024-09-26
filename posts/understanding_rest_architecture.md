@@ -812,7 +812,7 @@ Documentation tools make it easy to define, visualize, and share your REST API's
 | [**Swagger/OpenAPI**](https://swagger.io/tools/open-source/open-source-integrations/) | An open-source toolset that allows you to design, build, document, and consume RESTful APIs. It provides interactive API documentation and supports auto-generating client SDKs. |
 | [**Postman**](https://www.postman.com/)                                               | A popular API development environment that lets you design, test, and document your REST APIs. It offers features like collection runners, scripting, and automated testing.     |
 
-#### Testing RESTful APIs
+### Testing RESTful APIs
 
 Testing ensures that your REST API behaves as expected under different conditions. Here are some tools and strategies for testing REST APIs across various languages:
 
