@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { onMount } from 'svelte'
   import Spinner from '$lib/Spinner.svelte'
+  import { onMount } from 'svelte'
   import data from '../../data/personal.yml'
   import type { WorkExperience } from './types'
 
@@ -86,7 +86,7 @@
         a.href = url
         const currentDate = new Date()
         const isoDate = currentDate.toISOString()
-        a.download = `${isoDate}-resume_ismael_pamplona.pdf`
+        a.download = `resume_ismael_pamplona-${isoDate}.pdf`
         document.body.appendChild(a)
         a.click()
         document.body.removeChild(a)
