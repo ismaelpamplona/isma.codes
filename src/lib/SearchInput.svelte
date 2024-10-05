@@ -17,7 +17,9 @@
     }
   }
 
-  onMount
+  onMount(() => {
+    document.querySelector('input')?.addEventListener('input', searchForData)
+  })
 </script>
 
 <input on:input={searchForData} type="text" placeholder="Search..." />
