@@ -1,12 +1,13 @@
 <script lang="ts">
+  // import Assistant from '$lib/Assistant/Assistant.svelte'
   import Footer from '$lib/Footer.svelte'
   import Nav from '$lib/Nav/Nav.svelte'
   import { darkMode } from '$lib/Nav/stores'
-  import type { ChatCompletion } from '$lib/openai/types'
   import 'iconify-icon'
+  // import type { ChatCompletion } from 'openai/resources'
   import '../style/index.scss'
 
-  export let data: ChatCompletion
+  // export let data: ChatCompletion
 </script>
 
 <div class={$darkMode ? 'dark-theme' : 'light-theme'}>

@@ -1,9 +1,7 @@
-import { mdsvex } from 'mdsvex'
-import mdsvexConfig from './mdsvex.config.js'
 import vercel from '@sveltejs/adapter-vercel'
+import { mdsvex } from 'mdsvex'
 import sveltePreProcess from 'svelte-preprocess'
-
-const dev = process.argv.includes('dev')
+import mdsvexConfig from './mdsvex.config.js'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

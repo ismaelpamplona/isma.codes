@@ -2,7 +2,9 @@
   import { base } from '$app/paths'
   import { darkMode } from '$lib/Nav/stores'
   import mermaid from 'mermaid'
-  import { onMount, type SvelteComponent } from 'svelte'
+  import type { SvelteComponent } from 'svelte'
+  import { onMount } from 'svelte'
+  import { get, writable } from 'svelte/store'
   import type { PostMetadata } from '../../../types/posts'
 
   type DataType = PostMetadata & {
@@ -13,37 +15,48 @@
 
   const { title, date, description, categories, Content } = data
 
-  onMount(async () => {
-    let theme = $darkMode ? 'dark' : 'light'
-    changeTheme(theme)
-    const tables = document.querySelectorAll<HTMLTableElement>('table')
-    tables.forEach((table) => {
-      const wrapper = document.createElement('div')
-      wrapper.className = 'table-wrapper'
+  // Create a reactive store to trigger a re-render
+  const rebuildKey = writable(0)
 
-      table.parentNode?.insertBefore(wrapper, table)
-      wrapper.appendChild(table)
-    })
-  })
-
+  // Function to change theme for mermaid and reset diagrams
   async function changeTheme(newTheme: string) {
-    mermaid.initialize({
-      startOnLoad: false,
-      theme: newTheme,
-      securityLevel: 'loose' // Add this line
-    })
-    await mermaid.run({
-      querySelector: '.mermaid'
-    })
+    try {
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: newTheme,
+        securityLevel: 'loose'
+      })
+
+      // Iterate over each mermaid element to reset it
+      const mermaidElements = document.querySelectorAll('.mermaid')
+      mermaidElements.forEach((el) => el.removeAttribute('data-processed'))
+
+      // Delay to ensure the DOM is fully rendered before reinitializing Mermaid
+      await new Promise((resolve) => requestAnimationFrame(resolve))
+
+      await mermaid.run({
+        querySelector: '.mermaid'
+      })
+    } catch (error) {
+      console.error('Error initializing Mermaid:', error)
+    }
   }
 
-  $: $darkMode ? changeTheme('dark') : changeTheme('light')
+  onMount(() => {
+    let theme = get(darkMode) ? 'dark' : 'light'
+    changeTheme(theme)
 
-  $: {
-    changeTheme($darkMode ? 'dark' : 'light')
-    // Trigger re-rendering of all Mermaid diagrams
-    mermaid.init(undefined, document.querySelectorAll('.mermaid'))
-  }
+    // Subscribe to darkMode and trigger rebuild on change
+    const unsubscribe = darkMode.subscribe((isDarkMode) => {
+      const newTheme = isDarkMode ? 'dark' : 'light'
+      changeTheme(newTheme)
+
+      // Trigger a full page rebuild by incrementing the rebuildKey
+      rebuildKey.update((n) => n + 1)
+    })
+
+    return () => unsubscribe() // Cleanup
+  })
 </script>
 
 <svelte:head>
@@ -51,22 +64,24 @@
   <meta property="og:title" content={title} />
 </svelte:head>
 
-<article>
-  <h1>{title}</h1>
-  <p class="description">{description}</p>
-  <p class="published">Published at: {date}</p>
-  {#if categories?.length}
-    <div class="categories">
-      Categories:
-      {#each categories as cat}
-        <a class="category" href="{base}/blog/categories/{cat}">{cat}</a>
-      {/each}
+{#key $rebuildKey}
+  <article>
+    <h1>{title}</h1>
+    <p class="description">{description}</p>
+    <p class="published">Published at: {date}</p>
+    {#if categories?.length}
+      <div class="categories">
+        Categories:
+        {#each categories as cat}
+          <a class="category" href="{base}/blog/categories/{cat}">{cat}</a>
+        {/each}
+      </div>
+    {/if}
+    <div class="content-container">
+      <Content />
     </div>
-  {/if}
-  <div class="content-container">
-    <Content />
-  </div>
-</article>
+  </article>
+{/key}
 
 <style lang="scss">
   @import '../../../style/sizes.scss';

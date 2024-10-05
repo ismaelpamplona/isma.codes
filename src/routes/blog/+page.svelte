@@ -1,7 +1,7 @@
 <script lang="ts">
   import { base } from '$app/paths'
-  import type { PostMetadata } from '../../types/posts'
   import SearchInput from '$lib/SearchInput.svelte'
+  import type { PostMetadata } from '../../types/posts'
 
   export let data: {
     posts: PostMetadata[]

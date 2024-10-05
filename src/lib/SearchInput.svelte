@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { throttle, fuzzySearch } from '../helpers/utils'
   import { onMount } from 'svelte'
+  import { fuzzySearch, throttle } from '../helpers/utils'
 
   export let data: any[]
   export let results: any[] = data
@@ -9,7 +9,7 @@
   function searchForData(e: Event) {
     const target = e.target as HTMLInputElement
     if (target && target.value !== '') {
-      return throttle(() => {
+      throttle(() => {
         results = fuzzySearch(data, target.value, searchableKeys, 0.3).map((r) => r.item)
       }, 500)()
     } else {
@@ -22,7 +22,7 @@
   })
 </script>
 
-<input on:input={searchForData} type="text" placeholder="Search..." />
+<input type="text" placeholder="Search..." />
 
 <style lang="scss">
   @import '../style/sizes.scss';
