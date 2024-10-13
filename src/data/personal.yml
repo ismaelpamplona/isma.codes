@@ -1,7 +1,7 @@
 ---
 title:
   name: Ismael Pamplona
-  position: <strong>Software Engineer</strong> with 10+ years of experience and <strong>Rust</strong> Enthusiast
+  position: <strong>Software Engineer</strong> with 10+ years of experience
 
 contact:
   title: Contact
@@ -108,7 +108,7 @@ about:
   title: About me
   data:
     - I'm a curious software engineer with more than a decade of experience in the technology industry, constantly learning and adapting. I've led teams of up to 30 people and taken on a variety of roles, from administration to programming. My experience as a company founder has given me the ability to combine promising technology with business value.
-    - In the last 5 years, I've specialized in customer-centric web applications on cloud servers. The agility in developing various applications combined with my thirst for deep knowledge enables me to keep delighting users. I've written a lot with Python, Typescript and other technologies throughout my career, but when I discovered Rust a few years ago, I immediately fell in love with the language.
+    - In the last 5 years, I've specialized in customer-centric web applications on cloud servers. The agility in developing various applications combined with my thirst for deep knowledge enables me to keep delighting users.
 
 stack:
   title: Daily Tech Stack
