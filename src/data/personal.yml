@@ -607,8 +607,8 @@ experience:
 
     - title: CTO and Software Engineer
       show: true
-      company: Grupo Sozo
-      link: 'https://www.gruposozo.com.br'
+      company: Grupo VLG
+      link: 'https://www.vlginvestimentos.com.br/'
       from: 2019-11-01
       to: 2021-12-01
       city: Brasilia
@@ -616,7 +616,6 @@ experience:
       country: Brazil
       description:
         - "A tech-driven financial conglomerate that manages BRL 2.5 billion, serving 5,000+ clients with advisory and investment solutions
-          (<a target='_blank' href='https://www.gruposozo.com.br'>gruposozo</a>,
           <a target='_blank' href='https://www.vlginvestimentos.com.br'>vlginvestimentos</a>,
           <a target='_blank' href='https://vlgiasset.com.br'>vlgiasset</a>,
           <a target='_blank' href='https://vlgivida.com.br'>vlgivida</a> and
