@@ -70,7 +70,7 @@ For example, a mobile app (client) can interact with the same REST API as a web 
 
 The uniform interface is a fundamental aspect of REST, ensuring a standardized way of interacting with resources. This constraint is defined by four principles:
 
-- **Resource Identification**: Each resource is identified by a URI (Uniform Resource Identifier). For example, `https://api.example.com/users/123` uniquely identifies a user resource.
+- **Resource Identification**: Each resource is identified by a URI (Uniform Resource Identifier). For example, `https://api.eg.com/users/123` uniquely identifies a user resource.
 - **Manipulation of Resources Through Representations**: Clients interact with resources by using representations, such as JSON or XML. For example, a user’s data might be represented in JSON format.
 - **Self-Descriptive Messages**: Each request from the client to the server must be complete and understandable, containing all necessary information, such as HTTP methods, headers, and resource representation.
 - **HATEOAS (Hypermedia as the Engine of Application State)**: The server provides links to related resources within responses, guiding the client on how to interact with the API further. This means clients don’t need to hardcode endpoint paths and can discover them dynamically from responses.
@@ -85,9 +85,9 @@ A response to a request for a user resource might look like this:
   "name": "John Doe",
   "email": "john.doe@example.com",
   "links": [
-    { "rel": "self", "href": "https://api.example.com/users/123" },
-    { "rel": "orders", "href": "https://api.example.com/users/123/orders" },
-    { "rel": "profile", "href": "https://api.example.com/users/123/profile" }
+    { "rel": "self", "href": "https://api.eg.com/users/123" },
+    { "rel": "orders", "href": "https://api.eg.com/users/123/orders" },
+    { "rel": "profile", "href": "https://api.eg.com/users/123/profile" }
   ]
 }
 ```
