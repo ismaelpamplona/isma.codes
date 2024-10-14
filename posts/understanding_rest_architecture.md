@@ -308,21 +308,15 @@ APIs that handle large datasets should support pagination, filtering, and sortin
 
 **Pagination**
 
-Pagination breaks down data into manageable chunks, reducing response size. Common approaches include using `limit` and `offset` query parameters:
-
-- Example: `/books?limit=10&offset=20`
+Pagination breaks down data into manageable chunks, reducing response size. Common approaches include using `limit` and `offset` query parameters (e.g. `/books?limit=10&offset=20`)
 
 **Filtering**
 
-Filtering allows clients to retrieve data that meets specific criteria. Use query parameters to define filters:
-
-- Example: `/books?author=John+Doe&published_year=2023`
+Filtering allows clients to retrieve data that meets specific criteria. Use query parameters to define filters (e.g. `/books?author=John+Doe&published_year=2023`)
 
 **Sorting**
 
-Sorting enables clients to order data by one or more fields. Use query parameters like `sort` to specify sorting criteria:
-
-- Example: `/books?sort=title` or `/books?sort=-published_year` (descending)
+Sorting enables clients to order data by one or more fields. Use query parameters like `sort` to specify sorting criteria (e.g. `/books?sort=title` or `/books?sort=-published_year` (descending))
 
 Example Implementation in Python (Flask):
 
