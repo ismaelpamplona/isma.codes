@@ -258,20 +258,17 @@ APIs evolve over time, and introducing changes without breaking existing clients
 
 **Different Approaches to API Versioning:**
 
-1. **URI Versioning**: Include the version number in the URI.
+1. **URI Versioning**: Include the version number in the URI (`/v1/books` or `/api/v2/users`)
 
-   - Example: `/v1/books` or `/api/v2/users`
    - Pros: Clear and explicit. Easy for clients to identify the version.
    - Cons: Requires clients to change URIs when updating to a new version.
 
-2. **Header Versioning**: Specify the version in the request headers.
+2. **Header Versioning**: Specify the version in the request headers (e.g. `Accept: application/vnd.example.v1+json`)
 
-   - Example: `Accept: application/vnd.example.v1+json`
    - Pros: Cleaner URIs; versioning details are abstracted from the path.
    - Cons: Less visible, requires clients to handle custom headers.
 
-3. **Query Parameter Versioning**: Include the version as a query parameter.
-   - Example: `/books?version=1`
+3. **Query Parameter Versioning**: Include the version as a query parameter: (e.g.`/books?version=1`)
    - Pros: Simple to implement.
    - Cons: Less conventional and may lead to cluttered URLs.
 
