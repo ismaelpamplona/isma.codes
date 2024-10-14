@@ -283,17 +283,17 @@ article {
   margin-bottom: 2rem;
 }
 
-.table-wrapper {
-  max-width: 100%;
-  overflow-x: auto;
-}
-
 pre {
   overflow-x: auto;
   max-width: 100%;
 }
 
-td,
-th {
-  padding: 5px;
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
 }

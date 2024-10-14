@@ -42,9 +42,39 @@
     }
   }
 
+  // Function to wrap all <table> elements with a div of class "table-wrapper"
+  async function wrapTablesWithDiv(): Promise<void> {
+    return new Promise((resolve) => {
+      const observer = new MutationObserver(() => {
+        const tables = document.querySelectorAll<HTMLTableElement>('table')
+
+        if (tables.length > 0) {
+          tables.forEach((table) => {
+            const wrapper = document.createElement('div')
+            wrapper.classList.add('table-wrapper')
+
+            // Insert the wrapper before the table
+            table.parentNode?.insertBefore(wrapper, table)
+
+            // Move the table inside the wrapper
+            wrapper.appendChild(table)
+          })
+
+          // Disconnect the observer once the tables have been wrapped
+          observer.disconnect()
+          resolve()
+        }
+      })
+
+      // Start observing the body for changes in the subtree
+      observer.observe(document.body, { childList: true, subtree: true })
+    })
+  }
+
   onMount(() => {
     let theme = get(darkMode) ? 'dark' : 'light'
     changeTheme(theme)
+    wrapTablesWithDiv()
 
     // Subscribe to darkMode and trigger rebuild on change
     const unsubscribe = darkMode.subscribe((isDarkMode) => {
