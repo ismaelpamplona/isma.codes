@@ -1166,19 +1166,13 @@ student = Student("Alice")
 print(f"{student.name} is taught by {teacher.name}")
 ```
 
-```mermaid
+<pre class="mermaid" style="display: flex; justify-content: center;">
 classDiagram
     direction LR
-    class Teacher {
-        +teach()
-    }
-
-    class Student {
-        +learn()
-    }
-
     Student --> Teacher : Association
-```
+    Teacher : +teach()
+    Student : +learn()
+</pre>
 
 ### Aggregation
 
@@ -1206,19 +1200,13 @@ library.add_book(book1)
 print(f"{library.name} contains the book: {book1.title}")
 ```
 
-```mermaid
+<pre class="mermaid" style="display: flex; justify-content: center;">
 classDiagram
     direction LR
-    class Library {
-        +addBook()
-    }
-
-    class Book {
-        +read()
-    }
-
     Library o-- Book : Aggregation
-```
+    Library : +addBook()
+    Book : +read()
+</pre>
 
 ### Composition
 
@@ -1241,19 +1229,13 @@ car = Car("Toyota", "V8 Engine")
 print(f"The {car.model} has a {car.engine.engine_type}")
 ```
 
-```mermaid
+<pre class="mermaid" style="display: flex; justify-content: center;">
 classDiagram
     direction LR
-    class House {
-        +lock()
-    }
-
-    class Room {
-        +clean()
-    }
-
     House *-- Room : Composition
-```
+    House : +lock()
+    Room : +clean()
+</pre>
 
 ## How OOP Enables Code Reusability and Modularity
 
@@ -1596,29 +1578,20 @@ Represents the static structure of a system, showing classes, their attributes, 
 - **Classes**: Represented as rectangles with three compartments (class name, attributes, methods).
 - **Relationships**: Includes association, aggregation, composition, and inheritance.
 
-```mermaid
+<pre class="mermaid" style="display: flex; justify-content: center;">
 classDiagram
     direction LR
-    class Car {
-        +String model
-        +String color
-        +startEngine()
-        +stopEngine()
-    }
-
-    class Engine {
-        +start()
-        +stop()
-    }
-
-    class Driver {
-        +String name
-        +drive(car : Car)
-    }
-
     Car "1" *-- "1" Engine : Composition
     Driver "1" --> "1" Car : Uses
-```
+    Car : +String model
+    Car : +String color
+    Car : +startEngine()
+    Car : +stopEngine()
+    Engine : +start()
+    Engine : +stop()
+    Driver : +String name
+    Driver : +drive(car)
+</pre>
 
 In this example:
 
