@@ -15,6 +15,7 @@ categories:
 ## Introduction
 
 **What is Functional Programming?**
+
 FP is a programming paradigm that treats computation as the evaluation of mathematical functions. The core idea is to build software by composing pure functions, avoiding shared state, mutable data, and side effects. Functions in FP are treated as first-class citizens, meaning they can be passed as arguments, returned from other functions, and assigned to variables.
 
 At its essence, FP emphasizes:
@@ -64,6 +65,7 @@ const total = Array.from({ length: 10 }, (_, i) => i).reduce((acc, curr) => acc 
 In the functional example, there are no loops, and the state (`total`) is not mutated during the process.
 
 **History and Evolution of Functional Programming**
+
 FP has its roots in **lambda calculus**, a formal system developed in the 1930s by **Alonzo Church** to define function abstraction and application. Lambda calculus laid the mathematical foundation for FP, where computation is seen as function application.
 
 Key milestones in FP history include:
@@ -171,8 +173,6 @@ By avoiding mutation, you can prevent unintended side effects and improve code r
 
 **Function composition** is the process of combining simple functions to build more complex ones. It allows you to break down problems into smaller, more manageable functions, then chain them together.
 
-Here’s an example of composing two functions:
-
 ```javascript
 function addOne(x) {
   return x + 1
@@ -199,8 +199,6 @@ In this case, `addOneAndDouble` first applies `addOne` to `3`, then applies `dou
 
 In functional programming, **recursion** is often used in place of traditional loops (`for`, `while`). A recursive function is a function that calls itself to break down a problem into smaller instances of the same problem.
 
-Here’s an example of recursion in JavaScript:
-
 ```javascript
 function factorial(n) {
   if (n === 0) {
@@ -214,6 +212,21 @@ console.log(factorial(5)) // Output: 120
 ```
 
 This function calculates the factorial of `5` by calling itself repeatedly, reducing the input by 1 each time, until it reaches the base case (`n === 0`).
+
+```bash
+factorial(5)
+   factorial(4)
+      factorial(3)
+         factorial(2)
+            factorial(1)
+               factorial(0)
+               1
+            1
+         2
+      6
+   24
+120
+```
 
 Recursion Flow:
 
@@ -256,9 +269,7 @@ While functional programming languages use a more readable syntax than pure lamb
 
 In functional programming, everything is treated as an **expression**, which means every construct returns a value. This contrasts with **imperative programming**, where programs are built around **statements**, which do not return values and typically cause side effects (e.g., `if`, `for`).
 
-Here’s an example to show the difference:
-
-- **Imperative (with statements)**:
+**Imperative (with statements)**:
 
 ```javascript
 let result
@@ -269,7 +280,7 @@ if (x > 10) {
 }
 ```
 
-- **Functional (everything as an expression)**:
+**Functional (everything as an expression)**:
 
 ```javascript
 const result = x > 10 ? 'big' : 'small'
@@ -277,7 +288,7 @@ const result = x > 10 ? 'big' : 'small'
 
 In the functional version, the conditional logic (`x > 10`) is evaluated as an expression that returns a value, making the code more concise and reducing potential side effects.
 
-### Currying and Partial Application
+### Currying
 
 **Currying** is the process of transforming a function that takes multiple arguments into a series of functions that each take a single argument. In other words, a curried function breaks down the process of providing arguments into smaller steps.
 
@@ -293,6 +304,37 @@ console.log(addFive(3)) // Output: 8
 ```
 
 In this example, `add(5)` returns a new function that adds 5 to the argument passed in later (`3` in this case).
+
+**Example: Currying in Form Validation**
+
+Imagine you have an app that handles user forms, and you want to validate various fields (such as username, password, etc.). You can curry a validation function to create reusable validation logic.
+
+Step 1: Curried Validation Function
+
+```javascript
+const validateField = (minLength) => (maxLength) => (inputValue) => {
+  if (inputValue.length < minLength) {
+    return `Input must be at least ${minLength} characters long.`
+  } else if (inputValue.length > maxLength) {
+    return `Input must be less than ${maxLength} characters long.`
+  }
+  return 'Valid input!'
+}
+```
+
+Step 2: Reusing the Curried Function for Different Fields
+
+```javascript
+const validateUsername = validateField(3)(15)
+const validatePassword = validateField(8)(20)
+
+// Example usage
+console.log(validateUsername('Jo')) // Output: "Input must be at least 3 characters long."
+console.log(validateUsername('JohnDoe')) // Output: "Valid input!"
+console.log(validatePassword('short')) // Output: "Input must be at least 8 characters long."
+```
+
+### Partial Application
 
 **Partial application** is related to currying, but instead of breaking down a function into one-argument steps, you apply some of the function’s arguments initially, leaving the rest to be supplied later.
 
@@ -492,10 +534,8 @@ To manage immutability efficiently, functional programming uses techniques like 
 
    This concept can be visualized as a tree, where each node points to its child nodes. When a modification occurs, only the affected path is updated, and the rest of the tree remains unchanged and is shared between both versions.
 
-   Here's a simplified diagram to illustrate structural sharing:
-
    <pre class="mermaid" style="display: flex; justify-content: center;">
-   graph TD
+   graph LR
        A[Original Structure] --> B1[Part 1]
        A --> B2[Part 2]
        B2 --> C1[Shared Part]
@@ -514,32 +554,29 @@ Immutability in functional programming is managed using **persistent data struct
 
 **Map**, **filter**, and **reduce** are essential functional programming techniques for transforming collections of data in a functional way.
 
-1. **Map**:
-   The `map` function applies a given function to each element of a collection (array, list) and returns a new collection with the results. It transforms each element independently.
+The **`map`** function applies a given function to each element of a collection (array, list) and returns a new collection with the results. It transforms each element independently.
 
-   ```javascript
-   const numbers = [1, 2, 3, 4]
-   const doubled = numbers.map((num) => num * 2)
-   console.log(doubled) // Output: [2, 4, 6, 8]
-   ```
+```javascript
+const numbers = [1, 2, 3, 4]
+const doubled = numbers.map((num) => num * 2)
+console.log(doubled) // Output: [2, 4, 6, 8]
+```
 
-2. **Filter**:
-   The `filter` function processes a collection by applying a condition (predicate function) to each element, returning a new collection with only the elements that satisfy the condition.
+The **`filter`** function processes a collection by applying a condition (predicate function) to each element, returning a new collection with only the elements that satisfy the condition.
 
-   ```javascript
-   const numbers = [1, 2, 3, 4]
-   const evenNumbers = numbers.filter((num) => num % 2 === 0)
-   console.log(evenNumbers) // Output: [2, 4]
-   ```
+```javascript
+const numbers = [1, 2, 3, 4]
+const evenNumbers = numbers.filter((num) => num % 2 === 0)
+console.log(evenNumbers) // Output: [2, 4]
+```
 
-3. **Reduce**:
-   The `reduce` function takes a collection and a reducer function, accumulating all the elements into a single value based on the logic defined in the reducer function.
+The **`reduce`** function takes a collection and a reducer function, accumulating all the elements into a single value based on the logic defined in the reducer function.
 
-   ```javascript
-   const numbers = [1, 2, 3, 4]
-   const sum = numbers.reduce((accumulator, current) => accumulator + current, 0)
-   console.log(sum) // Output: 10
-   ```
+```javascript
+const numbers = [1, 2, 3, 4]
+const sum = numbers.reduce((accumulator, current) => accumulator + current, 0)
+console.log(sum) // Output: 10
+```
 
 These functions eliminate the need for explicit loops and maintain the functional programming paradigm by avoiding side effects.
 
@@ -566,41 +603,41 @@ for (const value of rangeGenerator) {
 
 In this example, the `lazyRange` generator produces values lazily—only when they are requested by the loop.
 
-### Monads and Functors
+### Functors
 
 **Monads** and **functors** are more advanced concepts used in functional programming to handle side effects, state, and I/O in a controlled manner. While these concepts originate from category theory, they are widely applied in functional programming languages like Haskell to encapsulate computations that involve effects while maintaining purity.
 
-1. **Functors**:
-   A **functor** is a data type that can be mapped over. Essentially, if you have a container or wrapper (like an array), you can apply a function to the values inside the container using `map`.
+A **functor** is a data type that can be mapped over. Essentially, if you have a container or wrapper (like an array), you can apply a function to the values inside the container using `map`.
 
-   In JavaScript, arrays are functors because you can use `map` to apply a function to each element in the array.
+In JavaScript, arrays are functors because you can use `map` to apply a function to each element in the array.
 
-   ```javascript
-   const numbers = [1, 2, 3]
-   const doubled = numbers.map((x) => x * 2) // Array is a functor
-   console.log(doubled) // Output: [2, 4, 6]
-   ```
+```javascript
+const numbers = [1, 2, 3]
+const doubled = numbers.map((x) => x * 2) // Array is a functor
+console.log(doubled) // Output: [2, 4, 6]
+```
 
-2. **Monads**:
-   A **monad** is a more powerful concept that builds on functors. It represents a computation sequence that allows chaining operations while managing side effects (like state, I/O, or asynchronous operations). In functional programming, monads help maintain purity by encapsulating side effects.
+### Monads
 
-   While JavaScript does not have built-in monads, **promises** can be considered monads for managing asynchronous computations.
+A **monad** is a more powerful concept that builds on functors. It represents a computation sequence that allows chaining operations while managing side effects (like state, I/O, or asynchronous operations). In functional programming, monads help maintain purity by encapsulating side effects.
 
-   ```javascript
-   const fetchData = () => Promise.resolve({ data: 'Hello' })
+While JavaScript does not have built-in monads, **promises** can be considered monads for managing asynchronous computations.
 
-   fetchData()
-     .then((result) => console.log(result.data)) // Monadic chaining
-     .catch((error) => console.error(error))
-   ```
+```javascript
+const fetchData = () => Promise.resolve({ data: 'Hello' })
 
-   In this example, promises allow chaining computations (e.g., `.then()`) while managing asynchronous I/O operations.
+fetchData()
+  .then((result) => console.log(result.data)) // Monadic chaining
+  .catch((error) => console.error(error))
+```
 
-   Monads must satisfy three laws:
+In this example, promises allow chaining computations (e.g., `.then()`) while managing asynchronous I/O operations.
 
-   - **Left identity**: `return(a).then(f)` is equivalent to `f(a)`.
-   - **Right identity**: `m.then(return)` is equivalent to `m`.
-   - **Associativity**: `(m.then(f)).then(g)` is equivalent to `m.then(x => f(x).then(g))`.
+Monads must satisfy three laws:
+
+- **Left identity**: `return(a).then(f)` is equivalent to `f(a)`.
+- **Right identity**: `m.then(return)` is equivalent to `m`.
+- **Associativity**: `(m.then(f)).then(g)` is equivalent to `m.then(x => f(x).then(g))`.
 
 Functional techniques like **map**, **filter**, and **reduce** simplify working with collections by transforming data without mutating the original values. **Lazy evaluation** helps optimize performance by delaying computations until necessary, and advanced concepts like **monads** and **functors** allow developers to manage side effects, asynchronous operations, and state in a controlled, functional manner. These techniques, combined, enable cleaner, more maintainable, and expressive functional code.
 
