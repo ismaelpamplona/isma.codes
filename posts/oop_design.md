@@ -158,14 +158,14 @@ print(dog.name)  # Output: Buddy
 print(dog.speak())  # Output: Woof!
 ```
 
-```mermaid
+<pre class="mermaid" style="display: flex; justify-content: center;">
 classDiagram
     direction LR
-    Animal <|-- Dog
+    Animal &lt;|-- Dog
     Animal : +name
     Animal : +speak()
     Dog : +speak()
-```
+</pre>
 
 ### Polymorphism
 
