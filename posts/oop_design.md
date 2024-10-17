@@ -1523,14 +1523,22 @@ Example (Following Tell, Don’t Ask):
 ```python
 class BankAccount:
     def __init__(self, balance):
-        self.balance = balance
+        self.__balance = balance  # Private attribute
+
+    def get_balance(self):
+        return self.__balance  # Getter for balance
 
     def withdraw(self, amount):
-        if self.balance >= amount:
-            self.balance -= amount
+        if 0 < amount <= self.__balance:
+            self.__balance -= amount
+        else:
+            print("Invalid withdrawal amount")
 
+# Usage
 account = BankAccount(100)
-account.withdraw(50)  # Telling the object to perform the action
+print(account.get_balance())  # Output: 100
+account.withdraw(50) # Telling the object to perform the action
+print(account.get_balance())  # Output: 50
 ```
 
 By using the `withdraw` method, the logic is encapsulated within `BankAccount`, promoting better encapsulation.
@@ -2313,30 +2321,37 @@ The "Library Management System REST API" serves as a comprehensive example of ho
 
 **Articles:**
 
-- [SOLID Principles Explained](https://medium.com/swlh/solid-principles-explained-using-examples-5b18d6a9b8)
-- [Understanding Design Patterns](https://refactoring.guru/design-patterns)
-- <p><a target="_blank" href="/blog/functional_programming_design">Functional Programming (FP) Design</a></p>
+- [SOLID Principles Explained](https://medium.com/swlh/solid-principles-explained-using-examples-5b18d6a9b8): A detailed article explaining SOLID principles with practical examples.
+
+- [Understanding Design Patterns](https://refactoring.guru/design-patterns): A comprehensive guide to various design patterns and their use cases.
+
+- <p><a target="_blank" href="/blog/functional_programming_design">Functional Programming (FP) Design</a>: An overview of functional programming principles and their impact on software design.</p>
 
 **Documentation:**
 
-- [Python OOP Documentation](https://docs.python.org/3/tutorial/classes.html)
-- [JavaScript Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
-- [Java Official Documentation](https://docs.oracle.com/javase/tutorial/java/concepts/)
+- [Python OOP Documentation](https://docs.python.org/3/tutorial/classes.html): Official Python documentation for classes and object-oriented programming fundamentals.
+
+- [JavaScript Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes): MDN documentation explaining JavaScript's class syntax and features.
+
+- [Java Official Documentation](https://docs.oracle.com/javase/tutorial/java/concepts/): Java's official documentation covering the basics of object-oriented programming.
 
 **Tutorials:**
 
-- [Python OOP Tutorial](https://realpython.com/python3-object-oriented-programming/)
-- [JavaScript OOP Basics](https://javascript.info/object-oriented-programming)
+- [Python OOP Tutorial](https://realpython.com/python3-object-oriented-programming/): A hands-on tutorial teaching object-oriented programming in Python.
+
+- [JavaScript OOP Basics](https://javascript.info/object-oriented-programming): A beginner-friendly guide to object-oriented programming concepts in JavaScript.
 
 **Videos:**
 
-- [SOLID Principles Explained - Derek Banas](https://www.youtube.com/watch?v=Gt0M_OHKhQE)
-- [Design Patterns in Object-Oriented Programming - freeCodeCamp.org](https://www.youtube.com/watch?v=wv7pvH1O5Ho)
+- [SOLID Principles Explained - Derek Banas](https://www.youtube.com/watch?v=Gt0M_OHKhQE): A YouTube video that clearly explains the SOLID principles in object-oriented programming.
+
+- [Design Patterns in Object-Oriented Programming - freeCodeCamp.org](https://www.youtube.com/watch?v=wv7pvH1O5Ho): A detailed video covering common design patterns in object-oriented programming.
 
 **Courses:**
 
-- [Coursera - Object-Oriented Programming in Java](https://www.coursera.org/specializations/object-oriented-programming)
-- [Udemy - Python OOP: Object-Oriented Programming in Python](https://www.udemy.com/course/python-object-oriented-programming/)
+- [Coursera - Object-Oriented Programming in Java](https://www.coursera.org/specializations/object-oriented-programming): A specialization course on object-oriented programming concepts in Java.
+
+- [Udemy - Python OOP: Object-Oriented Programming in Python](https://www.udemy.com/course/python-object-oriented-programming/): A comprehensive Udemy course on mastering object-oriented programming in Python.
 
 ## Glossary
 
