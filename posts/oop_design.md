@@ -1232,9 +1232,12 @@ print(f"The {car.model} has a {car.engine.engine_type}")
 <pre class="mermaid" style="display: flex; justify-content: center;">
 classDiagram
     direction LR
-    House *-- Room : Composition
-    House : +lock()
-    Room : +clean()
+    Car *-- Engine : Composition
+    Car : +String model
+    Car : +Engine engine
+    Car : +__init__(model, engine_type)
+    Engine : +String engine_type
+    Engine : +__init__(engine_type)
 </pre>
 
 ## How OOP Enables Code Reusability and Modularity
