@@ -2144,6 +2144,8 @@ def calculate_area(width, height=None):
 - **First-Class and Higher-Order Functions:** Functions are treated as first-class citizens and can be passed as arguments, returned from other functions, or assigned to variables.
 - **Function Composition:** Building complex functions by combining simpler functions.
 
+To learn more about Functional Programming (FP) design principles and practices, read <a target="_blank" href="/blog/functional_programming_design">"Functional Programming (FP) Design"</a>
+
 ### Comparison Between OOP and Functional Programming
 
 | **Aspect**                   | **Object-Oriented Programming (OOP)**                          | **Functional Programming (FP)**                      |
@@ -2337,6 +2339,7 @@ The "Library Management System REST API" serves as a comprehensive example of ho
 
 - [SOLID Principles Explained](https://medium.com/swlh/solid-principles-explained-using-examples-5b18d6a9b8)
 - [Understanding Design Patterns](https://refactoring.guru/design-patterns)
+- <p><a target="_blank" href="/blog/functional_programming_design">Functional Programming (FP) Design</a></p>
 
 **Documentation:**
 

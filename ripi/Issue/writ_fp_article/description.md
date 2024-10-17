@@ -1,1 +1,0 @@
-# writ_fp_article (Issue)
