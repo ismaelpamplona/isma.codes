@@ -854,9 +854,7 @@ The `Application` class depends on the `DatabaseInterface` abstraction, not a sp
 
 **Maintainability:** Code is easier to understand, debug, and enhance over time, reducing the risk of introducing bugs.
 
-## Composition vs. Inheritance
-
-**The "Favor Composition Over Inheritance" Principle**
+## The "Favor Composition Over Inheritance" Principle
 
 This principle suggests that you should prefer creating complex behavior by combining simple, reusable objects (composition) rather than using class inheritance. This approach encourages building systems where objects can collaborate with one another rather than creating rigid, tightly-coupled hierarchies.
 
@@ -924,6 +922,74 @@ print(car.start())  # Output: Engine starting...
 - **Avoiding Fragile Hierarchies:** Inheritance can lead to problems if changes in the base class affect all derived classes. Composition avoids this by allowing objects to interact without direct dependency.
 - **Greater Flexibility:** Composition allows you to swap components at runtime, making your code more adaptable to change.
 - **Better Encapsulation:** Composition hides the implementation details, promoting better encapsulation and reducing dependencies.
+
+Let's take a practical example where composition is better than inheritance: **a game character system** where characters can have multiple abilities (e.g., fly, swim, run). If you used inheritance to implement these abilities, you would quickly run into issues.
+
+**Inheritance Approach (Bad Option):**
+
+```python
+class Character:
+    def move(self):
+        pass
+
+class FlyingCharacter(Character):
+    def move(self):
+        return "Flying"
+
+class SwimmingCharacter(Character):
+    def move(self):
+        return "Swimming"
+
+class FlyingSwimmingCharacter(FlyingCharacter, SwimmingCharacter):  # Inheritance leads to complexity here
+    pass
+
+# Usage
+character = FlyingSwimmingCharacter()
+print(character.move())  # Ambiguity: Should it fly or swim? Inheritance leads to problems
+```
+
+Here, combining abilities through inheritance becomes complicated because `FlyingSwimmingCharacter` needs to inherit from both `FlyingCharacter` and `SwimmingCharacter`, leading to ambiguity and the "diamond problem" (which method should be used?).
+
+**Composition Approach (Better Option):**
+
+Instead of using inheritance, you can use composition to add behaviors dynamically, making the design more flexible and maintainable.
+
+```python
+class Character:
+    def __init__(self, name):
+        self.name = name
+        self.abilities = []
+
+    def add_ability(self, ability):
+        self.abilities.append(ability)
+
+    def move(self):
+        for ability in self.abilities:
+            print(ability.move())
+
+class FlyingAbility:
+    def move(self):
+        return "Flying"
+
+class SwimmingAbility:
+    def move(self):
+        return "Swimming"
+
+# Usage
+character = Character("Superman")
+character.add_ability(FlyingAbility())
+character.add_ability(SwimmingAbility())
+character.move()  # Output: Flying \n Swimming
+```
+
+Why, in this case, Composition is Better?
+
+- Flexibility: You can combine behaviors dynamically by adding different abilities to a character at runtime.
+
+- Maintainability: No need for complex hierarchies or multiple inheritance; you can add or remove abilities as needed.
+- Extensibility: Adding new abilities (like running, jumping) only requires creating a new class without affecting existing ones.
+
+In this case, composition is better because it allows you to freely combine behaviors without the rigid structure and potential conflicts that inheritance might cause.
 
 ## Interfaces and Abstract Classes
 
