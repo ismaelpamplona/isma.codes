@@ -42,7 +42,7 @@ The first significant leap towards automation came with configuration management
 
 IaC takes the principles of configuration management a step further by allowing the entire infrastructure stack—servers, networks, databases, load balancers, etc.— to be defined in code. This evolution has been driven by the rise of cloud computing, where infrastructure is provisioned and managed via APIs. IaC tools like Terraform, AWS CloudFormation, and Azure Resource Manager enable teams to define their infrastructure as code, automating the provisioning and management processes from start to finish.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 timeline
   title Evolution of Infrastructure Management
 
@@ -86,7 +86,7 @@ IaC offers several key benefits that make it an indispensable practice in modern
 
 - **Reproducibility:** Infrastructure can be easily reproduced in different environments, ensuring that the development, staging, and production environments are identical.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 flowchart LR
     A[Manual \n Configuration] -->|Inefficiencies| B[Configuration \n Management Tools]
     B -->|Automation of \n Configurations| C[Infrastructure \n as Code]
@@ -155,7 +155,7 @@ In this Ansible playbook, each task specifies a step in the process, giving the 
 
 - **Risk of Inconsistency:** Without careful management, imperative scripts can lead to configuration drift, where the actual infrastructure state diverges from the intended state.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 flowchart TD
     A[Declarative Approach] -->|Defines 'What'| B[Desired State Specified]
     C[Imperative Approach] -->|Defines 'How'| D[Steps Specified]
@@ -197,7 +197,7 @@ Immutable infrastructure takes a different approach, where infrastructure compon
 
 - **Deployment Complexity:** Requires a more sophisticated deployment pipeline to handle the creation and destruction of infrastructure.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 flowchart LR
     A[Mutable \n Infrastructure] -->|In-place \n  Updates| B[Configuration Drift, \n  Complex Maintenance]
     C[Immutable \n Infrastructure] -->|No In-place \n Updates| D[Consistency, \n Simplified Rollbacks]
@@ -275,7 +275,7 @@ While primarily known as a container orchestration platform, **Kubernetes** also
 - **Weaknesses:** Kubernetes has a steep learning curve and can be overkill for smaller applications or simpler environments.
 - **Use Cases:** Kubernetes is best suited for microservices architectures, cloud-native applications, and environments where high availability and scalability are critical.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 flowchart TD
     A[Terraform] -->|Multi-Cloud| B[Hybrid \n Environments]
     C[CloudFormation] -->|AWS-Specific| D[AWS  \n Environments]
@@ -323,7 +323,7 @@ Modularity in IaC involves breaking down infrastructure definitions into smaller
 
 - **Parameterization:** Use variables and parameters to make modules flexible and adaptable to different environments. For example, a module for an EC2 instance should allow the instance type and AMI to be specified.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 flowchart LR
     A[Monolithic IaC] -->|Breakdown| B[Modular Components]
     B -->|Reuse| C[Terraform Modules]
@@ -368,7 +368,7 @@ Security is a critical aspect of IaC, and integrating security checks early in t
 
 - **CloudFormation Guard:** A rule-based tool for validating CloudFormation templates against your organization’s policies.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 flowchart TD
     A[Security in IaC] -->|Static Analysis| B[Checkov, TFLint]
     A -->|Policy Enforcement| C[CloudFormation Guard]
@@ -406,7 +406,7 @@ Good documentation is critical for understanding, maintaining, and onboarding ne
 
 - **Code Reviews:** Implement a robust code review process to ensure that infrastructure changes are peer-reviewed. This enhances the quality of the code and fosters shared ownership.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 flowchart LR
     A[Documentation] -->|README Files| B[Module Documentation]
     A -->|Comments| C[In-Code Annotations]
@@ -443,7 +443,7 @@ As organizations increasingly adopt multi-cloud strategies to leverage the best 
 
 - **Geographical Redundancy:** Multi-cloud IaC allows organizations to deploy infrastructure closer to their users, reducing latency and improving performance by using the closest cloud region.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 flowchart LR
     A[Multi-Cloud IaC] -->|Terraform| B[AWS, Azure, GCP]
     A -->|Pulumi| C[Multi-Language Support]
@@ -473,7 +473,7 @@ Hybrid environments, where some resources are on-premises and others are in the 
 
 - **Data Integration:** For organizations that need to manage data across on-premises and cloud environments, IaC can automate the deployment of data replication services, backup strategies, and hybrid databases that span multiple environments.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 flowchart LR
     A[IaC for On-Premises] -->|Configuration Management| B[Ansible, Puppet, Chef]
     A -->|VMware Automation| C[Terraform with vSphere]
@@ -553,7 +553,7 @@ IaC is a key component of modern DevOps and DevSecOps practices, enabling automa
 
 - **Collaboration Tools:** Leveraging collaboration tools like Git, code review platforms, and automated documentation can enhance teamwork and ensure that IaC practices are consistently applied across the organization.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 flowchart TD
     A[IaC \n Challenges] -->|Complexity| B[Large-Scale \n  Environments]
     A -->|State Management| C[Managing State \n  and Drift]
@@ -635,7 +635,7 @@ GitOps and policy-as-code are two significant trends that are redefining how inf
 
 - **Policy-as-Code:** As security and compliance become increasingly important, policy-as-code allows organizations to define and enforce policies programmatically. Tools like Open Policy Agent (OPA) enable policies to be integrated into CI/CD pipelines, ensuring that infrastructure adheres to organizational standards before deployment.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 flowchart TD
     subgraph AI/ML in IaC
         A[AI/ML] -->|Automation| B[AI-Powered \n Automation]
@@ -682,7 +682,7 @@ To thrive in this evolving landscape, DevOps engineers will need to acquire new 
 
 - **Serverless and Edge Computing:** As serverless and edge computing become more prevalent, DevOps engineers should familiarize themselves with tools and frameworks designed for these environments. Understanding how to manage and deploy serverless functions and edge infrastructure using IaC will be crucial.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 flowchart TD
     A[DevOps Engineer] -->|Automation| B[AI/ML \n Integration]
     A -->|GitOps| C[GitOps \n Proficiency]
@@ -702,7 +702,7 @@ We'll walk through a simple example of Infrastructure as Code (IaC) using three 
 
 3. **Managing Additional Resources with AWS CloudFormation:** Finally, we'll use AWS CloudFormation to create an S3 bucket. CloudFormation is an IaC tool that allows us to define AWS resources in a template and manage them as a stack.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 flowchart LR
     subgraph Provision
         direction TB

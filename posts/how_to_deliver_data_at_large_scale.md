@@ -136,7 +136,7 @@ In software, partitioning strategies help in organizing and managing large amoun
 - The lookup table can become a bottleneck if it grows too large.
 - Requires additional management to keep the table updated.
 
-  <pre class="mermaid">
+  <pre class="mermaid" style="display: flex; justify-content: center;">
         graph LR
         A[Data Item] --> B[Lookup Table]
         B --> C[Partition 1]
@@ -159,7 +159,7 @@ In software, partitioning strategies help in organizing and managing large amoun
   - Can lead to uneven distribution if the data is not uniformly distributed.
   - May require rebalancing if ranges become skewed.
 
-   <pre class="mermaid">
+   <pre class="mermaid" style="display: flex; justify-content: center;">
         graph LR
         A[Data Item] --> B[Range Check]
         B --> C[Partition 1]
@@ -182,7 +182,7 @@ In software, partitioning strategies help in organizing and managing large amoun
   - Can be complex to implement and manage.
   - Difficult to handle range queries efficiently.
 
-   <pre class="mermaid">
+   <pre class="mermaid" style="display: flex; justify-content: center;">
         graph LR
         A[Data Item] --> B[Hash Function]
         B --> C[Partition 1]

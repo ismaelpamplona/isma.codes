@@ -78,7 +78,7 @@ Using both load balancing and a queue-based system creates a robust solution for
 
 ## Example Architecture Diagram
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
   graph TD
   A[User] -->|HTTP Requests| B[Load Balancer]
   B --> C[Web Server 1]

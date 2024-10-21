@@ -66,7 +66,7 @@ Open source software offers numerous benefits:
 
 Open source projects typically follow a collaborative development flow:
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 flowchart LR
     A[Idea \n Generation] --> B[Issue \n Tracking]
     B --> C[Development]
@@ -224,7 +224,7 @@ Some common Copyleft Licenses are:
 
 To aid in understanding when to choose each type of license, here’s a mermaid diagram illustrating a decision process:
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 stateDiagram-v2
     direction LR
     state "Do you want\nto keep\nderived works\nopen source?" as B

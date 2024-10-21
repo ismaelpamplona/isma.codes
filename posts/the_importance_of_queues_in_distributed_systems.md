@@ -52,7 +52,7 @@ This is like a line where the end is connected to the beginning, forming a circl
 
 - **How it Works:**
 
-    <pre class="mermaid">
+    <pre class="mermaid" style="display: flex; justify-content: center;">
     graph LR
       A[Write Pointer] -->|Writes Data| B[Circular Buffer]
       B -->|Read Data| C[Read Pointer]
@@ -86,7 +86,7 @@ This is like the roller coaster deciding to let some people go without a ride if
 
    - If the queue is full, some incoming requests are rejected to maintain system stability.
 
-     <pre class="mermaid">
+     <pre class="mermaid" style="display: flex; justify-content: center;">
       flowchart LR
           Start --> Decision[Queue Full?]
           Decision -->|Yes| Drop[Request Dropped]
@@ -110,7 +110,7 @@ This is like controlling how many people can enter the line per minute. It preve
 
    - Limits the number of requests per second or minute.
 
-   <pre class="mermaid">
+   <pre class="mermaid" style="display: flex; justify-content: center;">
    sequenceDiagram
        participant Client
        participant RateLimiter
@@ -137,7 +137,7 @@ When the roller coaster can't take more people or there are other issues, you ne
 
    - Retrying, redirecting, or logging failed requests.
 
-   <pre class="mermaid">
+   <pre class="mermaid" style="display: flex; justify-content: center;">
    sequenceDiagram
        participant Client
        participant Queue
@@ -164,7 +164,7 @@ This is like slowing down the rate at which people join the line if it gets too 
 
    - Signals upstream systems to reduce their request rate when the queue is full.
 
-   <pre class="mermaid">
+   <pre class="mermaid" style="display: flex; justify-content: center;">
    sequenceDiagram
        participant Client
        participant Upstream
@@ -190,7 +190,7 @@ This is like adding more roller coasters when the line gets too long or reducing
 
    - Automatically scales up or down to handle varying loads.
 
-     <pre class="mermaid">
+     <pre class="mermaid" style="display: flex; justify-content: center;">
      flowchart LR
          Start --> LoadBalancer[Check \n Load]
          LoadBalancer --> Decision[Is Load \n High?]
@@ -220,7 +220,7 @@ This is like having workers in a factory where some workers (producers) create p
 
    - Producers and consumers work independently but synchronize through the queue.
 
-     <pre class="mermaid">
+     <pre class="mermaid" style="display: flex; justify-content: center;">
      flowchart LR
          Producer[Producers] --> Queue[Queue]
          Queue --> Consumer[Consumers]
@@ -241,7 +241,7 @@ This is like having a system where producers wait if the conveyor belt is full a
 
     - Producers wait if the queue is full, and consumers wait if the queue is empty. They notify each other when adding or removing items.
 
-    <pre class="mermaid">
+    <pre class="mermaid" style="display: flex; justify-content: center;">
        sequenceDiagram
            participant Producer
            participant Queue
@@ -267,7 +267,7 @@ This is like having a traffic light system that controls access to the conveyor 
 
     - Semaphores maintain a counter that tracks available resources and signals when a resource is free or occupied.
 
-      <pre class="mermaid">
+      <pre class="mermaid" style="display: flex; justify-content: center;">
       flowchart LR
           Start --> ProducerSemaphoreCheck[Check Producer \n Semaphore]
           ProducerSemaphoreCheck -->|Available| Produce[Produce \n Item]
@@ -396,7 +396,7 @@ Big compute architecture involves using many computers (or processors) working t
   - No real-time processing.
   - Delays in getting results.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 graph LR;
   A[Start] --> B[Collect \n Tasks];
   B --> C[Batch \n Processing] --> D[Process \n Task 1];
@@ -429,7 +429,7 @@ graph LR;
 - - Not all problems are embarrassingly parallel.
   - Limited by the number of independent tasks available.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 graph LR;
   A[Start] --> B[Divide \n Problem];
   B --> C1[Task 1];

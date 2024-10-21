@@ -126,7 +126,7 @@ Once `git flow` is installed, you can proceed with the following steps:
 
 **Git Flow process:**
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 gitGraph
    commit id: "Initial commit" tag: "main"
    branch develop
@@ -236,7 +236,7 @@ Trunk-Based Development revolves around a few key principles:
 
 **Trunk-Based Development process:**
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 gitGraph
    commit id: "Initial commit" tag: "trunk"
    branch trunk
@@ -313,7 +313,7 @@ In the world of software development, version control is crucial for managing co
 
 Git Flow's structured branching model is ideal for managing complex projects with multiple teams. Feature branches allow isolated development, while release branches provide a stable environment for testing and bug fixing. The main branch ensures a production-ready state, and hotfix branches allow quick resolution of critical issues.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 graph LR;
 A[main] -->|create| B[develop]
 B -->|create| C[feature-branch]
@@ -338,7 +338,7 @@ E -->|merge| B
 
 Trunk-Based Development's emphasis on continuous integration and rapid deployment makes it perfect for agile startups. With frequent commits and short-lived feature branches, the team can quickly integrate and deploy new features, ensuring a fast-paced development cycle.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 graph LR;
 A[Trunk/Main] -->|create| B[Feature Branch]
 B -->|frequent commits| B

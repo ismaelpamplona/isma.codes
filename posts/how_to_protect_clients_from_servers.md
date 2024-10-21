@@ -59,7 +59,7 @@ Imagine you're calling a friend on the phone. Sometimes, you wait for them to pi
 
 **Synchronous Client:**
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
     sequenceDiagram
     participant User
     participant Server
@@ -69,7 +69,7 @@ Imagine you're calling a friend on the phone. Sometimes, you wait for them to pi
 
 **Asynchronous Client:**
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
     sequenceDiagram
     participant User
     participant Server
@@ -113,7 +113,7 @@ Think of it as a traffic light with three states: green, yellow, and red.
 3. **Fallback Mechanisms:** Provide an alternative response when the circuit breaker is open.
 4. **Monitoring and Logging:** Keep track of failures and successes to adjust the circuit breaker behavior.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 stateDiagram
     direction LR
     [*] --> Closed
@@ -190,7 +190,7 @@ Imagine if you were playing a video game and your character hit a wall that you 
 
 **Fail-Fast Scenario:**
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
     sequenceDiagram
     participant Client
     participant Server
@@ -201,7 +201,7 @@ Imagine if you were playing a video game and your character hit a wall that you 
 
 **Slow Service Scenario:**
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
     sequenceDiagram
     participant Client
     participant ServiceA
@@ -237,7 +237,7 @@ Imagine a ship with multiple compartments. If one compartment gets damaged and f
    - Divide services into isolated groups.
    - Each group operates independently, so a failure in one doesn't impact the others.
 
-   <pre class="mermaid">
+   <pre class="mermaid" style="display: flex; justify-content: center;">
    graph TD
      A[Service Group 1] -- Isolation --> B[Service Group 2]
      A -- Isolation --> C[Service Group 3]
@@ -318,7 +318,7 @@ Imagine a ship with multiple compartments. If one compartment gets damaged and f
 
 **Bulkhead Implementation:**
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 graph TD
   A[User Requests] --> B[Service Group 1]
   A --> C[Service Group 2]
@@ -382,7 +382,7 @@ Imagine you have a deck of cards, and you want to distribute them among several 
    handle_request("user123");
    ```
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 graph TD
   A[User \n Requests] --> B[Shard 1]
   A --> C[Shard 2]

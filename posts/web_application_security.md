@@ -532,7 +532,7 @@ Passwords remain a primary method of authentication, making secure password mana
 - **Secure Reset Links**: Send password reset links via email that expire after a short time (e.g., 15 minutes). Ensure the reset link is single-use and tied to a specific user session.
 - **Verification Steps**: Require users to verify their identity (e.g., through email or SMS) before allowing them to reset their password.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 sequenceDiagram
     participant U as User
     participant W as Web Application
@@ -576,7 +576,7 @@ SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are cryptographic 
 - **Strong Cipher Suites**: Configure servers to use strong cipher suites that provide forward secrecy, such as those based on Elliptic Curve Diffie-Hellman (ECDHE).
 - **Certificate Management**: Regularly renew certificates and use automated tools like Let’s Encrypt to manage certificate issuance and renewal.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 sequenceDiagram
     participant Client
     participant Server
@@ -606,7 +606,7 @@ HTTPS (Hypertext Transfer Protocol Secure) is the secure version of HTTP, using 
 
 **HSTS (HTTP Strict Transport Security)**: Implement HSTS to enforce HTTPS connections for your domain. HSTS instructs browsers to only communicate with your site using HTTPS, even if the user attempts to use HTTP.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 sequenceDiagram
     participant Browser
     participant Server
@@ -749,7 +749,7 @@ SQL Injection is one of the most dangerous and common web vulnerabilities. It oc
 
 SQL Injection can lead to unauthorized data access, data modification, or even complete database compromise. Attackers can retrieve, modify, or delete data, and in some cases, escalate their privileges on the system.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 flowchart LR
     subgraph Vulnerable_Flow [Vulnerable SQL Injection Flow]
         direction LR
@@ -880,7 +880,7 @@ app.run(debug=True)
 
 Cross-Site Scripting (XSS) occurs when an attacker injects malicious scripts into a web page that is then executed in the user's browser. XSS attacks can steal cookies, session tokens, or other sensitive data, and can even redirect users to malicious sites.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 flowchart LR
     subgraph Vulnerable_Flow [Vulnerable to XSS]
         direction LR
@@ -1088,7 +1088,7 @@ CSRF exploits the trust that a web application has in a user's browser. If the u
 
 In a CSRF attack, the attacker tricks an authenticated user into executing unwanted actions on a web application. This is often done by embedding malicious code or links in an email, website, or third-party application.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 flowchart LR
     subgraph Vulnerable_Flow [Vulnerable to CSRF]
         direction LR
@@ -1233,7 +1233,7 @@ if __name__ == '__main__':
 
 MitM attack occurs when an attacker intercepts and potentially alters the communication between two parties without their knowledge. This can lead to data theft, session hijacking, or further compromise of the communication channel.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 sequenceDiagram
     participant Client
     participant Attacker
@@ -1351,7 +1351,7 @@ A Distributed Denial of Service (DDoS) attack aims to overwhelm a web server or 
 - **Protocol Attacks**: Exploit weaknesses in network protocols to consume resources on the server (e.g., SYN floods, ping of death).
 - **Application Layer Attacks**: Target specific applications or services with a high volume of requests to exhaust resources (e.g., HTTP GET/POST floods).
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 flowchart LR
     subgraph Attack_Flow [DDoS Attack Flow]
         direction TB

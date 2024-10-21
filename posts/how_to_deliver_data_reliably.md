@@ -103,7 +103,7 @@ Imagine your system is a big cake with three layers. Each layer has a specific r
 - Manages data storage and retrieval.
 - Examples: Databases, file storage systems.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 graph LR
     A[Presentation Tier] --> B[Application Tier]
     B --> C[Data Tier]
@@ -183,7 +183,7 @@ When you try to do something and it doesn't work, you need a plan to handle it. 
 - **Why it's important:** It keeps things going even if the main way fails.
 - **Example:** Using a different route when your usual path is blocked.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 graph TD
     A[Request Fails] --> B[Cancel]
     A --> C[Retry]
@@ -275,7 +275,7 @@ If you can do something many times and it gives the same result, it's usually sa
 - **Service Unavailable (503):** Yes
 - **Request Timeout (504):** Yes, if idempotent
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 graph LR
     A[Request \n Fails] --> B[Is the operation \n idempotent?]
     B -->|Yes| C[Retry]
@@ -376,7 +376,7 @@ Err::<(), *>("SomeExceptionType")
 
 This code retries a failed request 5 times, with an exponentially increasing wait time and up to 1 second of random jitter.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 graph LR
     A[Original \n Request] -->|Fails| B[1st Retry: \n Wait 1s]
     B -->|Fails| C[2nd Retry: \n Wait 2s]
@@ -427,7 +427,7 @@ Understanding message delivery guarantees helps design systems that are reliable
 | At-least-once | Delivered at least once. Might be duplicated. | Message queue with retries.                  |
 | Exactly-once  | Delivered exactly once. No duplicates.        | Idempotent operations with transaction logs. |
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 graph TD
     A[Message is sent] --> B[At-most-once]
     A --> C[At-least-once]
@@ -454,7 +454,7 @@ These systems use a log to keep track of messages. Every message gets a number (
 - **Kafka**: Uses a log to store messages, and each consumer keeps track of their own offset.
 - **Kinesis**: Similar to Kafka, where messages are stored in a log and consumers manage offsets.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 graph TD
     A[Log-based Messaging System] --> B["Message 1 (Offset 0)"]
     A --> C["Message 2 (Offset 1)"]
@@ -493,7 +493,7 @@ Checkpointing is like marking your place in a book so you can easily find it lat
   - Uses ZooKeeper or a similar service to store offsets.
   - Ensures that consumers can restart from the correct position.
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 graph LR
     A[Consumer] --> B["Message 1 \n (Offset 0)"]
     B --> C[Process \n Message]

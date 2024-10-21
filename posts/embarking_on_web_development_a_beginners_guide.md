@@ -60,7 +60,7 @@ When you type a URL into your browser and press enter, the browser initiates a s
 
 Here's a visual representation of this process:
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 sequenceDiagram
     participant User as User
     participant Browser as Browser
@@ -109,7 +109,7 @@ Web hosting is the service of providing storage space and access to web servers 
 
 Here’s a visual representation of the interaction between a web server and a client:
 
-<pre class="mermaid">
+<pre class="mermaid" style="display: flex; justify-content: center;">
 sequenceDiagram
     participant User as User
     participant Browser as Web Browser
