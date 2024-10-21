@@ -18,6 +18,10 @@
   // Create a reactive store to trigger a re-render
   const rebuildKey = writable(0)
 
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   // Function to change theme for mermaid and reset diagrams
   async function changeTheme(newTheme: string) {
     try {
@@ -110,6 +114,9 @@
     <div class="content-container">
       <Content />
     </div>
+    <button title="Upward" aria-label="Upward" tabIndex="0" class="to-top" on:click={scrollToTop}>
+      <iconify-icon icon="eva:arrow-ios-upward-fill" />
+    </button>
   </article>
 {/key}
 
@@ -153,5 +160,16 @@
 
   a {
     color: inherit;
+  }
+
+  .to-top {
+    display: flex;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 30px;
+    background: rgba(0, 0, 0, 0.3);
   }
 </style>
