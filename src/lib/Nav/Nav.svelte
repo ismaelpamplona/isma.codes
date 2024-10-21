@@ -1,8 +1,8 @@
 <script lang="ts">
   import { page } from '$app/stores'
-  import { darkMode } from './stores'
   import links from '../../data/links.yml'
   import type { Link } from '../../types/links'
+  import { darkMode } from './stores'
 
   import Logo from '$lib/Logo.svelte'
 
@@ -35,6 +35,7 @@
         title="Switch theme"
         aria-label="Switch theme"
         tabIndex="0"
+        class="switch-theme-btn"
         on:click={toggleTheme}
         on:keyup={toggleTheme}
       >
@@ -186,6 +187,9 @@
     }
   }
 
+  .switch-theme-btn {
+    width: 40px;
+  }
   .copyright {
     display: flex;
     align-items: flex-end;
