@@ -1,28 +1,21 @@
 <script lang="ts">
-  import { onMount, onDestroy } from 'svelte'
-  import { prices, cryptoPairs, initializePrices } from '$lib/binance/index'
+  import type { CryptoPairs } from '$lib/binance/index'
+  import { initializePrices, prices } from '$lib/binance/index'
+  import { onDestroy, onMount } from 'svelte'
+  import data from '../data/pairs-crypto.yml'
+  import { formatNumber } from '../helpers/utils'
 
-  function formatNumber(value: string): string {
-    if (value === '...') return '...'
-    let num = parseFloat(value)
-    return new Intl.NumberFormat('en-US', {
-      style: 'decimal',
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2
-    }).format(num)
-  }
+  export const cryptoPairs = data as CryptoPairs[]
+
+  cryptoPairs.forEach((pair) =>
+    prices.update((n) => ({ ...n, [pair.pair]: { value: '...', direction: '' } }))
+  )
 
   let cleanUpFunction: () => void
 
-  onMount(() => {
-    cleanUpFunction = initializePrices()
-  })
+  onMount(() => (cleanUpFunction = initializePrices(cryptoPairs)))
 
-  onDestroy(() => {
-    if (cleanUpFunction) {
-      cleanUpFunction()
-    }
-  })
+  onDestroy(() => cleanUpFunction && cleanUpFunction())
 </script>
 
 <div class="tickers-container">

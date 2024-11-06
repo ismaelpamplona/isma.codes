@@ -60,6 +60,10 @@ body {
     }
   }
 
+  .search-container {
+    background-color: $dark-background;
+  }
+
   input,
   textarea {
     background-color: lighten($dark-background, 5%);
@@ -189,6 +193,10 @@ body {
     &:hover {
       opacity: 0.8;
     }
+  }
+
+  .search-container {
+    background-color: $light-background;
   }
 
   input,

@@ -102,3 +102,13 @@ export const fetchCategories = async (): Promise<{
     categories: categories.sort((a, b) => a.name.localeCompare(b.name))
   }
 }
+
+export function formatNumber(value: string): string {
+  if (value === '...') return '...'
+  const num = parseFloat(value)
+  return new Intl.NumberFormat('en-US', {
+    style: 'decimal',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  }).format(num)
+}

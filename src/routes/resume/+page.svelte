@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Spinner from '$lib/Spinner.svelte'
+  import Spinner from '$lib/UIComponents/Spinner.svelte'
   import { onMount } from 'svelte'
   import data from '../../data/personal.yml'
   import type { WorkExperience } from './types'

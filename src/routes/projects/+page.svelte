@@ -1,7 +1,7 @@
 <script lang="ts">
   import data from '../../data/projects.yml'
 
-  import SearchInput from '$lib/SearchInput.svelte'
+  import SearchInput from '$lib/UIComponents/SearchInput.svelte'
 
   type Project = {
     name: string

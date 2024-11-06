@@ -1,10 +1,12 @@
 <script lang="ts">
   import { onMount } from 'svelte'
-  import { fuzzySearch, throttle } from '../helpers/utils'
+  import { fuzzySearch, throttle } from '../../helpers/utils'
 
   export let data: any[]
   export let results: any[] = data
   export let searchableKeys: string[]
+  export let placeholder: string = 'Seach...'
+  export let icon: string = 'mdi:search'
 
   function searchForData(e: Event) {
     const target = e.target as HTMLInputElement
@@ -22,16 +24,12 @@
   })
 </script>
 
-<input type="text" placeholder="Search..." />
+<div class="tag-wrapper">
+  <input type="text" {placeholder} />
+  <iconify-icon {icon} />
+</div>
 
 <style lang="scss">
-  @import '../style/sizes.scss';
-
-  input {
-    border-radius: calc($tag-border-radius * 2);
-    width: 100%;
-    height: 2.5rem;
-    padding: 0 15px;
-    max-width: 90vw;
-  }
+  @import '../../style/sizes.scss';
+  @import './index.scss';
 </style>

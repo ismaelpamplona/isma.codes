@@ -1,0 +1,37 @@
+{
+  "id": "portfolio-1",
+  "created_at": "2024-11-06T10:00:00Z",
+  "name": "Portfolio One",
+  "assets": [
+    {
+      "asset_id": "BTC",
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "holdings": [
+        {
+          "amount": 0.5,
+          "added_date": "2024-01-15T10:00:00Z"
+        },
+        {
+          "amount": 0.3,
+          "added_date": "2024-05-01T12:30:00Z"
+        }
+      ]
+    },
+    {
+      "asset_id": "ETH",
+      "name": "Ethereum",
+      "symbol": "ETH",
+      "holdings": [
+        {
+          "amount": 10,
+          "added_date": "2023-10-15T08:00:00Z"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "secondary": "USD",
+    "notes": "My portfolio 1 crypto portfolio"
+  }
+}

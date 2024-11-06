@@ -1,7 +1,7 @@
 <script lang="ts">
   export let data
   import { base } from '$app/paths'
-  import SearchInput from '$lib/SearchInput.svelte'
+  import SearchInput from '$lib/UIComponents/SearchInput.svelte'
 
   let { categories } = data
 

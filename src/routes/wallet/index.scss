@@ -1,0 +1,58 @@
+@import '../../style/sizes.scss';
+
+.select-coin {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .search-container {
+    top: 0;
+    position: sticky;
+    padding: 10px 0;
+    z-index: 2;
+  }
+
+  .ticker-container {
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    border-radius: $tag-border-radius;
+    padding: 5px 10px;
+    margin: 0;
+
+    .ticker-info {
+      display: grid;
+      grid-template-areas: 'icon symbol name';
+      gap: 10px;
+      align-items: center;
+      .symbol {
+        grid-area: symbol;
+      }
+
+      .icon {
+        grid: icon;
+      }
+
+      .name {
+        grid-area: name;
+      }
+
+      .symbol,
+      .icon {
+        margin: 0;
+      }
+
+      .name {
+        opacity: 0.8;
+      }
+    }
+
+    .rank {
+      font-style: italic;
+      opacity: 0.8;
+      // align-self: stretch;
+    }
+  }
+}
