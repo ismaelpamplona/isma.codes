@@ -9,6 +9,7 @@ categories:
   - networking
   - internet
   - infrastructure
+show: true
 ---
 
 ## Content

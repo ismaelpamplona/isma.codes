@@ -8,6 +8,8 @@ categories:
   - software-design
   - design-patterns
   - programming-paradigms
+  - interview
+show: true
 ---
 
 ## Contents

@@ -9,6 +9,7 @@ categories:
   - workflow
   - git-flow
   - trunk-based-development
+show: true
 ---
 
 ## Contents

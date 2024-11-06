@@ -7,6 +7,7 @@ categories:
   - architecture
   - chaos-engineering
   - engineering
+show: true
 ---
 
 ## Contents

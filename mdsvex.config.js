@@ -1,10 +1,10 @@
 import { defineMDSveXConfig as defineConfig } from 'mdsvex'
-import remarkUnwrapImages from 'remark-unwrap-images'
-import remarkToc from 'remark-toc'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeSlug from 'rehype-slug'
 import remarkFootnotes from 'remark-footnotes'
 import remarkGithub from 'remark-github'
-import rehypeSlug from 'rehype-slug'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import remarkToc from 'remark-toc'
+import remarkUnwrapImages from 'remark-unwrap-images'
 
 const config = defineConfig({
   extensions: ['.svelte', '.svx', '.md'],

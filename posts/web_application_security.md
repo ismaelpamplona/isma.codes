@@ -8,6 +8,8 @@ categories:
   - security
   - cybersecurity
   - web-development
+  - interview
+show: true
 ---
 
 ## Contents

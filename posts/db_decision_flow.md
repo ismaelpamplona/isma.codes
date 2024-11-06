@@ -8,6 +8,7 @@ categories:
   - database
   - engineering
   - infrastructure
+show: true
 ---
 
 ## Contents

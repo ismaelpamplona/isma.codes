@@ -13,7 +13,8 @@ categories:
   - software-design
   - web
   - web-development
-  - web-development
+  - interview
+show: true
 ---
 
 ## Contents

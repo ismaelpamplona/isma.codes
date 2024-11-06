@@ -10,6 +10,8 @@ categories:
   - system-design
   - reliability
   - engineering
+  - interview
+show: true
 ---
 
 ## Contents

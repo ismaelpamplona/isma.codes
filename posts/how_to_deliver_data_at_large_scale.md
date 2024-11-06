@@ -10,6 +10,8 @@ categories:
   - message-consumption
   - partitioning
   - request-routing
+  - interview
+show: true
 ---
 
 ## Contents

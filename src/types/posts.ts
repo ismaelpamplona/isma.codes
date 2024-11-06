@@ -4,6 +4,7 @@ export type PostMetadata = {
   description: string
   categories: string[]
   slug?: string
+  show?: boolean
 }
 
 export interface GlobEntryResult {

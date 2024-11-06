@@ -8,6 +8,7 @@ categories:
   - cloud-computing
   - automation
   - iac
+show: true
 ---
 
 ## Contents

@@ -1,5 +1,5 @@
 import Fuse, { type FuseResult } from 'fuse.js'
-import type { Post, GlobEntryResult, EnhancedPost } from '../types/posts'
+import type { EnhancedPost, GlobEntryResult, Post } from '../types/posts'
 
 export function fuzzySearch<T>(
   list: T[],
@@ -65,9 +65,9 @@ export const fetchMarkdownPostsRaw = async (): Promise<Post[]> => {
     })
   )
 
-  const sortedPosts = allPosts.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  )
+  const sortedPosts = allPosts
+    .filter((post) => post.show === true)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
   return sortedPosts
 }
 

@@ -8,6 +8,7 @@ categories:
   - catgory
   - catgory
   - catgory
+show: false
 ---
 
 ## Contents
@@ -29,6 +30,3 @@ Laborum nisi ad dolore cupidatat cupidatat est culpa cillum enim. Deserunt fugia
 [Gitlab]: https://about.gitlab.com/ 'Gitlab'
 [Ismael Pamplona]: https://isma.codes 'isma.codes'
 [Gustavo Basso]: https://gubasso.xyz 'gubasso.xyz'
-
-
-

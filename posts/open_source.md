@@ -6,6 +6,7 @@ description: >-
 categories:
   - linux
   - open-source
+show: true
 ---
 
 ## Content

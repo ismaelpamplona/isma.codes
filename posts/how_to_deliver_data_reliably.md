@@ -10,6 +10,8 @@ categories:
   - performance
   - reliability
   - system-design
+  - interview
+show: true
 ---
 
 ## Contents

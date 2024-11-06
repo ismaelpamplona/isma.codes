@@ -8,6 +8,7 @@ categories:
   - rust
   - security
   - systems-programming
+show: true
 ---
 
 ## Content

@@ -9,6 +9,8 @@ categories:
   - engineering
   - load-balancing
   - queue
+  - interview
+show: true
 ---
 
 ## Contents
