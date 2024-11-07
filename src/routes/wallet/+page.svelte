@@ -2,8 +2,8 @@
   import type { CoinListObject } from '$lib/binance/index'
   import { getTickersFullData } from '$lib/binance/index'
   import { onMount } from 'svelte'
-  import SelectCoin from './SelectCoin.svelte'
-  import SelectFiat from './SelectFiat.svelte'
+  import WalletSlide from './WalletSlide.svelte'
+  import data from './test.json'
 
   let sortedData: any[] = []
 
@@ -22,15 +22,16 @@
 
 <div class="wallet-container">
   <h1>Wallet</h1>
-  <!-- <SelectCoin /> -->
-  <SelectCoin />
-  <SelectFiat />
+  <WalletSlide {data} />
 </div>
 
 <style lang="scss">
   @import '../../style/sizes.scss';
 
   .wallet-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 
     @media only screen and (min-width: $mobile) {

@@ -1,37 +1,155 @@
-{
-  "id": "portfolio-1",
-  "created_at": "2024-11-06T10:00:00Z",
-  "name": "Portfolio One",
-  "assets": [
-    {
-      "asset_id": "BTC",
-      "name": "Bitcoin",
-      "symbol": "BTC",
-      "holdings": [
-        {
-          "amount": 0.5,
-          "added_date": "2024-01-15T10:00:00Z"
-        },
-        {
-          "amount": 0.3,
-          "added_date": "2024-05-01T12:30:00Z"
-        }
-      ]
-    },
-    {
-      "asset_id": "ETH",
-      "name": "Ethereum",
-      "symbol": "ETH",
-      "holdings": [
-        {
-          "amount": 10,
-          "added_date": "2023-10-15T08:00:00Z"
-        }
-      ]
+[
+  {
+    "id": "portfolio-1",
+    "created_at": "2024-11-06T10:00:00Z",
+    "name": "Primary Portfolio",
+    "assets": [
+      {
+        "asset_id": "BTC",
+        "name": "Bitcoin",
+        "symbol": "BTC",
+        "holdings": [
+          {
+            "amount": 0.5,
+            "added_date": "2024-01-15T10:00:00Z"
+          },
+          {
+            "amount": 0.3,
+            "added_date": "2024-05-01T12:30:00Z"
+          }
+        ]
+      },
+      {
+        "asset_id": "ETH",
+        "name": "Ethereum",
+        "symbol": "ETH",
+        "holdings": [
+          {
+            "amount": 10,
+            "added_date": "2023-10-15T08:00:00Z"
+          }
+        ]
+      },
+      {
+        "asset_id": "ADA",
+        "name": "Cardano",
+        "symbol": "ADA",
+        "holdings": []
+      }
+    ],
+    "meta": {
+      "secondary": "USD",
+      "notes": "My portfolio 1 crypto portfolio"
     }
-  ],
-  "meta": {
-    "secondary": "USD",
-    "notes": "My portfolio 1 crypto portfolio"
+  },
+  {
+    "id": "portfolio-2",
+    "created_at": "2024-06-15T14:20:00Z",
+    "name": "Growth Portfolio",
+    "assets": [
+      {
+        "asset_id": "ADA",
+        "name": "Cardano",
+        "symbol": "ADA",
+        "holdings": [
+          {
+            "amount": 1500,
+            "added_date": "2024-03-10T10:00:00Z"
+          }
+        ]
+      },
+      {
+        "asset_id": "DOT",
+        "name": "Polkadot",
+        "symbol": "DOT",
+        "holdings": [
+          {
+            "amount": 200,
+            "added_date": "2024-04-25T11:00:00Z"
+          }
+        ]
+      },
+      {
+        "asset_id": "SOL",
+        "name": "Solana",
+        "symbol": "SOL",
+        "holdings": [
+          {
+            "amount": 75,
+            "added_date": "2024-05-01T12:00:00Z"
+          }
+        ]
+      }
+    ],
+    "meta": {
+      "secondary": "EUR",
+      "notes": "Focused on high-growth assets"
+    }
+  },
+  {
+    "id": "portfolio-3",
+    "created_at": "2024-09-10T09:30:00Z",
+    "name": "Diversified Portfolio",
+    "assets": [
+      {
+        "asset_id": "XRP",
+        "name": "Ripple",
+        "symbol": "XRP",
+        "holdings": [
+          {
+            "amount": 5000,
+            "added_date": "2024-07-20T10:15:00Z"
+          }
+        ]
+      },
+      {
+        "asset_id": "LTC",
+        "name": "Litecoin",
+        "symbol": "LTC",
+        "holdings": [
+          {
+            "amount": 100,
+            "added_date": "2024-08-10T09:00:00Z"
+          }
+        ]
+      }
+    ],
+    "meta": {
+      "secondary": "GBP",
+      "notes": "Portfolio with diversified crypto assets"
+    }
+  },
+  {
+    "id": "portfolio-4",
+    "created_at": "2024-12-01T08:45:00Z",
+    "name": "Income Portfolio",
+    "assets": [
+      {
+        "asset_id": "USDT",
+        "name": "Tether",
+        "symbol": "USDT",
+        "holdings": [
+          {
+            "amount": 10000,
+            "added_date": "2024-09-05T08:30:00Z"
+          }
+        ]
+      },
+      {
+        "asset_id": "BNB",
+        "name": "Binance Coin",
+        "symbol": "BNB",
+        "holdings": [
+          {
+            "amount": 50,
+            "added_date": "2024-11-02T14:15:00Z"
+          }
+        ]
+      }
+    ],
+    "meta": {
+      "secondary": "JPY",
+      "notes": "Focus on stable assets for income"
+    }
   }
-}
+]
