@@ -1,7 +1,7 @@
-import { sveltekit } from '@sveltejs/kit/vite'
-import { defineConfig } from 'vitest/config'
 import ViteYaml from '@modyfi/vite-plugin-yaml'
+import { sveltekit } from '@sveltejs/kit/vite'
 import path from 'path'
+import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
   optimizeDeps: {

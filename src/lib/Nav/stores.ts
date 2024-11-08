@@ -1,3 +1,3 @@
-import { writable } from 'svelte/store';
+import { writable } from 'svelte/store'
 
-export const darkMode = writable(true);
+export const darkMode = writable(true)

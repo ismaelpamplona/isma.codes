@@ -136,6 +136,14 @@ body {
     }
   }
 
+  .portfolio-slider {
+    background: linear-gradient(135deg, $space-cadet-darker, $dark-sky-blue);
+  }
+
+  .wallet-info {
+    background-color: $space-cadet-darker;
+  }
+
   footer {
     background: $space-cadet-darker;
     .copyright {
@@ -269,6 +277,14 @@ body {
     tr:hover {
       background-color: lighten($bone, 10%);
     }
+  }
+
+  .portfolio-slider {
+    background: linear-gradient(135deg, $dark-sky-blue, $lighter-red);
+  }
+
+  .wallet-info {
+    background-color: $bone;
   }
 
   footer {

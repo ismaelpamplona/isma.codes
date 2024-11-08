@@ -18,186 +18,183 @@
 </script>
 
 <div class="carousel">
-  <button class="nav-button left" on:click={prevSlide} aria-label="Previous slide">
-    <iconify-icon icon="simple-line-icons:arrow-left" />
-  </button>
+  <div class="portfolio-slider">
+    <button class="nav-button left" on:click={prevSlide} aria-label="Previous slide">
+      <iconify-icon icon="simple-line-icons:arrow-left" />
+    </button>
 
-  <div class="slides-container">
-    {#each data as wallet, index}
-      <div
-        class="slide"
-        class:selected={index === currentIndex}
-        style="transform: translateX({-currentIndex * 100}%);"
-      >
-        <div class="wallet-container">
-          <h5 class="wallet-title">{wallet.name}</h5>
-          <div class="wallet-assets">
-            <div class="wallet-asset title">
-              <span>Coin</span>
-              <span>Price</span>
-              <span>Holdings</span>
-            </div>
-            {#each wallet.assets as asset}
-              <div class="wallet-asset">
-                <div class="asset-info">
-                  <h5><iconify-icon icon="token-branded:{asset.symbol.toLowerCase()}" /></h5>
-                  <span class="asset-title">{asset.symbol}</span>
-                  <span class="asset-name">({asset.name})</span>
-                </div>
-                <div class="asset-price">
-                  <span>$75.000</span>
-                </div>
-                <div class="asset-holdings">
-                  {#if !asset.holdings.length}
-                    <button class="add-asset">add</button>
-                  {:else}
-                    <span class="asset-value">$400.000</span>
-                    <span class="asset-qtd">{sumHoldings(asset.holdings)}</span>
-                  {/if}
-                </div>
-              </div>
-            {/each}
-          </div>
+    <div class="wallet-card" style="transform: translateX({-currentIndex * 100}%);">
+      {#each data as wallet, index}
+        <div class="portfolio-summary">
+          <h3>{wallet.name}</h3>
+          <p class="balance">
+            {wallet.meta.secondary}
+            <!-- {sumHoldings(wallet.assets.flatMap((asset) => asset.holdings))} -->
+          </p>
         </div>
-      </div>
-    {/each}
+      {/each}
+    </div>
+
+    <button class="nav-button right" on:click={nextSlide} aria-label="Next slide">
+      <iconify-icon icon="simple-line-icons:arrow-right" />
+    </button>
   </div>
 
-  <button class="nav-button right" on:click={nextSlide} aria-label="Next slide">
-    <iconify-icon icon="simple-line-icons:arrow-right" />
-  </button>
+  <div class="wallet-info">
+    <div class="wallet-headers">
+      <span>Coin</span>
+      <span>Price</span>
+      <span>Holdings</span>
+    </div>
+
+    <div class="wallet-assets">
+      {#each data[currentIndex]?.assets as asset}
+        <div class="wallet-asset">
+          <div class="asset-info">
+            <iconify-icon icon="token-branded:{asset.symbol.toLowerCase()}" />
+            <span class="asset-title">{asset.symbol}</span>
+            <span class="asset-name">({asset.name})</span>
+          </div>
+          <div class="asset-price">
+            <span>$75,000</span>
+            <!-- Placeholder, replace with real price data -->
+          </div>
+          <div class="asset-holdings">
+            {#if asset.holdings.length === 0}
+              <button class="add-asset">Add</button>
+            {:else}
+              <span class="asset-value">$400,000</span>
+              <span class="asset-qtd">{sumHoldings(asset.holdings)}</span>
+            {/if}
+          </div>
+        </div>
+      {/each}
+    </div>
+  </div>
 </div>
 
 <style lang="scss">
   .carousel {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .portfolio-slider {
     position: relative;
     display: flex;
     align-items: center;
+    padding: 1rem;
+    border-radius: 12px;
     overflow: hidden;
-    width: 100%;
-    max-width: 800px;
+    margin-bottom: 1rem;
 
-    .slides-container {
+    .wallet-card {
       display: flex;
-      transition: transform 0.3s ease;
+      transition: transform 0.5s ease;
       width: 100%;
+    }
 
-      .slide {
-        min-width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        padding: 0 40px;
+    .portfolio-summary {
+      min-width: 100%;
+      text-align: center;
 
-        .wallet-container {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-
-          //   align-items: start;
-          //   justify-content: start;
-          width: 100%;
-          height: 600px;
-          border-radius: 8px;
-          border: 1px solid;
-
-          h5 {
-            margin: 0;
-          }
-
-          .wallet-title {
-            padding: 10px;
-            border-bottom: 1px solid;
-          }
-
-          .wallet-assets {
-            display: flex;
-            flex-direction: column;
-            padding: 10px;
-            overflow-y: auto;
-
-            .wallet-asset.title {
-              padding: 10px 0;
-              border-bottom: 1px solid;
-
-              span {
-                text-transform: uppercase;
-                opacity: 0.7;
-              }
-
-              span:not(:first-child) {
-                text-align: end;
-              }
-            }
-
-            .wallet-asset {
-              display: grid;
-              grid-template-columns: 50% 25% 25%;
-              padding: 10px 0;
-              border-bottom: 1px solid;
-
-              .asset-info,
-              .asset-price,
-              .asset-holdings {
-                display: flex;
-                align-items: center;
-              }
-
-              .asset-info {
-                gap: 5px;
-                width: 100%;
-              }
-
-              .asset-price {
-                // background: red;
-                width: 100%;
-                justify-content: flex-end;
-              }
-
-              .asset-holdings {
-                flex-direction: column;
-                align-items: flex-end;
-                justify-content: center;
-                // background: blue;
-                width: 100%;
-                gap: 5px;
-
-                .add-asset {
-                  border: 1px solid;
-                  border-radius: 8px;
-                }
-              }
-            }
-          }
-        }
+      h3 {
+        margin: 0;
+        font-size: 1.2rem;
       }
 
-      .slide.selected {
-        opacity: 1;
+      .balance {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .timeframe {
+        font-size: 0.8rem;
+        opacity: 0.7;
       }
     }
+
     .nav-button {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+      background: none;
       border: none;
-      padding: 0.5rem;
+      font-size: 1.5rem;
       cursor: pointer;
-      font-size: 1.2rem;
-      font-weight: bold;
+      padding: 0.5rem;
+      z-index: 2;
     }
 
     .nav-button.left {
       left: 0;
-      z-index: 6;
-      border-right: none;
     }
 
     .nav-button.right {
       right: 0;
-      border-left: none;
+    }
+  }
+
+  .wallet-info {
+    border-radius: 8px;
+    padding: 1rem;
+
+    .wallet-headers,
+    .wallet-asset {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 0.5rem 0;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #333;
+
+      span:not(:first-child) {
+        text-align: end;
+      }
+
+      button {
+        text-align: center;
+      }
+    }
+
+    .wallet-headers {
+      font-weight: bold;
+      opacity: 0.8;
+    }
+
+    .wallet-assets {
+      margin-top: 0.5rem;
+    }
+
+    .wallet-asset {
+      align-items: center;
+
+      .asset-info {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        .asset-title {
+          font-weight: bold;
+        }
+      }
+
+      .asset-price,
+      .asset-holdings {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      .add-asset {
+        background: #6200ea;
+        color: white;
+        border: none;
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+        cursor: pointer;
+      }
     }
   }
 </style>
