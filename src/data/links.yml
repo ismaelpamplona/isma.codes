@@ -16,11 +16,11 @@
   link: /projects
   address: /projects
 
-- text: wallet
-  title: Go to wallet
-  href: /wallet
-  link: /wallet
-  address: /wallet
+# - text: wallet
+#   title: Go to wallet
+#   href: /wallet
+#   link: /wallet
+#   address: /wallet
 
 - text: resume·cv
   title: Go to resume
