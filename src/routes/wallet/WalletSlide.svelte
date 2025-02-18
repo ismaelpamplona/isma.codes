@@ -5,7 +5,7 @@
   let currentIndex = 0
 
   function sumHoldings(holdings: Holding[]): number {
-    return holdings.reduce((sum, transaction) => sum + transaction.amount, 0).toFixed(2)
+    return holdings.reduce((sum, transaction) => sum + transaction.amount, 0)
   }
 
   function nextSlide() {
@@ -29,7 +29,7 @@
           <h3>{wallet.name}</h3>
           <p class="balance">
             {wallet.meta.secondary}
-            <!-- {sumHoldings(wallet.assets.flatMap((asset) => asset.holdings))} -->
+            {sumHoldings(wallet.assets.flatMap((asset) => asset.holdings)).toFixed(2)}
           </p>
         </div>
       {/each}

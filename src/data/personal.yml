@@ -150,7 +150,7 @@ experience:
       company: Scale AI
       link: 'https://github.com/cwnt-io'
       from: 2024-03-01
-      to: Present
+      to: 2024-12-31
       city: San Francisco (remote)
       state: CA
       country: United States
@@ -285,23 +285,23 @@ experience:
                 - - RabbitMQ
                   - https://www.rabbitmq.com/
 
-          - title: Grapevine P2P Chat
-            description: Is a decentralized, peer-to-peer chat app built with the Bitfinex Grenache microservice framework, using the BitTorrent DHT protocol for service discovery. It enables real-time, serverless communication between peers, offering a fault-tolerant, fully decentralized messaging system. (<a target='_blank' href='https://github.com/ismaelpamplona/grapevine-p2p-chat'>github</a>)."
-            technologies:
-              title: Stack
-              data:
-                - - Nodejs
-                  - https://nodejs.org
-                - - Git
-                  - https://git-scm.com
-                - - Grenache
-                  - https://github.com/bitfinexcom/grenache
-            roles:
-              title: Roles
-              data:
-                - Developer
-                - Software-engineer
-                - Maintainer
+          # - title: Grapevine P2P Chat
+          #   description: Is a decentralized, peer-to-peer chat app built with the Bitfinex Grenache microservice framework, using the BitTorrent DHT protocol for service discovery. It enables real-time, serverless communication between peers, offering a fault-tolerant, fully decentralized messaging system. (<a target='_blank' href='https://github.com/ismaelpamplona/grapevine-p2p-chat'>github</a>)."
+          #   technologies:
+          #     title: Stack
+          #     data:
+          #       - - Nodejs
+          #         - https://nodejs.org
+          #       - - Git
+          #         - https://git-scm.com
+          #       - - Grenache
+          #         - https://github.com/bitfinexcom/grenache
+          #   roles:
+          #     title: Roles
+          #     data:
+          #       - Developer
+          #       - Software-engineer
+          #       - Maintainer
 
           - title: Rip Issue
             description: "Open-source Rust-based CLI tool designed for agile management workflows. It facilitates efficient tracking and management utilizing the filesystem and git (<a target='_blank' href='https://crates.io/crates/ripissue'>crates.io</a>)."
