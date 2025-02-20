@@ -16,6 +16,8 @@ categories:
 show: true
 ---
 
+## Contents
+
 ## Introduction
 
 Kubernetes is an orchestration system designed to manage containerized applications at scale. To understand how Kubernetes functions, we use an analogy of a maritime shipping fleet. Imagine a fleet of cargo ships (worker nodes) that carry containers across the sea. These cargo ships are controlled and managed by specialized control ships (master nodes), ensuring the smooth operation of all cargo movement, planning, and logistics. Kubernetes employs a similar approach, where control planes manage worker nodes to run applications efficiently and reliably.
