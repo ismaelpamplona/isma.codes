@@ -147,6 +147,133 @@ experience:
   data:
     - title: Software Engineer
       show: true
+      company: Quadrant Health
+      link: 'https://quadrant.health/'
+      from: 2025-04-01
+      to: Present
+      city: New York (remote)
+      state: NY
+      country: United States
+      description:
+        - Quadrant Health is a technology-driven healthcare company that builds scalable, observable, and performant systems for AI-assisted clinical workflows and communication platforms.
+      duties:
+        title: Duties
+        data:
+          - Backend and frontend development for real-time messaging and observability systems.
+          - Implementing AI integration, scalable event-driven architecture, and infrastructure observability.
+          - End-to-end ownership of applications using modern PHP and TypeScript ecosystems.
+
+      jobs:
+        title: Jobs
+        data:
+          - title: QS Backend Service
+            description: |
+              Real-time backend application supporting websocket communication, webhook ingestion, and messaging orchestration for clinical operations. Deployed on AWS using containerized services and integrated with observability tooling.
+            technologies:
+              title: Stack
+              data:
+                - - AWS ECS + Fargate
+                  - https://aws.amazon.com/ecs/
+                - - Bugsnag
+                  - https://www.bugsnag.com/
+                - - AWS CloudWatch
+                  - https://aws.amazon.com/cloudwatch/
+                - - Deepgram
+                  - https://developers.deepgram.com/
+                - - Google Translate
+                  - https://cloud.google.com/translate
+                - - MySQL
+                  - https://www.mysql.com/
+                - - OpenAI
+                  - https://platform.openai.com/
+                - - OpenTelemetry
+                  - https://opentelemetry.io/
+                - - PHP
+                  - https://www.php.net/
+                - - PHPStan
+                  - https://phpstan.org/
+                - - PHPUnit
+                  - https://phpunit.de/
+                - - Postmark
+                  - https://postmarkapp.com/
+                - - AWS RDS
+                  - https://aws.amazon.com/rds/
+                - - Slim Framework
+                  - https://www.slimframework.com/
+                - - AWS SQS
+                  - https://docs.aws.amazon.com/AWSSimpleQueueService/
+                - - Twilio
+                  - https://www.twilio.com/
+                - - Anthropic API
+                  - https://docs.anthropic.com/
+
+            roles:
+              title: Roles
+              data:
+                - Backend Engineer
+                - Systems Engineer
+                - Observability Engineer
+
+          - title: QS Web Application
+            description: |
+              React-based frontend for real-time clinical communication, supporting secure messaging, mentions, and rich input. Strong emphasis on performance monitoring, error tracking, and accessibility.
+            technologies:
+              title: Stack
+              data:
+                - - React
+                  - https://react.dev/
+                - - Redux Toolkit
+                  - https://redux-toolkit.js.org/
+                - - TypeScript
+                  - https://www.typescriptlang.org/
+                - - MUI
+                  - https://mui.com/
+                - - Webpack
+                  - https://webpack.js.org/
+                - - Storybook
+                  - https://storybook.js.org/
+                - - Tailwind CSS
+                  - https://tailwindcss.com/
+                - - Bugsnag
+                  - https://www.bugsnag.com/
+                - - Axios
+                  - https://axios-http.com/
+                - - Jest
+                  - https://jestjs.io/
+                - - Playwright
+                  - https://playwright.dev/
+                - - Craco
+                  - https://github.com/dilanx/craco
+            roles:
+              title: Roles
+              data:
+                - Frontend Engineer
+                - UX Developer
+                - Performance Engineer
+
+          - title: Observability Project
+            description: Early-stage research initiative to improve observability, tracing, and monitoring infrastructure across backend and frontend stacks. Current stack includes Bugsnag and AWS CloudWatch. Evaluation ongoing for adopting Datadog or Grafana as part of expanded tracing and dashboarding capabilities.
+            technologies:
+              title: Stack
+              data:
+                - - Bugsnag
+                  - https://www.bugsnag.com/
+                - - AWS CloudWatch
+                  - https://aws.amazon.com/cloudwatch/
+                - - OpenTelemetry
+                  - https://opentelemetry.io/
+                - - Grafana
+                  - https://grafana.com/
+                - - Datadog
+                  - https://www.datadoghq.com/
+            roles:
+              title: Roles
+              data:
+                - Observability Engineer
+                - Research Contributor
+
+    - title: Software Engineer
+      show: true
       company: Scale AI
       link: 'https://github.com/cwnt-io'
       from: 2024-03-01
