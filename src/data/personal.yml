@@ -251,26 +251,29 @@ experience:
                 - UX Developer
                 - Performance Engineer
 
-          - title: Observability Project
-            description: Early-stage research initiative to improve observability, tracing, and monitoring infrastructure across backend and frontend stacks. Current stack includes Bugsnag and AWS CloudWatch. Evaluation ongoing for adopting Datadog or Grafana as part of expanded tracing and dashboarding capabilities.
+          - title: Observability Program
+            description: Structured initiative to centralize and evolve observability across backend and frontend systems. Initially relied on Bugsnag, CloudWatch, and Logs Insights. Recent evaluations included Grafana, Datadog, and SigNoz, with the team now focused on SigNoz for tracing and Bugsnag for error monitoring, while maintaining access to AWS-native tools for legacy support and complementary use.
             technologies:
               title: Stack
               data:
                 - - Bugsnag
                   - https://www.bugsnag.com/
-                - - AWS CloudWatch
+                - - CloudWatch
                   - https://aws.amazon.com/cloudwatch/
-                - - OpenTelemetry
-                  - https://opentelemetry.io/
+                - - LogsInsights
+                  - https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html
+                - - SigNoz
+                  - https://signoz.io/
                 - - Grafana
                   - https://grafana.com/
                 - - Datadog
                   - https://www.datadoghq.com/
+                - - OpenTelemetry
+                  - https://opentelemetry.io/
             roles:
               title: Roles
               data:
                 - Observability Engineer
-                - Research Contributor
 
     - title: Software Engineer
       show: true
