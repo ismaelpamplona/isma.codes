@@ -15,8 +15,7 @@ show: true
 
 ## Introduction
 
-Python has become a primary language for building backend systems and APIs.
-Its popularity comes from three main factors:
+Python has become a primary language for building backend systems and APIs. Its popularity comes from three main factors:
 
 1. **Ecosystem**: frameworks like FastAPI, Django, and Flask make it easy to design and scale services.
 2. **Productivity**: clear syntax and strong typing support (via `typing` and `pydantic`) allow faster development without losing reliability.
@@ -108,22 +107,6 @@ Without `nonlocal`, the assignment in `inner` would create a new local variable 
 > - Use `global` for modifying global state.
 > - Use `nonlocal` to modify variables in an enclosing scope.
 
-## Language Fundamentals
-
-### Variables and Scope
-
-In Python, variables are names that point to objects in memory.
-Assignment does not copy values; it binds a name to an object.
-
-```py
-x = 10
-y = x
-x = 20
-print(y)  # 10
-```
-
-Here, `y` still points to the original object `10`. Rebinding `x` to `20` doesn’t affect `y`.
-
 ### Global vs Local Scope
 
 Python resolves variable names using the **LEGB rule**:
@@ -177,17 +160,12 @@ def outer():
 outer()  # prints "changed"
 ```
 
-### Key Takeaways
+> - Assignment binds names to objects.
+> - Python searches variables using **LEGB**.
+> - `global` allows modification of module-level variables.
+> - `nonlocal` allows modification of enclosing scope variables.
 
-- Assignment binds names to objects.
-- Python searches variables using **LEGB**.
-- `global` allows modification of module-level variables.
-- `nonlocal` allows modification of enclosing scope variables.
-
-### Type Hints
-
-Python is dynamically typed, but since version 3.5 it supports **type hints**.
-They don’t affect runtime behavior, but help tools like linters, IDEs, and `mypy` catch errors earlier.
+Python is dynamically typed, but since version 3.5 it supports **type hints**. They don’t affect runtime behavior, but help tools like linters, IDEs, and `mypy` catch errors earlier.
 
 **Function Annotations**
 
@@ -578,8 +556,6 @@ print(a ^ b)  # Symmetric difference: {1, 2, 4, 5}
 
 ## Functions and Scope
 
-### Functions
-
 Functions group reusable logic and can accept flexible arguments.
 
 **Definitions and Default Arguments**
@@ -642,14 +618,14 @@ kwargs = {'x': 10, 'y': 20}
 
 Lambdas are anonymous one-line functions.
 
-```
+```py
 add = lambda x, y: x + y
 print(add(2, 3))  # 5
 ```
 
 They are useful for short, throwaway functions, especially with `map`, `filter`, or sorting:
 
-```
+```py
 nums = [3, 1, 4, 2]
 print(sorted(nums, key=lambda x: -x))  # [4, 3, 2, 1]
 ```
@@ -837,7 +813,7 @@ for num in count_up_to(3):
 
 Output:
 
-```py
+```
 1
 2
 3
@@ -1013,26 +989,6 @@ class Connection:
         self.connected = True
 ```
 
-**Tying to your article on OOP Design**
-
-Your **OOP Design** article emphasizes core principles—encapsulation, inheritance, SOLID, patterns—for robust design :contentReference[oaicite:0]{index=0}. While this section is language-specific, it shares the same foundational approach:
-
-- Keep state and behavior within well-defined classes (`User`, `Connection`).
-- Use class vs instance attributes deliberately to avoid unintended cross-instance behavior.
-- Construct objects cleanly—initializing only what’s needed right away.
-
-Later sections (inheritance, polymorphism, SOLID) can build on this—mirroring how your blog scales from basics to design principles. The goal is clarity first, then depth.
-
-> - Define classes using `__init__` for clean instantiation.
-> - Separate **class-level** and **instance-level** data.
-> - Keep constructors simple—focus on core initialization.
-> - Frame design in terms of maintainability and clarity, as in your OOP Design article.
-
-Would you like me to move on to **Inheritance, SOLID principles, or Design Patterns**, with similar clarity and tie-backs to your article?
-::contentReference[oaicite:1]{index=1}
-
-## Object-Oriented Programming
-
 ### Classes and Objects
 
 This section builds on the same principles you discussed in your [OOP Design article](https://isma.codes/blog/oop_design), but now applied directly to Python.
@@ -1082,8 +1038,7 @@ class Connection:
         self.connected = True
 ```
 
-Keep constructors simple: initialize attributes and prepare the object for use.
-Avoid doing heavy work like opening network connections inside `__init__`.
+Keep constructors simple: initialize attributes and prepare the object for use. Avoid doing heavy work like opening network connections inside `__init__`.
 
 **Reference to Your OOP Design Article**
 
@@ -1173,11 +1128,9 @@ print(c.wheels, c.brand)  # 4 Toyota
 
 `super()` is especially important in multiple inheritance, since it ensures every parent in the MRO is initialized correctly.
 
-**Key Takeaways**
-
-- Single inheritance: one parent, one child.
-- Multiple inheritance: Python resolves conflicts using MRO.
-- Use `super()` instead of directly naming parent classes—it makes the code more maintainable and works with multiple inheritance.
+> - Single inheritance: one parent, one child.
+> - Multiple inheritance: Python resolves conflicts using MRO.
+> - Use `super()` instead of directly naming parent classes—it makes the code more maintainable and works with multiple inheritance.
 
 ### Dunder Methods
 
@@ -1332,12 +1285,10 @@ b.items.append("apple")
 print(b.items)  # ['apple']
 ```
 
-**Key Takeaways**
-
-- `@dataclass` eliminates repetitive code (`__init__`, `__repr__`, `__eq__`).
-- Use `frozen=True` for immutability.
-- Use `field(default_factory=...)` for safe mutable defaults.
-- Great for DTOs, configs, and simple models.
+> - `@dataclass` eliminates repetitive code (`__init__`, `__repr__`, `__eq__`).
+> - Use `frozen=True` for immutability.
+> - Use `field(default_factory=...)` for safe mutable defaults.
+> - Great for DTOs, configs, and simple models.
 
 ## Execution Model
 
@@ -1497,8 +1448,7 @@ a["b"] = b
 b["a"] = a
 ```
 
-Here, `a` and `b` reference each other, so their count never drops to zero.
-Python’s **garbage collector** (GC) periodically finds these cycles and cleans them up.
+Here, `a` and `b` reference each other, so their count never drops to zero. Python’s **garbage collector** (GC) periodically finds these cycles and cleans them up.
 
 You can interact with it:
 
@@ -1885,9 +1835,9 @@ class MyMeta(type):
 
 class MyClass(metaclass=MyMeta):
     pass
-```
 
 # Output: Creating class MyClass
+```
 
 The metaclass intercepts the creation of `MyClass`.
 
@@ -2143,7 +2093,7 @@ def test_add_strings():
 
 Run tests simply with:
 
-```
+```sh
 pytest
 ```
 
@@ -2219,11 +2169,9 @@ mypy checks types **before execution**, preventing many bugs.
 - Python doesn’t enforce types at runtime.
 - You must adopt typing discipline consistently.
 
-**Key Takeaways**
-
-- Use type hints (`str`, `int`, `Optional`, `Union`, etc.) for clarity.
-- Run `mypy` to enforce contracts and catch type errors.
-- Static typing improves maintainability in large projects.
+> - Use type hints (`str`, `int`, `Optional`, `Union`, etc.) for clarity.
+> - Run `mypy` to enforce contracts and catch type errors.
+> - Static typing improves maintainability in large projects.
 
 ### Linting and Formatting
 
@@ -2362,10 +2310,60 @@ Why isolation matters:
 Packaging makes Python code reusable and distributable.
 The ecosystem has evolved from `setup.py` to modern standards with `pyproject.toml`.
 
+**Poetry**
+
+Poetry is an all-in-one tool for dependency management, virtualenvs, locking, building, and publishing, centered on `pyproject.toml` + `poetry.lock`.
+
+- Reproducible installs via a lockfile.
+- Per-project virtual environments without manual `venv`.
+- Clean metadata/builds using PEP 517/518 (`pyproject.toml`).
+
+Core commands:
+
+- Init/scaffold: `poetry init`, `poetry new my_app`
+- Dependencies: `poetry add fastapi`, `poetry add --group dev pytest`, `poetry remove ...`
+- Install/update/lock: `poetry install`, `poetry update`, `poetry lock`
+- Run/shell: `poetry run pytest`, `poetry shell`
+- Build/publish: `poetry build`, `poetry publish`
+- Export (for pip/Docker): `poetry export -f requirements.txt -o requirements.txt --without-hashes`
+
+Typical workflow:
+
+1. Initialize (`poetry init` or `poetry new`).
+2. Add dependencies (prod and `--group dev`).
+3. `poetry install` to resolve deps, create/use the env, and write/read the lock.
+4. Run with `poetry run ...` or open `poetry shell`.
+5. Update within constraints using `poetry update`.
+
+Groups & extras (selective installs):
+
+- Install with groups: `poetry install --with dev` or skip groups with `--without dev`.
+- Define extras under `[tool.poetry.extras]` and install with `--extras "feature"`.
+
+Locking & CI:
+
+- Commit `poetry.lock` for reproducibility.
+- In CI: install Poetry (e.g., `pipx install poetry`), cache based on the lockfile, then `poetry install --no-interaction --no-root --with dev`.
+
+Docker options:
+
+- Keep Poetry in the image and run `poetry install --only main`, or
+- Export runtime deps (`poetry export ...`) and then `pip install -r requirements.txt` for a lean image.
+
+Build & publish:
+
+- Configure package metadata in `pyproject.toml`.
+- Build artifacts with `poetry build`.
+- Publish to PyPI/TestPyPI using `poetry publish` (tokens configured beforehand).
+
+When to use vs skip:
+
+- **Use Poetry:** team projects, CI/CD, multiple dependency groups, publishing.
+- **Skip/just mention:** tiny scripts/one-offs where `venv + pip` is enough.
+
 **pip**
 
-`pip` is the package installer for Python.
-Install packages from [PyPI](https://pypi.org):
+`pip` is the package installer for Python. Install packages from [PyPI](https://pypi.org):
 
 ```sh
 pip install requests
