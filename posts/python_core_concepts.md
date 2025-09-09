@@ -8,7 +8,7 @@ categories:
   - interview
   - development
   - web-development
-show: true
+show: false
 ---
 
 ## Contents
